@@ -1,0 +1,129 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+.NavbarDiv {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.leftNavSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.logoSection img {
+  height: 60px;
+  object-fit: contain;
+  margin-right: 3rem;
+}
+
+.playStoreSection .buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.playStoreSection img {
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.playStoreSection img:hover {
+  transform: scale(1.05);
+}
+
+.contactSection {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-left: 2rem;
+}
+
+.contactSection .phoneNumbers p,
+.contactSection .mailId p {
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.phoneNumbers {
+  margin-right: 2rem;
+}
+
+.rightNavSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.rightButtonSection button {
+  padding: 0.5rem 1.4rem;
+  background-color: #0fb7a4;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rightLeftSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.barDiv {
+  color: red;
+  height: 2rem;
+  border: 0.1px solid black;
+  margin: 0 1rem;
+  cursor: auto;
+}
+.mailId {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mailId p,
+.phoneNumbers p {
+  font-size: 1.1rem;
+}
+
+.rightButtonSection button:hover {
+  background-color: #10d2bb;
+}
+
+@media (max-width: 768px) {
+  .NavbarDiv {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leftNavSection,
+  .rightNavSection {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .rightButtonSection {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

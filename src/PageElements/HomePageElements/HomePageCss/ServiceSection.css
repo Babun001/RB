@@ -1,0 +1,30 @@
+.health-section {
+  background-image: url("../../../Assets/servicesImages.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  padding: 3rem 8rem;
+  background-color: #f8fdfd;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #000;
+  
+}
+
+.section-content {
+  color: teal;
+  line-height: 1.6;
+  margin-top: 10px;
+  font-size: 16px;
+  /* cursor: pointer; */
+}
+
+/* .small-text {
+  font-size: 14px;
+  
+} */

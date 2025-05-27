@@ -1,0 +1,147 @@
+.WelcomeContainer {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 2fr; 
+  padding: 40px 0;
+  align-items: start;
+}
+
+.leftWelcomeSection {
+  max-width: 100%;
+  min-width: 300px;
+}
+
+.leftWelcomeSection h2 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.leftBottomWelcomeSection{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 1rem;
+  max-width: 90%;
+}
+
+.RBIntro {
+  font-size: 1rem;
+  width: 80%;
+  color: #444;
+  margin-bottom: 32px;
+}
+
+.cardUpSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.cardsSection {
+  width: 100%;
+  height: 12rem;
+  padding: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cardsSection:hover {
+  transform: translateY(-5px);
+}
+
+.cardsSection svg {
+  font-size: 24px;
+  color: #00a98f;
+}
+
+.cardsSection h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #003588;
+}
+
+.cardsSection p {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.rightWelcomeSection {
+  background-color: #eff7f5;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+  margin-top: 100px;
+}
+
+.rightWelcomeSection h3 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.rightWelcomeSection form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.iconCircle {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rightWelcomeSection input,
+.rightWelcomeSection textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.rightWelcomeSection button {
+  padding: 12px 16px;
+  background-color: #d9ede6;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.rightWelcomeSection button:hover {
+  background-color: hsl(171, 100%, 25%);
+}
+
+
+
+
+
+/* ✅ Responsive: Stack columns vertically on smaller screens */
+@media (max-width: 768px) {
+  .WelcomeContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .leftWelcomeSection,
+  .rightWelcomeSection {
+    max-width: 100%;
+  }
+
+  .RBIntro {
+    width: 100%;
+  }
+}
+
