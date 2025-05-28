@@ -9,7 +9,7 @@ import AboutSection from "../PageElements/HomePageElements/AboutSection.jsx";
 // import CorporateWillSection from "../PageElements/HomePageElements/CorporateWillness.jsx";
 // import PackagesSection from "../PageElements/HomePageElements/PackagesSection.jsx";
 // import TestsSection from "../PageElements/HomePageElements/TestsSections.jsx";
-// import WhyChooseUsSection from "../PageElements/HomePageElements/WhyChooseUsSection.jsx";
+import WhyChooseUsSection from "../PageElements/HomePageElements/WhyChooseUsSection.jsx";
 // import TrustSection from "../PageElements/HomePageElements/TrustSection.jsx";
 // import TestimonialSection from "../PageElements/HomePageElements/TestimonialSection.jsx";
 import FAQSectionSection from "../PageElements/HomePageElements/FAQSection.jsx";
@@ -34,7 +34,7 @@ export default function Home() {
             {/* <CorporateWillSection/> */}
             {/* <PackagesSection/> */}
             {/* <TestsSection/> */}
-            {/* <WhyChooseUsSection/> */}
+            <WhyChooseUsSection/>
             {/* <TrustSection/> */}
             {/* <TestimonialSection/> */}
             <FAQSectionSection/>

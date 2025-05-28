@@ -1,0 +1,47 @@
+.whychooseUsContainer {
+  background-image: url("../../../Assets/WhyChooseUs.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem 6rem;
+  left: 0;
+  top: 0;
+}
+
+.headingText{
+    width: 40%;
+}
+
+
+.questionRow {
+  display: flex;
+  gap: 12px;
+}
+
+.iconCircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #b5ebfe;
+  color: rgb(24, 0, 146);
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.questionText {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.answerText{
+    /* background-color: red; */
+    width: 50%;
+    font-size: 15px;
+    margin-left: 2.5rem;
+    margin-top: -15px;
+}

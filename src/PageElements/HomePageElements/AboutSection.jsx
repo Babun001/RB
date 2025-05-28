@@ -38,7 +38,7 @@ const AboutSection = () => {
                 </div>
 
                 <div className="about-right">
-                    <span className="tag">About US</span>
+                    <span className="rb-headingTag">About US</span>
                     <h2 className="title">Explore Tests by Organ for Smarter Health Screening</h2>
                     <p className="description">
                         At RB Diagnostic, we offer an extensive range of tests covering all major health parameters. From routine screenings to advanced diagnostics, our tests are designed to deliver accurate results with the highest precision—empowering you and your doctor to make informed health decisions at every step.
