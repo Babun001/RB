@@ -7,6 +7,7 @@
   gap: 3rem;
   margin-top: 3rem;
   position: relative;
+  margin-bottom: 3rem;
 }
 
 .about-left,
@@ -43,22 +44,6 @@
   position: relative;
 }
 
-/* .about-right .tag {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #003588;
-  background-image: linear-gradient(
-    to right,
-    #b5ebfe 0%,
-    rgba(255, 255, 255, 0)
-  );
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  width: 8rem;
-} */
 
 .about-right .title {
   font-size: 3rem;
@@ -116,7 +101,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   right: 0px;
-  width: 15rem;
+  width: 10rem;
   margin: 3rem;
 }
 

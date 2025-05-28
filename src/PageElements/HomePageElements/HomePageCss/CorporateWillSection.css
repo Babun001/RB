@@ -1,0 +1,85 @@
+.rb-headingTag {
+    width: 10rem !important;
+}
+
+.corporateContainer{
+    background-image: url('../../../Assets/corporateWell.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 6rem;
+}
+
+
+.companiesSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.headLineText{
+    width: 60%;
+}
+
+.buttomText{
+    font-size: 30px;
+    font-weight: 400;
+    background-color: white;
+    padding: 3px;
+    border-radius: 20px;
+}
+
+.companyCard {
+  width: 10rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.companyCard:hover {
+  transform: scale(1.05);
+}
+
+.companyCard img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.viewMoreBtn {
+  padding: 10px 24px;
+  background-color: #0fb7a4;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 6rem;
+  transition: background-color 0.3s ease;
+}
+
+.viewMoreBtn:hover {
+  background-color: #0bab98;
+}
+
+@media (max-width: 768px) {
+  .corporateContainer {
+    padding: 2rem;
+  }
+
+  .headLineText h2 {
+    font-size: 1.5rem;
+  }
+
+  .companyCard {
+    width: 100px;
+    height: 70px;
+  }
+}

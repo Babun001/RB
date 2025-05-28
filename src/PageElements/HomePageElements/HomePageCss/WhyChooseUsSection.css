@@ -3,7 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 4rem 6rem;
+  padding: 6rem 4rem;
   left: 0;
   top: 0;
 }
@@ -19,17 +19,17 @@
 }
 
 .iconCircle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 35px;
+  height: 35px;
   background-color: #b5ebfe;
   color: rgb(24, 0, 146);
   border-radius: 50%;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   flex-shrink: 0;
+  cursor: pointer;
+  line-height: 31px;
+  text-align: center;
 }
 
 .questionText {
@@ -39,9 +39,8 @@
 }
 
 .answerText{
-    /* background-color: red; */
     width: 50%;
     font-size: 15px;
-    margin-left: 2.5rem;
+    transform: translateX(60px);
     margin-top: -15px;
 }

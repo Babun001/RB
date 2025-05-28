@@ -1,0 +1,84 @@
+.packageContainer {
+  padding: 4rem 6rem;
+}
+
+.packageUpperSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.pk-tag {
+  margin: auto;
+}
+.pk-title {
+  margin: 0;
+}
+
+.packageLowerSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  justify-items: center;
+}
+
+.diseaseCardSection {
+  position: relative;
+  /* width: 250px;
+  height: 220px; */
+  /* border-radius: 20px; */
+  overflow: hidden;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 50px;
+  width: 16rem;
+}
+
+.viewMoreContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.viewMoreBtn {
+  background-color: #d9ede6;
+  color: black;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  right: 0px;
+  width: 15rem;
+  margin: 3rem;
+  font-weight: 700;
+}
+
+.diseaseCardSection:hover {
+  transform: translateY(-5px);
+}
+
+.diseaseCardSection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.diseaseName {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.diseaseName p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  background-color: white;
+  margin: 0rem 2rem;
+  padding: 3px;
+  border-radius: 20px;
+  transform: translate(0px, -10px);
+}
