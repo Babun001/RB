@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import './HomePageCss/OurPackageSection.css'
+import './HomePageCss/OurPackageSection.css';
+import { GiWallet } from "react-icons/gi";
+import { FaBookmark } from "react-icons/fa";
+import { FaSearch } from 'react-icons/fa';
+import cornerIcon from '../../Assets/cornerIcon.png';
 
 export default function OurPackage() {
   const [activeTab, setActiveTab] = useState('General Wellness');
@@ -7,45 +11,99 @@ export default function OurPackage() {
   const categories = ['General Wellness', 'Lifestyle', 'Gynecology Packages', 'Offers'];
 
   const getCardsForCategory = (category) => {
+    // You can customize data per category here
     return [
-      { title: `${category} - Card 1`, description: 'This is a sample card.' },
-      { title: `${category} - Card 2`, description: 'This is a sample card.' },
-      { title: `${category} - Card 3`, description: 'This is a sample card.' },
+      {
+        title: 'Serology Profile',
+        TestsAndComp: ['4 Tests', '7 Components'],
+        price: 1600.00
+      },
+      {
+        title: 'KFT',
+        TestsAndComp: ['7 Tests', '7 Components'],
+        price: 1300.00
+      },
+      {
+        title: 'RBD Healthy Life, Blood (Female)',
+        TestsAndComp: ['21 Tests', '93 Components'],
+        price: 6500.00
+      }
     ];
   };
 
   const cards = getCardsForCategory(activeTab);
 
   return (
-    <>
-      <div className="ourPackageContainer">
-        <div className="ourPackageUpperSection">
-          <h2 className='rb-title'>Our Packages</h2>
-          <p className='paraText'>RB Diagnostic offers a comprehensive range of health check-up packages tailored for every stage of life.</p>
-          <p className='paraText'>Each package is designed by experts to provide accurate insights and support preventive healthcare, ensuring timely diagnosis and better health outcomes.</p>
-        </div>
-
-        <div className="midNavButtons">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`navBtn ${activeTab === category ? 'active' : ''}`}
-              onClick={() => setActiveTab(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        <div className="ourPackageCardSection">
-          {cards.map((card, index) => (
-            <div key={index} className="packageCard">
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-            </div>
-          ))}
-        </div>
+    <div className="ourPackageContainer">
+      <div className="ourPackageUpperSection">
+        <h2 className="rb-title">Our Packages</h2>
+        <p className="paraText">
+          RB Diagnostic offers a comprehensive range of health check-up packages tailored for every stage of life.
+        </p>
+        <p className="paraText">
+          Each package is designed by experts to provide accurate insights and support preventive healthcare, ensuring timely diagnosis and better health outcomes.
+        </p>
       </div>
-    </>
+
+      <div className="midNavButtons">
+        {categories.map((category) => (
+          <button
+            key={category}
+            className={`navBtn ${activeTab === category ? 'active' : ''}`}
+            onClick={() => setActiveTab(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <div className="ourPackageCardSection">
+        {cards.map((card, index) => (
+          <div key={index} className="packageCard">
+
+            <div className="cornerImage">
+              <img src={cornerIcon} alt="corner icon" style={{ width: "5.5rem" }} />
+            </div>
+
+            <span className="upperCardText">
+              <p style={{
+                backgroundColor: "#D8D5F4",
+                padding: "0px 20px",
+                borderRadius: "20px",
+                fontSize: "1.5rem",
+                textAlign: "center",
+                fontWeight: "700"
+              }}>Safe</p>
+            </span>
+
+
+            <div className="cardTitlePack">
+              <h2 style={{lineHeight:"25px", margin:"5px 0px"}}>{card.title}</h2>
+            </div>
+
+            <span className="testAndComp">
+              <p>Covers {card.TestsAndComp.join(' ')}</p>
+            </span>
+
+            <div className="cardsMiddleSec">
+              <h4 style={{fontSize:"1.3rem"}}>Report Delivery</h4>
+              <p style={{color:"gray"}}>Speak to our customer care</p>
+            </div>
+
+            <div className="priceSection">
+              <h2 style={{fontSize:"2.5rem", color:"#01CAB8"}}>₹{card.price.toFixed(2)}</h2>
+            </div>
+
+            <div className="cardLowerSec">
+              <button title='Click to View Details'>View Details <FaSearch size={20}/></button>
+              <div className="cardLowerRigntSec">
+                <GiWallet title="Add to Wallet" style={{color:"#8A8A8A",fontSize:"3rem", cursor:"pointer"}}/>
+                <FaBookmark title="Bookmark" style={{color:"#8A8A8A",fontSize:"3rem", cursor:"pointer", marginLeft:"5px"}}/>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

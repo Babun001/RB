@@ -1,7 +1,7 @@
 .consult-section {
   margin-right: 3rem;
   margin-left: 3rem;
-  height: 20rem;
+  height: 15rem;
   background-color: red;
   border-radius: 60px;
   position: relative;
@@ -13,21 +13,20 @@
   padding: 2rem;
   gap: 2rem;
   font-family: "Segoe UI", sans-serif;
-  flex-wrap: wrap;
-  overflow: hidden;
+  /* flex-wrap: wrap; */
+  /* overflow: hidden; */
 }
 
 .consult-image {
-  position: relative;
-  z-index: 2;
-  /* top: -rem; */
+  transform: translateX(5px);
 }
 
 .consult-image img {
   width: 25rem;
+  transform: translateY(-22px);
 }
 
-.backgroundDiv {
+/* .backgroundDiv {
   position: absolute;
   top: 50%;
   left: 40px;
@@ -38,17 +37,18 @@
   border-radius: 50%;
   z-index: 0;
   top: 20rem;
-}
+} */
+
+
 .consult-text {
   flex: 1;
   text-align: left;
   min-width: 200px;
-  margin-bottom: 4rem;
 }
 
 .consult-text h2 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: -0.5rem;
 }
 
 .consult-text p {
@@ -58,19 +58,28 @@
 }
 .consult-text h4 {
   font-size: 1.5rem;
+  line-height: 0px;
+}
+
+.consult-button{
+  transform: translate(-180px, 80px);
 }
 
 .consult-button button {
   background-color: #0fb7a4;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 20px;
+  padding: 1rem 0.5rem;
+  border-radius: 15px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 100;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 20rem;
+  width: 12rem;
+}
+
+.subText p{
+  line-height: 0px;
 }
 
 .consult-button button:hover {

@@ -1,0 +1,31 @@
+.TestsContainer{
+    padding: 2rem 4ren;
+}
+
+.temp-title{
+    max-width: 48rem !important;
+    text-align: center !important;
+}
+
+.diseaseSectionExplore{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 4rem;
+    justify-items: center;
+}
+
+.cardDiseaseSection{
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cardDiseaseSection img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

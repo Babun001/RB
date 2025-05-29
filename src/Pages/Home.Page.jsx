@@ -33,13 +33,13 @@ export default function Home() {
             <OurPackage/>
             <CorporateWillSection/>
             <PackagesSection/>
-            {/* <TestsSection/> */}
+            <TestsSection/>
             <WhyChooseUsSection/>
             {/* <TrustSection/> */}
             {/* <TestimonialSection/> */}
             <FAQSectionSection/>
             <ServiceSection/>
-            {/* <ConsultSection/> */}
+            <ConsultSection/>
 
             <FooterSection/>
         </>
