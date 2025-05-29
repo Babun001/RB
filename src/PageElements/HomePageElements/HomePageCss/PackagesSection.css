@@ -1,5 +1,5 @@
 .packageContainer {
-  padding: 4rem 6rem;
+  padding: 6rem 3rem;
 }
 
 .packageUpperSection {
@@ -10,7 +10,7 @@
   margin: auto;
 }
 .pk-title {
-  margin: 0;
+  /* margin: 0; */
 }
 
 .packageLowerSection {

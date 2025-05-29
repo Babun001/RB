@@ -26,10 +26,8 @@
   color: white;
   padding: 6px 16px;
   border-radius: 20px;
-  /* font-size: 0.9rem; */
   font-weight: 500;
   display: inline-block;
-  /* width: 25rem; */
   background-image: linear-gradient(
     to right,
     rgba(0, 169, 143, 1) 0%,
@@ -49,10 +47,9 @@
 .hero-subtext {
   position: absolute;
   bottom: 0rem;
-  left: 0rem;
   font-size: 1.5rem;
   color: rgb(52 103 147);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .divider {

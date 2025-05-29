@@ -35,7 +35,7 @@ export default function CorporateWillSection() {
                 ))}
 
                 {!showAll && (
-                    <button className="viewMoreBtn" onClick={() => setShowAll(true)}>More</button>
+                    <button className="moreBtn" onClick={() => setShowAll(true)}>More</button>
                 )}
             </div>
         </div>

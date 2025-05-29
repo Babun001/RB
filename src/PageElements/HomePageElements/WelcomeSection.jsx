@@ -1,6 +1,6 @@
 import { FaCalendarCheck, FaFileAlt, FaVials, FaMapMarkerAlt } from 'react-icons/fa';
 import './HomePageCss/WelcomeSection.css';
-
+import { MdChevronRight } from "react-icons/md"
 const WelcomeSection = () => {
 
     return (
@@ -15,33 +15,59 @@ const WelcomeSection = () => {
                 <div className="leftBottomWelcomeSection">
                     <div className="cardUpSection">
                         <div className="cardsSection" style={{ backgroundColor: "#e0f7fa" }}>
-                            <div className="iconCircle">
-                                <FaCalendarCheck style={{ color: "#003588" }} />
+
+                            <div className="cardUpperSection">
+                                <span className="iconCircle">
+                                    <FaCalendarCheck style={{ color: "#003588" }} />
+                                </span>
+                                <MdChevronRight style={{ color: "black", fontWeight: "700", fontSize: "2rem" }} />
                             </div>
+
                             <h4>Book an Appointment</h4>
                             <p>Schedule your diagnostic tests effortlessly with our easy online booking system</p>
                         </div>
                         <div className="cardsSection" style={{ backgroundColor: "#fce4ec" }}>
-                            <div className="iconCircle">
-                                <FaVials style={{ color: "#003588" }} />
+
+                            <div className="cardUpperSection">
+                                <div className="iconCircle">
+                                    <FaVials style={{ color: "#003588" }} />
+                                </div>
+                                <MdChevronRight style={{ color: "black", fontWeight: "700", fontSize: "2rem" }} />
                             </div>
+
+
+
                             <h4>Home Collection</h4>
                             <p>Our home collection services ensure accurate sample collection and timely reporting</p>
                         </div>
                     </div>
                     <div className="cardUpSection">
-                        
+
                         <div className="cardsSection" style={{ backgroundColor: "#fff3e0" }}>
-                            <div className="iconCircle">
-                                <FaFileAlt style={{ color: "#003588" }} />
+
+
+                            <div className="cardUpperSection">
+                                <div className="iconCircle">
+                                    <FaFileAlt style={{ color: "#003588" }} />
+                                </div>
+                                <MdChevronRight style={{ color: "black", fontWeight: "700", fontSize: "2rem" }} />
                             </div>
+
+
                             <h4>View Report</h4>
                             <p>Access your medical reports securely anytime from our online portal</p>
                         </div>
                         <div className="cardsSection" style={{ backgroundColor: "#ede7f6" }}>
-                            <div className="iconCircle">
-                                <FaMapMarkerAlt style={{ color: "#003588" }} />
+
+
+
+                            <div className="cardUpperSection">
+                                <div className="iconCircle">
+                                    <FaMapMarkerAlt style={{ color: "#003588" }} />
+                                </div>
+                                <MdChevronRight style={{ color: "black", fontWeight: "700", fontSize: "2rem" }} />
                             </div>
+
                             <h4>Locate a Centre Nearby</h4>
                             <p>Easily find the nearest RB Diagnostic centre for quick service</p>
                         </div>
