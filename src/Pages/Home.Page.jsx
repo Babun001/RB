@@ -35,8 +35,8 @@ export default function Home() {
             <PackagesSection/>
             <TestsSection/>
             <WhyChooseUsSection/>
-            {/* <TrustSection/> */}
-            {/* <TestimonialSection/> */}
+            <TrustSection/>
+            <TestimonialSection/>
             <FAQSectionSection/>
             <ServiceSection/>
             <ConsultSection/>

@@ -1,0 +1,120 @@
+.testimonialContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+  overflow: visible;
+}
+
+.testimonialMiddleSection {
+  /* margin: 2rem 0; */
+  background-image: url("../../../Assets/circle.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: inherit;
+  margin-top: -10rem;
+  padding: 10rem 0;
+  z-index: 0;
+  position: relative;
+}
+
+.testimonialCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.testimonialName {
+  margin: 0.5rem 0 0.2rem;
+  font-weight: bold;
+}
+
+.testimonialText {
+  font-style: italic;
+  color: #555;
+}
+
+.testimonialLowerSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  transform: translateY(-80px);
+}
+
+.videoSection,
+.testimonianlButton {
+  min-width: 150px;
+  max-width: 200px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.responsiveVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.buttonWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonianlButton button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #56d6ca;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 9rem;
+  margin: 2rem;
+}
+
+.testimonialTextSection {
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 35rem;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px #c3e7e7;
+  font-size: 1rem;
+}
+
+.buttonWrapper {
+  background-color: #cef2ef;
+  border-radius: 10px;
+}
+
+.testimonialTextCircleDiv {
+  width: 200px;
+  height: 100px;
+  /* border: 2px solid red; */
+  background-color: #f2f9f9;
+  border-radius: 0 0 150px 150px;
+  transform: translateY(-100px);
+}
