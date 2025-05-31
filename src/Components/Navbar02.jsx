@@ -5,8 +5,8 @@ const SecondaryNavbar = () => {
   return (
     <nav className="secondary-navbar">
       <ul className="nav-menu">
-        <li><Link to="#">Home</Link></li>
-        <li><Link to="#">Home Collection</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/collection">Home Collection</Link></li>
         <li><Link to="#">View Report</Link></li>
 
         <li className="dropdown">

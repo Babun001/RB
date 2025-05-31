@@ -1,4 +1,6 @@
-import { Phone, Mail } from 'lucide-react';
+// import { Phone, Mail } from 'lucide-react';
+import { FaPhone } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 import doctorImage from '../../Assets/background01.png';
 import './HomePageCss/FirstSection.css';
 
@@ -28,10 +30,10 @@ const FirstSection = () => {
                         </div>
                         <div className="hero-float-icons">
                             <div className="icon-circle">
-                                <Phone size={25} />
+                                <FaPhone title='Phone' size={25} />
                             </div>
                             <div className="icon-circle">
-                                <Mail size={25} />
+                                <IoMdMail title="Mail" size={25} />
                             </div>
                         </div>
                     </div>

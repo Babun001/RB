@@ -1,6 +1,9 @@
-import { FaCalendarCheck, FaFileAlt, FaVials, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFileAlt } from 'react-icons/fa';
+import { FaMobileRetro } from "react-icons/fa6";
 import './HomePageCss/WelcomeSection.css';
-import { MdChevronRight } from "react-icons/md"
+import { MdChevronRight } from "react-icons/md";
+import { IoHomeSharp } from "react-icons/io5";
+import { FaBriefcaseMedical } from "react-icons/fa6";
 const WelcomeSection = () => {
 
     return (
@@ -17,8 +20,8 @@ const WelcomeSection = () => {
                         <div className="cardsSection" style={{ backgroundColor: "#e0f7fa" }}>
 
                             <div className="cardUpperSection">
-                                <span className="iconCircle">
-                                    <FaCalendarCheck style={{ color: "#003588" }} />
+                                <span className="iconBackground">
+                                    <FaMobileRetro size={24} style={{ color: "#003588" }} />
                                 </span>
                                 <MdChevronRight style={{ color: "black", fontWeight: "700", fontSize: "2rem" }} />
                             </div>
@@ -29,8 +32,8 @@ const WelcomeSection = () => {
                         <div className="cardsSection" style={{ backgroundColor: "#fce4ec" }}>
 
                             <div className="cardUpperSection">
-                                <div className="iconCircle">
-                                    <FaVials style={{ color: "#003588" }} />
+                                <div className="iconBackground">
+                                    <IoHomeSharp size={24}  style={{ color: "#003588" }} />
                                 </div>
                                 <MdChevronRight style={{ color: "black", fontWeight: "700", fontSize: "2rem" }} />
                             </div>
@@ -47,8 +50,8 @@ const WelcomeSection = () => {
 
 
                             <div className="cardUpperSection">
-                                <div className="iconCircle">
-                                    <FaFileAlt style={{ color: "#003588" }} />
+                                <div className="iconBackground">
+                                    <FaFileAlt size={24} style={{ color: "#003588" }} />
                                 </div>
                                 <MdChevronRight style={{ color: "black", fontWeight: "700", fontSize: "2rem" }} />
                             </div>
@@ -62,14 +65,14 @@ const WelcomeSection = () => {
 
 
                             <div className="cardUpperSection">
-                                <div className="iconCircle">
-                                    <FaMapMarkerAlt style={{ color: "#003588" }} />
+                                <div className="iconBackground">
+                                    <FaBriefcaseMedical size={24} style={{ color: "#003588" }} />
                                 </div>
                                 <MdChevronRight style={{ color: "black", fontWeight: "700", fontSize: "2rem" }} />
                             </div>
 
                             <h4>Locate a Centre Nearby</h4>
-                            <p>Easily find the nearest RB Diagnostic centre for quick service</p>
+                            <p>With multiple centres across Kolkata and beyond, find the nearest RB Diagnostic location with just a click.</p>
                         </div>
                     </div>
 

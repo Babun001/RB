@@ -30,15 +30,16 @@
 }
 
 .navBtn {
-  padding: 0.5rem 1.2rem;
-  border: 2px solid #6897FC;
+  padding: 0.5rem 1rem;
+  border: 1px solid #6897FC;
   background-color: white;
   color: #000000;
   border-radius: 20px;
   cursor: pointer;
-  font-weight: bold;
+  /* font-weight: bold; */
   transition: background 0.3s, color 0.3s;
-  width: 15rem;
+  width: 13rem;
+  font-size: 15px;
 }
 
 .navBtn.active {

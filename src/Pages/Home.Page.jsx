@@ -1,7 +1,7 @@
-import Navbar from "../Components/Navbar01.jsx";
+// import Navbar from "../Components/Navbar01.jsx";
 
 
-import SecondaryNavbar from "../Components/Navbar02.jsx";
+// import SecondaryNavbar from "../Components/Navbar02.jsx";
 import FirstSection from "../PageElements/HomePageElements/FirstSection.jsx";
 import WelcomeSection from "../PageElements/HomePageElements/WelcomeSection.jsx";
 import AboutSection from "../PageElements/HomePageElements/AboutSection.jsx";
@@ -17,7 +17,7 @@ import ServiceSection from "../PageElements/HomePageElements/ServiceSection.jsx"
 import ConsultSection from "../PageElements/HomePageElements/ConsultSection.jsx";
 
 
-import FooterSection from "../Components/Footer.jsx";
+// import FooterSection from "../Components/Footer.jsx";
 
 
 
@@ -25,8 +25,8 @@ import FooterSection from "../Components/Footer.jsx";
 export default function Home() {
     return (
         <>
-            <Navbar />
-            <SecondaryNavbar />
+            {/* <Navbar />
+            <SecondaryNavbar /> */}
             <FirstSection />
             <WelcomeSection />
             <AboutSection />
@@ -41,7 +41,7 @@ export default function Home() {
             <ServiceSection/>
             <ConsultSection/>
 
-            <FooterSection/>
+            {/* <FooterSection/> */}
         </>
     )
 }
