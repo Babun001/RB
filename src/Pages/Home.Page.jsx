@@ -25,8 +25,6 @@ import ConsultSection from "../PageElements/HomePageElements/ConsultSection.jsx"
 export default function Home() {
     return (
         <>
-            {/* <Navbar />
-            <SecondaryNavbar /> */}
             <FirstSection />
             <WelcomeSection />
             <AboutSection />
@@ -40,8 +38,6 @@ export default function Home() {
             <FAQSectionSection/>
             <ServiceSection/>
             <ConsultSection/>
-
-            {/* <FooterSection/> */}
         </>
     )
 }

@@ -1,0 +1,20 @@
+.whscContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    gap: 3rem;
+    /* margin-top: 3rem; */
+    position: relative;
+    /* margin-bottom: 3rem; */
+}
+
+.whscLeftSection{
+    position: relative;
+    width: 100%;
+}
+
+.whscRightSection{
+    position: relative;
+}

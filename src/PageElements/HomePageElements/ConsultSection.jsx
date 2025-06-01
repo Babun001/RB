@@ -1,6 +1,5 @@
 import './HomePageCss/ConsultSection.css';
 import docImg from '../../Assets/DoctorAndCircle.png';
-import { HiOutlinePhone } from "react-icons/hi";
 
 export default function ConsultSection() {
     return (

@@ -1,0 +1,32 @@
+.collectionContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    /* background-color: red; */
+    background-image: url('../../../Assets/HomeCollectionbg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.collectionLowerSec{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: gainsboro; */
+    width: 100%;
+}
+
+.pngSection{
+    /* background-color: red; */
+    
+}
+
+.dottetLine{
+    width: 100%;
+    /* height: 1rem; */
+    border: 1px dashed black ;
+}

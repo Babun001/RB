@@ -1,0 +1,32 @@
+.whyRBDContainer{
+    background-color: red;
+    background-image: url('../../../Assets/faqBackground.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rbdLowerSection{
+    /* background-color: red;
+    margin: 3rem; */
+    width: 60%;
+    margin: auto;
+
+}
+
+.textArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 3rem;
+    margin: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.textArea p{
+    width: 80%;
+}

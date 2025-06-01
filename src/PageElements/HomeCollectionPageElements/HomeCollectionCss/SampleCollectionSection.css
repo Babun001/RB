@@ -1,0 +1,12 @@
+.long-heading{
+    width: 30rem !important;
+}
+
+.sampleCollectionContainer{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    /* background-color: red; */
+    margin: auto;
+    padding: 2rem;
+}
