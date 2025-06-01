@@ -1,0 +1,73 @@
+.appointment-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  position: relative;
+}
+
+.appointmentHeading {
+  color: #00b4aa;
+  margin-bottom: 24px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.appointment-form input[type="text"],
+.appointment-form input[type="email"],
+.appointment-form input[type="date"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.gender-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gender-group div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.gender-group input {
+  margin-right: 4px;
+}
+
+.location-btn {
+  background-color: #3fd1c7;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.location-btn span {
+  margin-right: 6px;
+}
+
+.doctor-img {
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+  height: 180px;
+  object-fit: contain;
+}
