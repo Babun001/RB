@@ -1,6 +1,9 @@
 import './HomePageCss/TestsSections.css'
-
+import { useState } from 'react';
 export default function TestsSections() {
+
+    const [showAll, setShowAll] = useState(false);
+
 
     const testData = [
         { name: "Heart", link: "#", img: "" },
@@ -9,7 +12,15 @@ export default function TestsSections() {
         { name: "Thyroid", link: "#", img: "" },
         { name: "Liver", link: "#", img: "" },
         { name: "Spinal Disc", link: "#", img: "" },
+        { name: "Thyroid", link: "#", img: "" },
+        { name: "Liver", link: "#", img: "" },
+        { name: "Spinal Disc", link: "#", img: "" },
+        { name: "Thyroid", link: "#", img: "" },
+        { name: "Liver", link: "#", img: "" },
+        { name: "Spinal Disc", link: "#", img: "" },
     ]
+    const visibleDiseases = showAll ? testData : testData.slice(0, 6);
+
     return (
         <>
             <div className="TestsContainer">
@@ -25,18 +36,22 @@ export default function TestsSections() {
                 </div>
                 <div className="diseaseSectionExplore">
                     {
-                        testData.map((d, indx) => (
+                        visibleDiseases.map((d, indx) => (
                             <div className="cardDiseaseSection" key={indx}>
-                                <img src="https://t4.ftcdn.net/jpg/03/88/42/87/360_F_388428739_3zMY6G1T67yE9Y3PjT9AMhhsI6lMOFWI.jpg" alt="" />
+                                <img src="https://i.pinimg.com/1200x/46/97/cd/4697cd238531208a7783b70e42070625.jpg" alt="" />
                                 <h2>{d.name}</h2>
-                                <div className="linksDieases">
+                                <p className="linksDieases">
                                     <a href={d.link}>Explore Now</a>
-                                </div>
+                                </p>
                             </div>
                         ))
                     }
-
                 </div>
+                {!showAll && testData.length > 6 && (
+                <div className="viewMoreContainer">
+                    <button className="viewMoreBtn" onClick={() => setShowAll(true)}>View All</button>
+                </div>
+            )}
             </div>
         </>
     )

@@ -10,8 +10,9 @@
 .diseaseSectionExplore{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    gap: 4rem;
+    gap: 1rem;
     justify-items: center;
+    padding: 2rem 4rem;
 }
 
 .cardDiseaseSection{
@@ -28,4 +29,22 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 50%;
+}
+
+.cardDiseaseSection h2{
+    font-size: 1.8rem;
+
+}
+
+.cardDiseaseSection p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.cardDiseaseSection a{
+    text-decoration: none;
+    font-size: 0.8rem;
 }

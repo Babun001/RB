@@ -12,12 +12,11 @@
 
 
 .companiesSection {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  justify-content: start;
+  /* width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  margin: 1rem 0rem;
+  justify-content: center; */
 }
 
 .headLineText{
@@ -36,15 +35,29 @@
     /* border-radius: 20px; */
 }
 
+.companiesSection{
+  /* max-width: 1200px;
+  margin: 0 auto; */
+}
+
 .companyCard {
-  /* width: 10rem;
-  height: auto;
+  padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
   transition: transform 0.3s ease;
 }
 
+/* .slick-slide{
+  width: 8rem !important;
+} */
+.slick-list{
+  padding: 0rem !important;
+}
+
+.slick-track{
+  width: 100%;
+}
 .companyCard:hover {
   transform: scale(1.05);
 }
@@ -54,6 +67,10 @@
   height: 6rem;
   object-fit: contain;
   border-radius: 8px;
+}
+
+.companyCard img:hover {
+  transform: scale(1.05);
 }
 
 .moreBtn {
@@ -85,5 +102,81 @@
   .companyCard {
     width: 100px;
     height: 70px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.companiesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.sliderWrapper {
+  width: 70%;
+  /* max-width: 1000px; */
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.companyCard {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.companyCard img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.companyCard:hover img {
+  transform: scale(1.05);
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.moreBtn {
+  padding: 8px 24px;
+  background-color: #0CA798;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.moreBtn:hover {
+  background-color: #0bc0ad;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sliderWrapper {
+    width: 90%;
+  }
+
+  .companyCard img {
+    width: 4rem;
+    height: 4rem;
   }
 }

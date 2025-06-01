@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './HomePageCss/OurPackageSection.css';
-import { GiWallet } from "react-icons/gi";
-import { FaBookmark } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+// import { FaBookmark } from "react-icons/fa";
 import { FaSearch } from 'react-icons/fa';
 import cornerIcon from '../../Assets/cornerIcon.png';
 
@@ -62,23 +62,24 @@ export default function OurPackage() {
           <div key={index} className="packageCard">
 
             <div className="cornerImage">
+              <div className="upperCardText">
+                <p style={{
+                  backgroundColor: "#D8D5F4",
+                  padding: "0px 20px",
+                  borderRadius: "20px",
+                  fontSize: "1.5rem",
+                  textAlign: "center",
+                  fontWeight: "700"
+                }}>Safe</p>
+              </div>
               <img src={cornerIcon} alt="corner icon" style={{ width: "5.5rem" }} />
             </div>
 
-            <span className="upperCardText">
-              <p style={{
-                backgroundColor: "#D8D5F4",
-                padding: "0px 20px",
-                borderRadius: "20px",
-                fontSize: "1.5rem",
-                textAlign: "center",
-                fontWeight: "700"
-              }}>Safe</p>
-            </span>
+
 
 
             <div className="cardTitlePack">
-              <h2 style={{lineHeight:"25px", margin:"5px 0px"}}>{card.title}</h2>
+              <h2 style={{ lineHeight: "25px", margin: "5px 0px" }}>{card.title}</h2>
             </div>
 
             <span className="testAndComp">
@@ -86,19 +87,19 @@ export default function OurPackage() {
             </span>
 
             <div className="cardsMiddleSec">
-              <h4 style={{fontSize:"1.3rem"}}>Report Delivery</h4>
-              <p style={{color:"gray"}}>Speak to our customer care</p>
+              <h4 style={{ fontSize: "1.3rem" }}>Report Delivery</h4>
+              <p style={{ color: "gray" }}>Speak to our customer care</p>
             </div>
 
             <div className="priceSection">
-              <h2 style={{fontSize:"2.5rem", color:"#01CAB8"}}>₹{card.price.toFixed(2)}</h2>
+              <h2 style={{ fontSize: "2.5rem", color: "#01CAB8" }}>₹{card.price.toFixed(2)}</h2>
             </div>
 
             <div className="cardLowerSec">
-              <button title='Click to View Details'>View Details <FaSearch size={20}/></button>
+              <button title='Click to View Details'>View Details <FaSearch size={20} /></button>
               <div className="cardLowerRigntSec">
-                <GiWallet title="Add to Wallet" style={{color:"#8A8A8A",fontSize:"3rem", cursor:"pointer"}}/>
-                <FaBookmark title="Bookmark" style={{color:"#8A8A8A",fontSize:"3rem", cursor:"pointer", marginLeft:"5px"}}/>
+                <FaShoppingCart title="Add to Cart" style={{ color: "#8A8A8A", fontSize: "2rem", cursor: "pointer" }} />
+                {/* <FaBookmark title="Bookmark" style={{ color: "#8A8A8A", fontSize: "2rem", cursor: "pointer", marginLeft: "5px" }} /> */}
               </div>
             </div>
           </div>

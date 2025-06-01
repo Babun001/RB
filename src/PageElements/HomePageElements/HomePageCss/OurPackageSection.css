@@ -62,7 +62,7 @@
 
 
 .packageCard {
-  width: 19rem;
+  width: 15rem;
   border-radius: 25px;
   padding: 2rem;
   box-shadow: 0 12px 15px rgb(183 246 255);
@@ -71,13 +71,19 @@
 
 .cornerImage{
   display: flex;
-  justify-content: right;
-  transform: translate(55px, -35px);
+  justify-content: space-between;
+  transform: translateY(-60px);
+  margin-bottom: 1.5rem;
+}
+
+.cornerImage img{
+  width: 5.5rem;
+  transform: translate(54px, -20px);
 }
 
 .upperCardText{
   display: flex;
-  transform: translateY(-60px);
+  /* transform: translateY(-60px); */
 }
 .cardTitlePack{
   margin-top: -5rem;
@@ -111,10 +117,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 60%;
+  width: 70%;
   background-color: #01CAB8;
   border: none;
   border-radius: 40px;
   padding: 15px;
   cursor: pointer;
+  color: white;
 }

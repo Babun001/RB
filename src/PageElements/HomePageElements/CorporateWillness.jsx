@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 import './HomePageCss/CorporateWillSection.css';
+import Slider from "react-slick";
+
 import tcs from '../../Assets/tcs.png';
 import wipro from '../../Assets/wipro.png';
 import itc from '../../Assets/itc.png';
 
 export default function CorporateWillSection() {
-    const [showAll, setShowAll] = useState(false);
+    const sliderRef = useRef(null);
 
     const companies = [
         { cName: "TCS", logo: tcs },
@@ -14,9 +16,42 @@ export default function CorporateWillSection() {
         { cName: "TCS", logo: tcs },
         { cName: "ITC", logo: itc },
         { cName: "WIPRO", logo: wipro },
+        { cName: "TCS", logo: tcs },
+        { cName: "ITC", logo: itc },
     ];
 
-    const displayedCompanies = showAll ? companies : companies.slice(0, 3);
+    const handleMoreClick = () => {
+        if (sliderRef.current) {
+            sliderRef.current.slickNext();
+            sliderRef.current.slickNext();
+            sliderRef.current.slickNext();
+        }
+    };
+
+    const settings = {
+        centerMode: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        speed: 500,
+        arrows: true,
+        autoplay: false,
+        ref: sliderRef,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 3 }
+            },
+            {
+                breakpoint: 768,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1 }
+            }
+        ]
+    };
 
     return (
         <div className="corporateContainer">
@@ -27,16 +62,21 @@ export default function CorporateWillSection() {
                 </div>
                 <span className='buttomText'>Companies Who Trust Us</span>
             </div>
-            <div className="companiesSection">
-                {displayedCompanies.map((company, index) => (
-                    <div key={index} className="companyCard">
-                        <img src={company.logo} alt={`Company-${index}`} />
-                    </div>
-                ))}
 
-                {!showAll && (
-                    <button className="moreBtn" onClick={() => setShowAll(true)}>More</button>
-                )}
+            <div className="companiesSection">
+                <div className="sliderWrapper">
+                    <Slider ref={sliderRef} {...settings}>
+                        {companies.map((company, index) => (
+                            <div key={index} className="companyCard">
+                                <img src={company.logo} alt={company.cName} />
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
+
+                <div className="buttonWrapper">
+                    <button className="moreBtn" onClick={handleMoreClick}>More</button>
+                </div>
             </div>
         </div>
     );
