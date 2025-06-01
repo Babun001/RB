@@ -5,6 +5,7 @@
   flex-direction: column;
   padding: 4rem;
   overflow: visible;
+  padding-bottom: 0;
 }
 
 .testimonialMiddleSection {
@@ -52,7 +53,7 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  transform: translateY(-80px);
+  transform: translateY(-100px);
 }
 
 .videoSection,

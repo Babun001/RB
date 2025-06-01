@@ -1,30 +1,37 @@
 .health-section {
+  position: relative;
+  background-color: white;
+  padding: 3rem 8rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.health-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url("../../../Assets/servicesImages.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: Arial, sans-serif;
-  padding: 3rem 8rem;
-  background-color: #f8fdfd;
+  opacity: 0.3;
+  z-index: -1;
 }
 
+
 .section-title {
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 40px;
   color: #000;
-  
 }
 
 .section-content {
-  color: teal;
+  color: #0CA798;
   line-height: 1.6;
   margin-top: 10px;
-  font-size: 16px;
-  /* cursor: pointer; */
+  font-size: 18px;
 }
-
-/* .small-text {
-  font-size: 14px;
-  
-} */

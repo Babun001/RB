@@ -1,5 +1,6 @@
 import './HomePageCss/ConsultSection.css';
 import docImg from '../../Assets/DoctorAndCircle.png';
+import { HiOutlinePhone } from "react-icons/hi";
 
 export default function ConsultSection() {
     return (
@@ -14,8 +15,8 @@ export default function ConsultSection() {
                     <p>Get profeddional medical guidance and follow-up support from our experienced doctors, anytime you need.</p>
                     <div className="subText">
                         <h4>Contact Us</h4>
-                        <p>+91 XXXXXXXXXX</p>
-                        <p>+91 XXXXXXXXXX</p>
+                        <p style={{lineHeight:"5px"}}>+91 XXXXXXXXXX</p>
+                        <p style={{lineHeight:"5px"}}>+91 XXXXXXXXXX</p>
                     </div>
 
                 </div>
