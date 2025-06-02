@@ -27,7 +27,11 @@ export default function OurPackage() {
         title: 'RBD Healthy Life, Blood (Female)',
         TestsAndComp: ['21 Tests', '93 Components'],
         price: 6500.00
-      }
+      },{
+        title: 'KFT',
+        TestsAndComp: ['7 Tests', '7 Components'],
+        price: 1300.00
+      },
     ];
   };
 
@@ -87,7 +91,7 @@ export default function OurPackage() {
             </span>
 
             <div className="cardsMiddleSec">
-              <h4 style={{ fontSize: "1.2rem" }}>Report Delivery</h4>
+              <h4 style={{ fontSize: "1.2rem" , fontWeight:"500"}}>Report Delivery</h4>
               <p style={{ color: "gray" }}>Speak to our customer care</p>
             </div>
 
@@ -98,7 +102,7 @@ export default function OurPackage() {
             <div className="cardLowerSec">
               <button title='Click to View Details'>View Details <FaSearch size={20} /></button>
               <div className="cardLowerRigntSec">
-                <FaShoppingCart title="Add to Cart" style={{ color: "#8A8A8A", fontSize: "2rem", cursor: "pointer" }} />
+                <FaShoppingCart className='addticartBtn' title="Add to Cart" style={{ color: "#8A8A8A", fontSize: "2rem", cursor: "pointer" }} />
                 {/* <FaBookmark title="Bookmark" style={{ color: "#8A8A8A", fontSize: "2rem", cursor: "pointer", marginLeft: "5px" }} /> */}
               </div>
             </div>

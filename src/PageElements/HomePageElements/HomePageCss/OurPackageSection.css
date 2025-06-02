@@ -32,7 +32,7 @@
 
 .navBtn {
   padding: 0.5rem 1rem;
-  border: 1px solid #6897FC;
+  border: 1px solid #6897fc;
   background-color: white;
   color: #000000;
   border-radius: 20px;
@@ -45,7 +45,7 @@
 
 .navBtn.active {
   background-color: #d9ede6;
-  color: #0E408E;
+  color: #0e408e;
   border: none;
 }
 .navBtn:hover {
@@ -56,11 +56,10 @@
 .ourPackageCardSection {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 2rem;
   flex-wrap: wrap;
   margin-top: 4rem;
 }
-
 
 .packageCard {
   width: 15rem;
@@ -71,45 +70,45 @@
   background-color: white;
 }
 
-.cornerImage{
+.cornerImage {
   display: flex;
   justify-content: space-between;
   transform: translateY(-60px);
   margin-bottom: 0.5rem;
 }
 
-.cornerImage img{
+.cornerImage img {
   width: 5.5rem;
   transform: translate(54px, -20px);
 }
 
-.upperCardText{
+.upperCardText {
   /* display: flex; */
   /* transform: translateY(-60px); */
 }
-.cardTitlePack{
+.cardTitlePack {
   margin-top: -5rem;
   min-height: 50px;
 }
 
-.testAndComp p{
-  background-color: #D9EDE6;
+.testAndComp p {
+  background-color: #d9ede6;
   width: fit-content;
   padding: 3px 14px;
   border-radius: 15px;
   font-size: 15px;
 }
 
-.cardsMiddleSec{
+.cardsMiddleSec {
   line-height: 0px;
 }
 
-.cardLowerSec{
+.cardLowerSec {
   display: flex;
   justify-content: space-between;
 }
 
-.cardLowerSec{
+.cardLowerSec {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,10 +119,21 @@
   justify-content: space-around;
   align-items: center;
   width: 70%;
-  background-color: #01CAB8;
+  background-color: #01cab8;
   border: none;
   border-radius: 40px;
   padding: 15px;
   cursor: pointer;
   color: white;
+  font-size: 15px;
+}
+
+.cardLowerSec button:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.addticartBtn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
