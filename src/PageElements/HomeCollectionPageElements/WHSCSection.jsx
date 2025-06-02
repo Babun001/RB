@@ -8,7 +8,7 @@ export default function WHSCSection(){
                 <img className='image-bg' src={bgPng} alt="png" />
             </div>
             <div className="whscRightSection">
-                <h2 className='rb-title'>What is Home Sample Collection?</h2>
+                <h2 className='rb-title whsc-title'>What is Home Sample Collection?</h2>
                 <div className="whscMiddleText">
                     <p>Home sample collection is a convenient service that allows you to have your medical samples collected from the comfort of your home. </p>
                     <p>A trained phlebotomist visits your residence at a scheduled time to collect the necessary samples, which are then transported to our certified laboratories for analysis.</p>

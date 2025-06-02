@@ -5,16 +5,26 @@
     width: 90%;
     margin: auto;
     gap: 3rem;
-    /* margin-top: 3rem; */
+    margin-top: 6rem;
     position: relative;
     /* margin-bottom: 3rem; */
 }
 
 .whscLeftSection{
     position: relative;
-    width: 100%;
+    width: 60%;
 }
 
 .whscRightSection{
     position: relative;
+    margin-left: 4rem;
+}
+
+.whsc-title{
+    width: 60%;
+}
+
+.whscLowerText{
+    margin-top: 4rem;
+    transform: translateX(-25px);
 }
