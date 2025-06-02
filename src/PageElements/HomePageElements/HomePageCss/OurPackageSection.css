@@ -1,5 +1,6 @@
 .ourPackageContainer {
   padding: 4rem 4rem;
+  background-color: #fcfcfc;
 }
 
 .ourPackageUpperSection {
@@ -65,15 +66,16 @@
   width: 15rem;
   border-radius: 25px;
   padding: 2rem;
-  box-shadow: 0 12px 15px rgb(183 246 255);
+  box-shadow: 0 12px 15px #cbcbcb;
   /* text-align: center; */
+  background-color: white;
 }
 
 .cornerImage{
   display: flex;
   justify-content: space-between;
   transform: translateY(-60px);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .cornerImage img{
@@ -82,12 +84,12 @@
 }
 
 .upperCardText{
-  display: flex;
+  /* display: flex; */
   /* transform: translateY(-60px); */
 }
 .cardTitlePack{
   margin-top: -5rem;
-  min-height: 52px;
+  min-height: 50px;
 }
 
 .testAndComp p{

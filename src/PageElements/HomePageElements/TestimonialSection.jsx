@@ -21,7 +21,7 @@ export default function TestimonialSection() {
                         <div className="testimonialTextCircleDiv">
                             
                         </div>
-                        <p>
+                        <p style={{margin:"0"}}>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint facere delectus exercitationem ducimus fugiat
                             aliquid iste vero deleniti cum a. Eligendi cumque eos, architecto placeat ex expedita voluptatem
                             repellendus? Quos?

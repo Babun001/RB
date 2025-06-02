@@ -6,6 +6,7 @@
   padding: 4rem;
   overflow: visible;
   padding-bottom: 0;
+  margin-bottom: -10rem;
 }
 
 .testimonialMiddleSection {
@@ -13,8 +14,8 @@
   background-image: url("../../../Assets/circle.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: inherit;
-  margin-top: -10rem;
+  background-size: contain;
+  margin-top: -13rem;
   padding: 10rem 0;
   z-index: 0;
   position: relative;
@@ -53,7 +54,7 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  transform: translateY(-100px);
+  transform: translateY(-200px);
 }
 
 .videoSection,
@@ -112,10 +113,10 @@
 }
 
 .testimonialTextCircleDiv {
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 70px;
   /* border: 2px solid red; */
   background-color: #f2f9f9;
   border-radius: 0 0 150px 150px;
-  transform: translateY(-100px);
+  transform: translateY(-75px);
 }

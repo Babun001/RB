@@ -65,14 +65,14 @@ export default function OurPackage() {
               <div className="upperCardText">
                 <p style={{
                   backgroundColor: "#D8D5F4",
-                  padding: "0px 20px",
+                  padding: "3px 20px",
                   borderRadius: "20px",
-                  fontSize: "1.5rem",
-                  textAlign: "center",
-                  fontWeight: "700"
+                  // fontSize: "1.5rem",
+                  // textAlign: "center",
+                  // fontWeight: "700"
                 }}>Safe</p>
               </div>
-              <img src={cornerIcon} alt="corner icon" style={{ width: "5.5rem" }} />
+              <img src={cornerIcon} alt="corner icon" style={{ width: "4.5rem" }} />
             </div>
 
 
@@ -87,12 +87,12 @@ export default function OurPackage() {
             </span>
 
             <div className="cardsMiddleSec">
-              <h4 style={{ fontSize: "1.3rem" }}>Report Delivery</h4>
+              <h4 style={{ fontSize: "1.2rem" }}>Report Delivery</h4>
               <p style={{ color: "gray" }}>Speak to our customer care</p>
             </div>
 
             <div className="priceSection">
-              <h2 style={{ fontSize: "2.5rem", color: "#01CAB8" }}>₹{card.price.toFixed(2)}</h2>
+              <h2 style={{ fontSize: "2rem", color: "black" }}>₹{card.price.toFixed(2)}</h2>
             </div>
 
             <div className="cardLowerSec">
