@@ -1,35 +1,64 @@
 .appointment-container {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 40px;
+  width: 80%;
+  margin: auto;
+  padding: 4rem;
   border-radius: 16px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
-  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(187, 225, 216, 0.8);
+  /* background-color: #cccccc; */
   position: relative;
+}
+
+label{
+  font-size: 1.4rem;
 }
 
 .appointmentHeading {
   color: #00b4aa;
-  margin-bottom: 24px;
+  margin-bottom: 6rem;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.halfSection{
+  width: 80%;
 }
 
 .appointment-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 75%;
 }
 
 .row {
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gender-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.gender-options label {
+  font-weight: normal;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .appointment-form input[type="text"],
 .appointment-form input[type="email"],
 .appointment-form input[type="date"] {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 20px;
+  border: 3px solid #ddd;
   border-radius: 6px;
 }
 
@@ -50,24 +79,64 @@
 }
 
 .location-btn {
-  background-color: #3fd1c7;
+  background-color: #56D6CA;
   border: none;
   padding: 10px 20px;
   color: white;
-  font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  align-self: flex-start;
+  font-size: 1.4rem;
+  width: 20rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.location-btn span {
-  margin-right: 6px;
+.location-btn:hover{
+  background-color: #4ec7bb;
 }
+
 
 .doctor-img {
   position: absolute;
-  bottom: 0;
-  right: -40px;
-  height: 180px;
+  bottom: -50px;
+  right: -88px;
   object-fit: contain;
+}
+
+
+.lowerSectionButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lowerSectionButton button{
+  width: 15rem;
+}
+
+.resetBtn{
+  background-color: #ddd;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.lowerSectionButton .resetBtn:hover{
+  background-color: #cacaca;
+}
+
+.lowerSectionButton button:hover{
+  background-color: #4ec7bb;
 }

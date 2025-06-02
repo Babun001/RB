@@ -13,7 +13,7 @@ export default function SampleCollectionSection(){
         <div className="sampleCollectionContainer">
             <div className="sampleCollectionUpperSection">
                 <h4 className="rb-headingTag pk-tag long-heading">Bringing Quality Healthcare to Your Doorstep</h4>
-                <h2 className="rb-title pk-title">Home Sample Collection Process</h2>
+                <h2 className="rb-title pk-title hc-title">Home Sample Collection Process</h2>
             </div>
 
             <div className="sampleCollectionLowerSection">

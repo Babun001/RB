@@ -1,5 +1,13 @@
 .long-heading{
-    width: 30rem !important;
+    width: 25rem !important;
+    margin: auto !important;
+}
+
+.hc-title{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .sampleCollectionContainer{
@@ -9,5 +17,5 @@
     /* background-color: red; */
     margin: auto;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 6rem;
 }

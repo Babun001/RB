@@ -13,7 +13,7 @@ export default function WhyChooseUsRBD() {
         <>
             <div className="whyRBDContainer">
                 <div className="rbdUpperSection">
-                    <h2 className="rb-title">Why Choose RB Diagnostics for Home Sample Collection?</h2>
+                    <h2 className="rb-title wcrbd-title">Why Choose RB Diagnostics for Home Sample Collection?</h2>
                 </div>
                 <div className="rbdLowerSection">
                     {
