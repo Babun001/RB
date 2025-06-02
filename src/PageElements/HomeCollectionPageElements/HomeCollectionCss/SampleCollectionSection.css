@@ -1,21 +1,94 @@
 .long-heading{
-    width: 25rem !important;
+    width: 22rem !important;
     margin: auto !important;
+    justify-content: center !important;
 }
 
 .hc-title{
-    width: 70%;
+    width: 30%;
     margin: auto;
     text-align: center;
     margin-top: 2rem;
+}
+
+.indexHeadline{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    align-items: center;
 }
 
 .sampleCollectionContainer{
     display: flex;
     justify-content: center;
     width: 90%;
-    /* background-color: red; */
+    flex-direction: column;
     margin: auto;
     padding: 2rem;
     margin-top: 6rem;
+    margin-bottom: -7rem;
+}
+
+.curvePng{
+    width: 70%;
+    /* transform: translateX(-40px); */
+    opacity: 0.15;
+    margin: auto;
+}
+
+.sampleCollectionLowerSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 1rem 8rem;
+}
+
+
+.processTextArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50rem;
+    /* padding: 2rem; */
+}
+
+.processTextArea h3{
+    margin: 0;
+}
+
+.processTextArea p{
+    font-size: 12px;
+    color: #727272;
+}
+
+.indexing{
+    width: 4rem;
+    height: 4rem;
+    background-color: #0CA798;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: 400;
+}
+
+.firstTextArea{
+    transform: translate(0px, -148px);
+}
+
+.secondTextArea{
+    transform: translate(0px, -118px);
+}
+
+.thirdTextArea{
+    transform: translate(0px, -95px);
+}
+
+.fourthTextArea{
+    transform: translate(0px, -198px);
 }
