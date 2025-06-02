@@ -1,32 +1,74 @@
-.collectionContainer{
+.collectionContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 90%;
     margin: auto;
-    /* background-color: red; */
     background-image: url('../../../Assets/HomeCollectionbg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 40px;
+    height: 40rem;
+    margin-top: 2rem;
+    position: relative; /* Needed for absolute children */
 }
 
-.collectionLowerSec{
+.collectionTitle{
+    width: 50%;
+}
+
+.upperTextSection p{
+    font-size: 1.4rem;
+}
+
+.collectionUpperSection {
+    width: 90%;
+    position: relative; /* So .dottetLine can position absolutely inside it */
+}
+
+.upperTextSection {
+    width: 50%;
+    transform: translateY(180px);
+}
+
+.collectionLowerSec {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* background-color: gainsboro; */
     width: 100%;
+    margin-top: 8rem;
 }
 
-.pngSection{
-    /* background-color: red; */
-    
+.pngSection {
+    width: 25%;
+    transform: translate(100px, -15px);    
+    position: relative;
 }
 
-.dottetLine{
+.pngSection img {
     width: 100%;
-    /* height: 1rem; */
-    border: 1px dashed black ;
+    height: 100%;
+    object-fit: contain;
+}
+
+.secondPngSection {
+    width: 55%;
+    transform: translate(196px, -35px); /* FIXED: removed invalid syntax */
+    position: relative;
+}
+
+.secondPngSection img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dottetLine {
+    font-size: 3rem;
+    position: absolute;
+    left: 0;
+    transform: translateY(307px);
+    color: #333;
 }
