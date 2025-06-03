@@ -12,7 +12,7 @@ const SecondaryNavbar = () => {
         <li className="dropdown">
           <span>Health Package ▾</span>
           <ul className="dropdown-menu">
-            <li><Link to="#">Basic Package</Link></li>
+            <li><Link to="/OurPackagesPage">Basic Package</Link></li>
             <li><Link to="#">Advanced Package</Link></li>
             <li><Link to="#">Custom Package</Link></li>
           </ul>

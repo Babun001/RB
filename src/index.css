@@ -38,3 +38,9 @@ code {
   align-items: center;
   margin: 0;
 }
+
+.containers{
+  width: 80%;
+  margin: auto;
+  padding: 4rem;
+}
