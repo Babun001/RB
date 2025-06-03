@@ -1,0 +1,77 @@
+.gridContainer{
+    background-image: url('../../../Assets/gridBackground.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+    max-height: 17rem;
+    margin: 0;
+}
+
+
+.customSearchBar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #0CA798;
+    border-radius: 50px;
+    padding: 10px 15px;
+    max-width: 900px;
+    margin-top: 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    margin: auto;
+    transform: translateY(20px);
+}
+
+.inputWithIcon {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0 10px;
+    min-width: 200px;
+}
+
+.inputWithIcon input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px;
+    flex: 1;
+    background: transparent;
+}
+
+.inputIcon {
+    margin-right: 8px;
+    color: #888;
+    font-size: 22px;
+}
+
+.divider {
+    height: 30px;
+    width: 2px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.styledSearchBtn {
+    background-color: #0CA798;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.styledSearchBtn:hover {
+    background-color: #088c7f;
+}
+
+
+.gridUpperTextSection{
+    padding: 3rem;
+}

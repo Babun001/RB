@@ -1,0 +1,108 @@
+.doctor-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.rating-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #00bfa6;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 1;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ccc;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.doctor-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.doctor-info {
+    padding: 12px;
+}
+
+.specialty {
+    color: #00bfa6;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.doctor-name-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.doctor-name {
+    font-size: 16px;
+}
+
+.status-dot {
+    background-color: #e6fff5;
+    color: #00bfa6;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 12px;
+}
+
+.location {
+    font-size: 13px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.fees-book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fees {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00bfa6;
+}
+
+.book-btn {
+    background-color: #00bfa6;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background-color: #009f8b;
+}
