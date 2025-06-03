@@ -1,22 +1,27 @@
-.packageContainer{
-    background-image: url('../../../Assets/ourpackageBg.png');
-    width: 90%;
-    margin: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50px;
-    height: 40rem;
-    position: relative;
-    margin-top: 2rem;
+.packageFirstContainer {
+  background-image: url("../../../Assets/ourpackageBg.png");
+  width: 90%;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50px;
+  height: 40rem;
+  position: relative;
+  margin-top: 2rem;
 }
 
-.packageUpperSection{
-    transform: translateY(0px) !important;
-    text-align: left;
-    margin-left: 2rem;
+.packageFirstUpperSection {
+  transform: translateY(0px);
+  margin-left: 3rem;
+  padding-top: 4rem;
 }
 
-.packageTitle{
-    width: 40%;
+.packageFirstTitle {
+  text-align: left;
+  width: 40%;
+}
+
+.packageTitle {
+  width: 40%;
 }

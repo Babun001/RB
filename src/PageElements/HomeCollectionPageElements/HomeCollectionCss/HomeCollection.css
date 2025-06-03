@@ -12,7 +12,7 @@
     border-radius: 40px;
     height: 40rem;
     margin-top: 2rem;
-    position: relative; /* Needed for absolute children */
+    position: relative;
 }
 
 .collectionTitle{

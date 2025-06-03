@@ -1,0 +1,123 @@
+.mainPackageCardSection{
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+
+.packageBodySection {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.filterSection {
+    flex: 1;
+    max-width: 300px;
+    padding: 1rem;
+    border: 1px solid #939393;
+    border-radius: 25px;
+    background: #f9f9f9;
+    height: 18rem;
+    margin-top: 4rem;
+    width: 270px;
+}
+
+.filterSection label {
+    display: block;
+    margin: 1rem 0;
+}
+
+.filterSection select {
+    width: 100%;
+    background-color: #EDEFEF;
+    border: none;
+    padding: 11px;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+.resetBtn {
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+    background-color: #01CAB8;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.mainPackageCardSection {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 75%;
+}
+
+.midNavButtons{
+    width: 75% !important;
+}
+
+.pagination {
+    margin-top: 1.5rem;
+    text-align: center;
+    grid-column: 1/-1;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: 1px solid #797979;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 3rem;;
+    height: 3rem;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+.pagination .activePage {
+    background-color: #0CA798;
+    color: white;
+    font-weight: bolder;
+    border: none;
+}
+
+
+.filterHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
+
+.mainPackageCard{
+    margin-bottom: 3rem;
+    max-height: 18rem;
+}
+
+.mainLeftDoctorImage{
+    margin-top: 5rem;
+}
+
+/* .pagination .arrowBtn {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.pagination .arrowBtn:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+} */

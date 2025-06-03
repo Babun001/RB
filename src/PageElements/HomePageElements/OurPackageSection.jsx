@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './HomePageCss/OurPackageSection.css';
 import { FaShoppingCart } from "react-icons/fa";
 // import { FaBookmark } from "react-icons/fa";
-import { FaSearch } from 'react-icons/fa';
+// import { FaSearch } from 'react-icons/fa';
 import cornerIcon from '../../Assets/cornerIcon.png';
 
 export default function OurPackage() {
@@ -100,7 +100,7 @@ export default function OurPackage() {
             </div>
 
             <div className="cardLowerSec">
-              <button title='Click to View Details'>View Details <FaSearch size={20} /></button>
+              <button title='Click to View Details'>View Details </button>
               <div className="cardLowerRigntSec">
                 <FaShoppingCart className='addticartBtn' title="Add to Cart" style={{ color: "#8A8A8A", fontSize: "2rem", cursor: "pointer" }} />
                 {/* <FaBookmark title="Bookmark" style={{ color: "#8A8A8A", fontSize: "2rem", cursor: "pointer", marginLeft: "5px" }} /> */}
