@@ -1,39 +1,56 @@
 
 import './DoctorsGridPageCss/DoctorCard.css';
-import { FaStar, FaHeart, FaMapMarkerAlt, FaRegCalendarCheck } from 'react-icons/fa';
+import { FaStar, FaHeart, FaMapMarkerAlt } from 'react-icons/fa';
+import { LuBookText } from "react-icons/lu";
+import { LuDot } from "react-icons/lu";
+import { useEffect, useState } from 'react';
 
-export default function DoctorCard({
-    name = "Dr. A K Jain",
-    specialty = "Diabetologist",
-    location = "SaltLake",
-    availability = "Available",
-    rating = 5.0,
-    fees = 700,
-    imageUrl = "https://via.placeholder.com/300x200?text=Doctor+Image"
-}) {
+export default function DoctorCard(params) {
+
+    const [Liked, setLiked] = useState(false);
+    const [available, setAvailable] = useState(true);
+
+    useEffect(()=>{
+        setAvailable(params.availability);
+
+    })
+
+    const handleLikedBtn = (e) =>{
+        e.preventDefault();
+        setLiked(prev => !prev)
+    }
+
     return (
         <div className="doctor-card">
             <div className="rating-badge">
-                <FaStar /> {rating}
+                <FaStar /> {parseFloat(params.rating).toFixed(1)}
             </div>
-            <div className="favorite-icon">
-                <FaHeart />
+            <div className="favorite-icon" onClick={handleLikedBtn}>
+                <FaHeart size={22} style={{color: Liked?"red":"white"}}/>
             </div>
-            <img src={imageUrl} alt={name} className="doctor-image" />
+            <div className="doctorsImgSec">
+                <img src={params.imageUrl} alt={params.name} className="doctor-image" />
+            </div>
             <div className="doctor-info">
-                <div className="specialty">{specialty}</div>
+                <div className="specialityAndAvailability">
+                    <div className="specialty">{params.specialty}</div>
+                    <span className="status-dot" style={{backgroundColor:!available?'#FFEDE9':'', color:!available?"#FF0000":""}}><LuDot />{available?"Available":"Unavailable"}</span>
+                </div>
                 <div className="doctor-name-status">
-                    <span className="doctor-name">{name}</span>
-                    <span className="status-dot">{availability}</span>
+                    <span className="doctor-name">{params.name}</span>
+                    {/* <span className="status-dot"><LuDot/>{params.availability}</span> */}
                 </div>
                 <div className="location">
-                    <FaMapMarkerAlt /> {location}
+                    <FaMapMarkerAlt /> {params.location}
                 </div>
                 <hr />
+                <div className="consultationFees">
+                    <p>Consultation Fees</p>
+                </div>
                 <div className="fees-book">
-                    <div className="fees">₹{fees}</div>
+                    <div className="fees">₹{params.fees}</div>
                     <button className="book-btn">
-                        <FaRegCalendarCheck /> Book Now
+                        <LuBookText size={18}/> Book Now
                     </button>
                 </div>
             </div>

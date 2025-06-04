@@ -109,7 +109,7 @@ export default function AppointmentSection() {
         </div>
         <div className="lowerSectionButton halfSection">
           <button className="location-btn" type="submit">Submit</button>
-          <button className="resetBtn" type="button">Reset</button>
+          <button className="location-btn" type="button">Reset</button>
         </div>
 
       </form>

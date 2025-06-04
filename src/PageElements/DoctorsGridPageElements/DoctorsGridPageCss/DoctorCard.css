@@ -1,12 +1,13 @@
 .doctor-card {
     width: 250px;
     border: 1px solid #ddd;
-    border-radius: 16px;
+    border-radius: 22px;
     overflow: hidden;
     background: #fff;
     position: relative;
     font-family: 'Segoe UI', sans-serif;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    height: 330px;
 }
 
 .rating-badge {
@@ -15,13 +16,14 @@
     left: 10px;
     background-color: #00bfa6;
     color: white;
-    padding: 4px 8px;
-    border-radius: 12px;
+    padding: 1px 8px;
+    /* border-radius: 12px; */
     font-size: 12px;
     display: flex;
     align-items: center;
     gap: 4px;
     z-index: 1;
+    font-family: sans-serif;
 }
 
 .favorite-icon {
@@ -33,49 +35,73 @@
     z-index: 1;
 }
 
+.doctorsImgSec{
+    overflow: hidden; 
+    height: 167px;
+}
+
 .doctor-image {
     width: 100%;
     height: auto;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
+.doctor-image:hover{
+    transform: scale(1.06);
+}
 .doctor-info {
     padding: 12px;
 }
 
 .specialty {
     color: #00bfa6;
-    font-size: 14px;
+    font-size: 11px;
     margin-bottom: 4px;
 }
 
 .doctor-name-status {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
     font-weight: 600;
     margin-bottom: 4px;
 }
 
 .doctor-name {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .status-dot {
     background-color: #e6fff5;
     color: #00bfa6;
     font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 12px;
+    padding: 1px 10px;
+    /* border-radius: 12px; */
+    display: flex;
+    align-items: center;
 }
 
 .location {
-    font-size: 13px;
+    font-size: 12px;
     color: #555;
     display: flex;
     align-items: center;
     gap: 4px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    font-weight: 500;
+}
+
+hr{
+    border: 1px dashed gray;
+}
+
+.consultationFees p{
+    font-size: 11px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 1rem;
+    margin-bottom: 5px;
 }
 
 .fees-book {
@@ -85,18 +111,19 @@
 }
 
 .fees {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
     color: #00bfa6;
+    font-family: sans-serif;
 }
 
 .book-btn {
     background-color: #00bfa6;
     color: white;
     border: none;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 3px 12px;
+    border-radius: 25px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -105,4 +132,16 @@
 
 .book-btn:hover {
     background-color: #009f8b;
+}
+
+
+.specialityAndAvailability{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+span{
+    font-family: sans-serif !important;
 }

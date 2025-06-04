@@ -1,0 +1,186 @@
+/* .gridMainContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.gridMainContainer {
+  display: flex;
+  padding: 1rem;
+  gap: 1.5rem;
+  /* flex-wrap: wrap; */
+  /* margin-top: 6rem; */
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.gridMainLeftSection {
+  width: 20%;
+  border-radius: 12px;
+  padding: 1rem;
+  height: fit-content;
+  margin-top: 7rem;
+  border: 1px solid #C6C6C6;
+  max-width: 274px;
+}
+
+.gridMainRightSection {
+  width: 72%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 10rem;
+}
+
+.filter-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-section label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.filter-search {
+  padding: 0.6rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: white;
+}
+
+.filter-range {
+  width: 100%;
+}
+
+
+.view-more-btn {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+.view-more-btn:hover {
+  color: #0056b3;
+}
+
+.filterUpperText{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    width: 275px;
+    padding: 0rem 1rem;
+    background-color: #D9EDE6;
+    transform: translate(-17px, -17px);
+    border-radius: 12px;
+}
+
+.filterUpperText p:last-child {
+  color: #7c3aed;
+  cursor: pointer;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.filterUpperText p:last-child:hover {
+  text-decoration: underline;
+}
+
+
+.filterUpperText p{
+    color:#003588;
+    font-size: 1.1rem;
+}
+
+.filter-section + hr {
+  border: none;
+  border-top: 1px solid #C6C6C6;
+  margin: 1rem 0;
+}
+
+input+ hr{
+    border: none;
+  border-top: 1px solid #C6C6C6;
+  margin: 1rem 0;
+}
+
+/* Checkbox Group */
+.checkbox-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+/* Count Pills */
+.checkbox-group label::after {
+  content: "21"; /* placeholder for count */
+  font-size: 0.75rem;
+  color: #334155;
+  background-color: #f1f5f9;
+  border-radius: 999px;
+  padding: 0.2rem 0.5rem;
+  margin-left: auto;
+}
+
+/* View More */
+.view-more-btn {
+  color: #7c3aed;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  font-weight: 500;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 1rem;
+  color: black;
+}
+
+
+.checkbox-group{
+    color: gray;
+    margin-top: 0.8rem;
+}
+@media (max-width: 768px) {
+  .gridMainContainer {
+    flex-direction: column;
+  }
+
+  .gridMainLeftSection,
+  .gridMainRightSection {
+    width: 100%;
+  }
+}
