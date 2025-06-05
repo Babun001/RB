@@ -18,7 +18,6 @@
 .main-img {
   position: relative;
   width: 100%;
-  /* max-width: 45rem; */
 }
 
 .image-bg {
@@ -43,7 +42,6 @@
   margin-top: -4rem;
   position: relative;
 }
-
 
 .about-right .title {
   font-size: 3rem;
@@ -126,39 +124,15 @@
   height: 100%;
 }
 
-@media screen and (min-width: 1441px) {
-  .about-right .description {
-    /* font-size: 25px; */
-  }
-  .about-right .tag {
-    /* font-size: 1.5rem; */
-  }
-  .features li {
-    /* margin-bottom: 1rem; */
-    /* font-size: 25px; */
-  }
-
-  /* .experience-badge {
-    width: 160px;
-    height: 170px;
-    bottom: -30px;
-    left: -30px;
-  } */
-  /* .about-right-buttom {
-    transform: translate(-190px, 150px);
-  } */
-  /* .read-more-btn {
-    width: 20rem;
-    margin: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-  } */
-}
-
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     padding: 2rem 1rem;
+    margin-bottom: 6rem;
+  }
+
+  .about-right .description {
+    margin: 5px;
   }
 
   .main-img {
@@ -172,5 +146,43 @@
   .experience-badge {
     font-size: 0.9rem;
     padding: 0.7rem 1rem;
+  }
+
+  .about-right span {
+    /* background-color: red; */
+    /* margin: auto; */
+    transform: translateY(-400px);
+  }
+
+  .about-right .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-right-buttom {
+    /* background-color: red; */
+    transform: translate(0px, 50px);
+    width: 90%;
+    margin: 2rem;
+  }
+
+  .features li h3 {
+    font-size: 1rem;
+  }
+
+  .features li {
+    font-size: 13px;
+    line-height: 1;
+    width: 90%;
+  }
+
+  .features li strong {
+    display: block;
+    color: #222;
+    margin-bottom: 0.2rem;
+  }
+
+  .read-more-btn{
+    transform: translateX(-36px);
   }
 }

@@ -37,18 +37,18 @@
 
 .doctorsImgSec{
     overflow: hidden; 
-    height: 167px;
+    height: 166px;
 }
 
 .doctor-image {
     width: 100%;
     height: auto;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
 
 .doctor-image:hover{
-    transform: scale(1.06);
+    transform: scale(1.16);
 }
 .doctor-info {
     padding: 12px;
@@ -113,7 +113,7 @@ hr{
 .fees {
     font-size: 25px;
     font-weight: bold;
-    color: #00bfa6;
+    color: black;
     font-family: sans-serif;
 }
 

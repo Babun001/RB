@@ -39,13 +39,25 @@ code {
   margin: 0;
 }
 
-.containers{
+.containers {
   width: 80%;
   margin: auto;
   padding: 4rem;
 }
 
-
-h1,h2,h3,h4,h5, strong, li, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+strong,
+li,
+p {
   font-family: sans-serif !important;
+}
+
+@media (max-width: 768px) {
+  .rb-title {
+    font-size: 2rem;
+  }
 }

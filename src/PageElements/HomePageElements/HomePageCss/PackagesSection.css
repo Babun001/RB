@@ -86,3 +86,53 @@
   border-radius: 20px;
   transform: translate(0px, -10px);
 }
+
+
+@media (max-width: 768px) {
+  .packageContainer {
+    padding: 3rem 1.5rem;
+  }
+
+
+  .packageLowerSection {
+    grid-template-columns: repeat(2, 1fr); /* ✅ Always 2 cards per row */
+    gap: 1.5rem;
+  }
+
+  .diseaseCardSection {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 30px;
+  }
+
+  .diseaseName p {
+    font-size: 1rem;
+    margin: 0 1rem;
+    padding: 5px;
+  }
+
+  .viewMoreBtn {
+    width: 8rem;
+    margin: 2rem 0 0;
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+
+/* @media (max-width: 480px) {
+  .packageLowerSection {
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+
+  .diseaseCardSection {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .viewMoreBtn {
+    width: 90%;
+    margin: 2rem auto;
+  }
+} */

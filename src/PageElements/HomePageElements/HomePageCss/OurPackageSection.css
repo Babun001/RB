@@ -83,10 +83,6 @@
   transform: translate(54px, -20px);
 }
 
-.upperCardText {
-  /* display: flex; */
-  /* transform: translateY(-60px); */
-}
 .cardTitlePack {
   margin-top: -4rem;
   min-height: 50px;
@@ -137,4 +133,41 @@
 .addticartBtn:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .ourPackageContainer {
+    padding: 1rem;
+  }
+
+  .packageCard {
+    margin-bottom: 1rem;
+    width: 12rem;
+  }
+  .testAndComp p {
+    font-size: 11px;
+  }
+
+  .cardsMiddleSec {
+    font-size: 15px;
+  }
+
+  .paraText {
+    font-size: 14px;
+    line-height: 1;
+    width: 100%;
+  }
+
+  .midNavButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .navBtn {
+    width: 100%;
+    font-size: 11px;
+    padding: 0.5rem 0.8rem;
+  }
 }

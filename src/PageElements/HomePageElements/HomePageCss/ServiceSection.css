@@ -35,3 +35,36 @@
   margin-top: 10px;
   font-size: 18px;
 }
+
+
+
+@media (max-width: 768px) {
+  .health-section {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .section-content {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.5;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .health-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .section-content {
+    font-size: 15px;
+  }
+} */

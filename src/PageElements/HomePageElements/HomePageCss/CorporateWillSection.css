@@ -12,11 +12,6 @@
 
 
 .companiesSection {
-  /* width: 60%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center; */
 }
 
 .headLineText{
@@ -104,16 +99,6 @@
     height: 70px;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 .companiesSection {
   display: flex;

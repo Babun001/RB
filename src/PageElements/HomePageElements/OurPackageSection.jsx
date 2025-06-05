@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import './HomePageCss/OurPackageSection.css';
 import { FaShoppingCart } from "react-icons/fa";
-// import { FaBookmark } from "react-icons/fa";
-// import { FaSearch } from 'react-icons/fa';
 import cornerIcon from '../../Assets/cornerIcon.png';
 
 export default function OurPackage() {

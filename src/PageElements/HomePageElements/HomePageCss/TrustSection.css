@@ -60,3 +60,56 @@
     height: 10rem;
     object-fit: contain;
 }
+
+@media (max-width: 768px) {
+  .trustUpperSection {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .innerLowerSection {
+    flex-direction: column;
+    width: 80%;
+    transform: translateY(80px);
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .innerLowerTextSection h3 {
+    font-size: 1.5rem;
+  }
+
+  .innerLowerTextSection p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .trustLowerSection {
+    /* flex-direction: column; */
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .trustLowerSection h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .affiliatedWith img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .innerLowerTextSection h3 {
+    font-size: 2rem;
+  }
+
+  .affiliatedWith img {
+    width: 5rem;
+    height: 5rem;
+  }
+} */

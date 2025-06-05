@@ -31,3 +31,10 @@
 .slick-list{
     padding: 4rem 0rem !important;
 }
+
+
+@media (max-width: 768px) {
+    .rb-title{
+        text-align: center;
+    }
+}

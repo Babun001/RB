@@ -22,7 +22,7 @@
   padding: 1rem;
   height: fit-content;
   margin-top: 7rem;
-  border: 1px solid #C6C6C6;
+  border: 1px solid #c6c6c6;
   max-width: 274px;
 }
 
@@ -32,7 +32,15 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 10rem;
+  position: relative;
 }
+
+.pagination button{
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  align-items: centers;
+}
+
 
 .filter-box {
   display: flex;
@@ -69,7 +77,6 @@
   width: 100%;
 }
 
-
 .view-more-btn {
   color: #007bff;
   text-decoration: underline;
@@ -83,16 +90,16 @@
   color: #0056b3;
 }
 
-.filterUpperText{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    width: 275px;
-    padding: 0rem 1rem;
-    background-color: #D9EDE6;
-    transform: translate(-17px, -17px);
-    border-radius: 12px;
+.filterUpperText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  width: 275px;
+  padding: 0rem 1rem;
+  background-color: #d9ede6;
+  transform: translate(-17px, -17px);
+  border-radius: 12px;
 }
 
 .filterUpperText p:last-child {
@@ -106,21 +113,20 @@
   text-decoration: underline;
 }
 
-
-.filterUpperText p{
-    color:#003588;
-    font-size: 1.1rem;
+.filterUpperText p {
+  color: #003588;
+  font-size: 1.1rem;
 }
 
 .filter-section + hr {
   border: none;
-  border-top: 1px solid #C6C6C6;
+  border-top: 1px solid #c6c6c6;
   margin: 1rem 0;
 }
 
-input+ hr{
-    border: none;
-  border-top: 1px solid #C6C6C6;
+input + hr {
+  border: none;
+  border-top: 1px solid #c6c6c6;
   margin: 1rem 0;
 }
 
@@ -169,11 +175,102 @@ input+ hr{
   color: black;
 }
 
-
-.checkbox-group{
-    color: gray;
-    margin-top: 0.8rem;
+.checkbox-group {
+  color: gray;
+  margin-top: 0.8rem;
 }
+
+.doctors-header-bar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  transform: translateY(-64px);
+  width: 93%;
+}
+
+.doctor-count {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.doctor-count .highlight {
+  color: #8a2be2; /* Purple or theme color */
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.availability-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sort-dropdown label{
+  font-size: 1rem;
+}
+
+
+.sort-dropdown select {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.availability-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slider {
+  width: 50px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2px;
+  transition: background-color 0.3s, justify-content 0.3s;
+}
+
+.slider.on {
+  background-color: #4caf50;
+  justify-content: flex-end;
+}
+
+.icon {
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 14px;
+  color: black;
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
   .gridMainContainer {
     flex-direction: column;

@@ -1,10 +1,29 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import './ComponentsStyles/Navbar02.css';
 
 const SecondaryNavbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+  };
+
   return (
     <nav className="secondary-navbar">
-      <ul className="nav-menu">
+      <div className="menu-toggle" onClick={toggleMenu}>
+        {menuOpen ? (
+          <span className="close-icon">✕</span> // Cross icon
+        ) : (
+          <>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </>
+        )}
+      </div>
+
+      <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/collection">Home Collection</Link></li>
         <li><Link to="#">View Report</Link></li>

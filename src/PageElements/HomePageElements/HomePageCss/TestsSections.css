@@ -48,3 +48,68 @@
     text-decoration: none;
     font-size: 0.8rem;
 }
+
+
+@media (max-width: 1024px) {
+  .diseaseSectionExplore {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .TestsContainer {
+    padding: 2rem 1rem;
+  }
+
+  .pk-tag{
+  }
+
+  .temp-title {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .diseaseSectionExplore {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .cardDiseaseSection {
+    width: 8rem;
+  }
+
+  .cardDiseaseSection h2 {
+    font-size: 1.2rem;
+  }
+
+  .cardDiseaseSection p {
+    font-size: 0.8rem;
+  }
+
+  .cardDiseaseSection a {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .diseaseSectionExplore {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .cardDiseaseSection {
+    width: 100%;
+  }
+
+  .cardDiseaseSection h2 {
+    font-size: 1rem;
+  }
+
+  .cardDiseaseSection p,
+  .cardDiseaseSection a {
+    font-size: 0.7rem;
+  }
+}

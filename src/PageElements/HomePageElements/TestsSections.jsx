@@ -21,6 +21,10 @@ export default function TestsSections() {
         { name: "Thyroid", link: "#", img: thyroidImg},
         { name: "Liver", link: "#", img: liverImg },
         { name: "Spinal Disc", link: "#", img: spinalImg },
+        { name: "Liver", link: "#", img: liverImg },
+        { name: "Spinal Disc", link: "#", img: spinalImg },
+        { name: "Liver", link: "#", img: liverImg },
+        { name: "Spinal Disc", link: "#", img: spinalImg },
         
     ]
     const visibleDiseases = showAll ? testData : testData.slice(0, 6);

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import DoctorCard from './DoctorCards';
 import img from '../../Assets/doctorCardImg.jpg';
+import { FaCheck, FaTimes } from "react-icons/fa";
 import './DoctorsGridPageCss/GridMainSection.css';
 
 
@@ -12,6 +13,9 @@ export default function GridMainSection() {
     const [price, setPrice] = useState(200);
     const [currentPage, setCurrentPage] = useState(1);
     const [showMoreSpecialties, setShowMoreSpecialties] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
+
+
 
     const [openFilters, setOpenFilters] = useState({
         specialties: true,
@@ -28,7 +32,7 @@ export default function GridMainSection() {
     };
 
     const doctorsPerPage = 12;
-    const doctorsDetails = Array(22).fill({
+    const doctorsDetails = Array(20).fill({
         name: "Dr. A K Jain",
         specialty: "Diabetologist",
         location: "SaltLake",
@@ -38,10 +42,14 @@ export default function GridMainSection() {
         imageUrl: img,
     });
 
-    const totalPages = Math.ceil(doctorsDetails.length / doctorsPerPage);
+    const filteredDoctors = isChecked
+  ? doctorsDetails.filter((doc) => doc.availability)
+  : doctorsDetails;
+
+    const totalPages = Math.ceil(filteredDoctors.length / doctorsPerPage);
     const indexOfLastDoctor = currentPage * doctorsPerPage;
     const indexOfFirstDoctor = indexOfLastDoctor - doctorsPerPage;
-    const currentDoctors = doctorsDetails.slice(indexOfFirstDoctor, indexOfLastDoctor);
+    const currentDoctors = filteredDoctors.slice(indexOfFirstDoctor, indexOfLastDoctor);
 
     const handlePageChange = (page) => {
         if (page >= 1 && page <= totalPages) {
@@ -110,7 +118,7 @@ export default function GridMainSection() {
                     {/* Availability */}
                     <div className="filter-section">
                         <div className="filter-header" onClick={() => toggleFilter('availability')}>
-                            <label style={{ color: "black" }}>Availability</label>
+                            <label style={{ color: "black", fontSize:"15px" }}>Availability</label>
                             <span className="arrow">{openFilters.availability ? <FaChevronUp /> : <FaChevronDown />}</span>
                         </div>
                         {openFilters.availability && (
@@ -198,25 +206,53 @@ export default function GridMainSection() {
                         )}
                     </div>
                 </div>
-            </div> 
+            </div>
 
             <div className="gridMainRightSection">
-                {currentDoctors.map((doc, idx) => (
-                    <DoctorCard
-                        key={idx}
-                        name={doc.name}
-                        specialty={doc.specialty}
-                        location={doc.location}
-                        availability={doc.availability}
-                        rating={doc.rating}
-                        fees={doc.fees}
-                        imageUrl={doc.imageUrl}
-                    />
-                ))}
+
+                <div className="doctors-header-bar">
+                    <h3 className="doctor-count">
+                        Showing <span className="highlight">{filteredDoctors.length}</span> Doctors For You
+                    </h3>
+
+                    <div className="header-controls">
+                        <label className="availability-switch">
+                            Availability
+                            <div className={`slider ${isChecked ? 'on' : ''}`} onClick={() => setIsChecked(!isChecked)}>
+                                {isChecked ? <FaCheck className="icon" /> : <FaTimes className="icon" />}
+                            </div>
+                        </label>
+
+                        <div className="sort-dropdown">
+                            <label htmlFor="sort-select">Sort By</label>
+                            <select id="sort-select">
+                                <option>Price (Low to High)</option>
+                                <option>Price (High to Low)</option>
+                                <option>Rating</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                {currentDoctors
+                    .filter(doc => !isChecked || doc.availability)
+                    .map((doc, idx) => (
+                        <DoctorCard
+                            key={idx}
+                            name={doc.name}
+                            specialty={doc.specialty}
+                            location={doc.location}
+                            availability={doc.availability}
+                            rating={doc.rating}
+                            fees={doc.fees}
+                            imageUrl={doc.imageUrl}
+                        />
+                    ))}
 
 
 
-                {totalPages > 1 && (
+                {filteredDoctors.length > doctorsPerPage && (
                     <div className="pagination">
                         <button
                             onClick={() => handlePageChange(currentPage - 1)}
