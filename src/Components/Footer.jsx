@@ -51,7 +51,7 @@ export default function FooterSection() {
                         <ul className="contact-info">
                             <li><FaPhoneAlt /> 033-4085 4085 / 033-3382 3382</li>
                             <li><FaEnvelope /> info@rbdiagnostics.com</li>
-                            <li><FaMapMarkerAlt /> R B Diagnostics (P) Ltd, P-846 Block A, Lake Town, Kolkata-700089<br />
+                            <li><FaMapMarkerAlt size={24}/> R B Diagnostics (P) Ltd, P-846 Block A, Lake Town, Kolkata-700089<br />
                                 Landmark: Near Bank Of Baroda Laketown</li>
                         </ul>
                     </div>
@@ -59,10 +59,10 @@ export default function FooterSection() {
 
                 <div className="footer-bottom">
                     <div className="social-icons">
-                        <FaFacebook size={40}/>
-                        <FaTwitter size={40}/>
-                        <FaLinkedin size={40}/>
-                        <FaYoutube size={40}/>
+                        <FaFacebook />
+                        <FaTwitter />
+                        <FaLinkedin />
+                        <FaYoutube />
                     </div>
                     <p>
                         © Copyright @2021 RB Diagnostic Pvt. Ltd. (India) <br />

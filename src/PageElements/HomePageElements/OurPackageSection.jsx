@@ -25,7 +25,7 @@ export default function OurPackage() {
         title: 'RBD Healthy Life, Blood (Female)',
         TestsAndComp: ['21 Tests', '93 Components'],
         price: 6500.00
-      },{
+      }, {
         title: 'KFT',
         TestsAndComp: ['7 Tests', '7 Components'],
         price: 1300.00
@@ -38,13 +38,16 @@ export default function OurPackage() {
   return (
     <div className="ourPackageContainer">
       <div className="ourPackageUpperSection">
-        <h2 className="rb-title">Our Packages</h2>
-        <p className="paraText">
-          RB Diagnostic offers a comprehensive range of health check-up packages tailored for every stage of life.
-        </p>
-        <p className="paraText">
-          Each package is designed by experts to provide accurate insights and support preventive healthcare, ensuring timely diagnosis and better health outcomes.
-        </p>
+        <h2 className="rb-title ourpackageTitle">Our Packages</h2>
+        <div className="textParaSection">
+          <p className="paraText">
+            RB Diagnostic offers a comprehensive range of health check-up packages tailored for every stage of life.
+          </p>
+          <p className="paraText">
+            Each package is designed by experts to provide accurate insights and support preventive healthcare, ensuring timely diagnosis and better health outcomes.
+          </p>
+        </div>
+
       </div>
 
       <div className="midNavButtons">
@@ -89,7 +92,7 @@ export default function OurPackage() {
             </span>
 
             <div className="cardsMiddleSec">
-              <h4 style={{ fontSize: "1.2rem" , fontWeight:"500"}}>Report Delivery</h4>
+              <h4 style={{ fontSize: "1.2rem", fontWeight: "500" }}>Report Delivery</h4>
               <p style={{ color: "gray" }}>Speak to our customer care</p>
             </div>
 

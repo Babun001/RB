@@ -5,10 +5,11 @@ import './HomePageCss/FirstSection.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import img1 from '../../Assets/background01.png';
-import img2 from '../../Assets/background01.png';
+import img1 from '../../Assets/faqBackground.png';
+import img2 from '../../Assets/wcrbd.png';
+import img3 from '../../Assets/WhyChooseUs.png';
 
-const images = [img1,img2];
+const images = [img1,img2,img3];
 
 const sliderSettings = {
     dots: true,
@@ -42,6 +43,12 @@ const FirstSection = () => {
                     </div>
                 ))}
             </Slider>
+            <div className="hero-section-degins">
+                {/* this is a white circle */}
+                <div className="lefdeginstdiv"></div>
+                {/* this is a white cube */}
+                <div className="rightdegindiv"></div>
+            </div>
 
             {/* Fixed Overlay */}
             <div className="hero-fixed-overlay">

@@ -7,7 +7,7 @@
   gap: 3rem;
   margin-top: 3rem;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .about-left,
@@ -128,7 +128,7 @@
   .about-container {
     flex-direction: column;
     padding: 2rem 1rem;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
   }
 
   .about-right .description {
@@ -161,19 +161,21 @@
 
   .about-right-buttom {
     /* background-color: red; */
-    transform: translate(0px, 50px);
+    transform: translate(0px, 5px);
     width: 90%;
     margin: 2rem;
   }
 
   .features li h3 {
     font-size: 1rem;
+    margin: 0px;
   }
 
   .features li {
     font-size: 13px;
     line-height: 1;
     width: 90%;
+    margin: 10px auto;
   }
 
   .features li strong {
@@ -184,5 +186,6 @@
 
   .read-more-btn{
     transform: translateX(-36px);
+    margin-top: 2rem;
   }
 }

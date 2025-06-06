@@ -13,9 +13,7 @@
   padding: 2rem;
   gap: 2rem;
   font-family: "Segoe UI", sans-serif;
-  /* flex-wrap: wrap; */
-  /* overflow: hidden; */
-} 
+}
 
 .consult-image {
   transform: translateX(5px);
@@ -25,7 +23,6 @@
   width: 25rem;
   transform: translateY(-22px);
 }
-
 
 .consult-text {
   width: 40%;
@@ -50,11 +47,11 @@
   line-height: 0px;
 }
 
-.subText p{
+.subText p {
   line-height: 5px;
 }
 
-.consult-button{
+.consult-button {
   transform: translate(-180px, 80px);
 }
 
@@ -71,7 +68,7 @@
   width: 12rem;
 }
 
-.subText p{
+.subText p {
   line-height: 0px;
 }
 
@@ -84,9 +81,48 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+    border-radius: 30px;
+    gap: 1rem;
+    top: 80px;
+    height: 30rem;
   }
 
   .consult-text {
+    width: 100%;
+    padding: 0;
     text-align: center;
+    transform: translateY(-100px);
+  }
+
+  .consult-text h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .consult-text h4 {
+    font-size: 1.2rem;
+  }
+
+  .consult-text p {
+    font-size: 0.95rem;
+  }
+
+  .consult-button {
+    /* transform: none; */
+    margin-top: 1rem;
+    transform: translateY(-115px);
+  }
+
+  .consult-button button {
+    width: 100%;
+    /* max-width: 250px; */
+    padding: 0.75rem 1rem;
+  }
+
+  .consult-image img {
+    transform: translate(-7px, -85px);
+    width: 17rem;
   }
 }

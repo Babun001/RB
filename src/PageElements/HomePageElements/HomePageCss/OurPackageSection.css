@@ -1,6 +1,7 @@
 .ourPackageContainer {
-  padding: 4rem 4rem;
+  padding: 2rem 2rem;
   background-color: #fcfcfc;
+  margin-bottom: 2rem;
 }
 
 .ourPackageUpperSection {
@@ -15,9 +16,10 @@
 
 .paraText {
   font-size: 14px;
-  line-height: 0px;
+  line-height:0.6;
   text-align: center;
   margin-top: 0.5rem;
+  color: #555;
 }
 
 .midNavButtons {
@@ -136,6 +138,20 @@
 }
 
 @media (max-width: 768px) {
+
+  .ourPackageContainer{
+    margin-bottom: 1.5rem;
+  }
+  .textParaSection{
+    margin-top: -0.5rem;
+  }
+  .ourPackageCardSection {
+    margin-top: 3rem;
+  }
+
+  .ourPackageUpperSection {
+    padding: 0.5rem;
+  }
   .ourPackageContainer {
     padding: 1rem;
   }
@@ -153,7 +169,7 @@
   }
 
   .paraText {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
     width: 100%;
   }
@@ -162,7 +178,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .navBtn {

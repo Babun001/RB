@@ -118,7 +118,7 @@ export default function GridMainSection() {
                     {/* Availability */}
                     <div className="filter-section">
                         <div className="filter-header" onClick={() => toggleFilter('availability')}>
-                            <label style={{ color: "black", fontSize:"15px" }}>Availability</label>
+                            <label style={{ color: "black" }}>Availability</label>
                             <span className="arrow">{openFilters.availability ? <FaChevronUp /> : <FaChevronDown />}</span>
                         </div>
                         {openFilters.availability && (

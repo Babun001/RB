@@ -36,7 +36,7 @@ export default function CorporateWillSection() {
         speed: 500,
         arrows: true,
         autoplay: false,
-        ref: sliderRef,
+        // ref: sliderRef,
         responsive: [
             {
                 breakpoint: 1024,
@@ -57,7 +57,7 @@ export default function CorporateWillSection() {
         <div className="corporateContainer">
             <div className="textSection">
                 <h4 className="rb-headingTag cw-headingTag">Corporate Wellness</h4>
-                <div className="headLineText">
+                <div className="headLineText corporateHeadLineText">
                     <h2 className="rb-title">Preferred Diagnostic Partner for Corporates Across Industries</h2>
                 </div>
                 <span className='buttomText'>Companies Who Trust Us</span>

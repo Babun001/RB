@@ -3,9 +3,40 @@
   max-width: 90%;
   position: relative;
   margin: auto;
-  /* height: 700px; */
+  height: 600px;
+  margin-top: -2rem;
 }
 
+.hero-section-degins {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* should be above slider, but below overlay */
+  pointer-events: none;
+}
+
+/* White Circle */
+.lefdeginstdiv {
+  width: 450px;
+  height: 6rem;
+  border-radius: 0 3rem;
+  transform: translate(-15px, 520px);
+  position: absolute;
+  background-color: white;
+}
+
+/* White Cube (Square) */
+.rightdegindiv {
+  width: 120px;
+  height: 200px;
+  background-color: white;
+  position: absolute;
+  bottom: -29px;
+  right: -28px;
+  border-radius: 20px;
+}
 
 .slider-image {
   width: 100%;
@@ -13,7 +44,6 @@
   object-fit: cover; /* ensures it fills the container without distortion */
   display: block;
 }
-
 
 .hero-fixed-overlay {
   position: absolute;
@@ -37,12 +67,13 @@
 
 .hero-float-icons {
   position: absolute;
-  bottom: 20px;
-  right: 50px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   pointer-events: auto;
+  bottom: 20px;
+  right: 77px;
+  z-index: 5;
 }
 
 .icon-circle {
@@ -55,23 +86,23 @@
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); */
+  animation: pulse-shake 2s infinite;
 }
 
 .icon-circle:hover {
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
-
 
 .scrolling-text-wrapper {
   position: absolute;
   bottom: 1rem;
   left: 0;
-  width: 100%;
+  /* width: 100%; */
   overflow: hidden;
   height: 2rem;
   pointer-events: none;
-  transform: translateY(-92px);
+  z-index: 5;
 }
 
 .scrolling-text-inner {
@@ -99,12 +130,42 @@
   }
 }
 
+@keyframes pulse-shake {
+  0% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(1.07) rotate(-10deg); }
+  40% { transform: scale(1.05) rotate(5deg); }
+  60% { transform: scale(1.07) rotate(-10deg); }
+  80% { transform: scale(1.05) rotate(3deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
 
+
+
+.slick-list {
+  padding: 2rem !important;
+}
 
 @media (max-width: 768px) {
+  .hero-slider-container {
+    height: 300px;
+    margin-top: -1;
+  }
   .slider-image {
-    height: 100px;
+    height: 300px !important;
     border-radius: 1rem;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rightdegindiv {
+    width: 90px;
+    height: 130px;
+  }
+
+  .hero-float-icons {
+    bottom: 4px;
+    right: 42px;
   }
 
   .hero-fixed-overlay {
@@ -114,16 +175,11 @@
   .scrolling-text-wrapper {
     height: 1.5rem;
     bottom: 0.5rem;
+    width: 73%;
   }
 
   .scrolling-text {
     font-size: 1rem;
-  }
-
-  .hero-float-icons {
-    bottom: 10px;
-    right: 10px;
-    gap: 8px;
   }
 
   .icon-circle {
