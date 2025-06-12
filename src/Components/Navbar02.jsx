@@ -47,6 +47,7 @@ const SecondaryNavbar = () => {
         </li>
 
         <li><Link to="/doctors-grid">OPD</Link></li>
+        <li><Link to="/faqs">FAQs</Link></li>
         <li><Link to="#">Corporate Wellness</Link></li>
 
         <li className="dropdown">
