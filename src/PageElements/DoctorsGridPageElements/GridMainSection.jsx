@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import DoctorCard from './DoctorCards';
-import img from '../../Assets/doctorCardImg.jpg';
+// import img from '../../Assets/doctorCardImg.jpg';
 import { FaCheck, FaTimes } from "react-icons/fa";
 import './DoctorsGridPageCss/GridMainSection.css';
+import doctors from '../../DB/DoctorsDetails';
 
 
 import { FaChevronDown } from "react-icons/fa";
@@ -32,19 +33,23 @@ export default function GridMainSection() {
     };
 
     const doctorsPerPage = 12;
-    const doctorsDetails = Array(20).fill({
-        name: "Dr. A K Jain",
-        specialty: "Diabetologist",
-        location: "SaltLake",
-        availability: false,
-        rating: 5.0,
-        fees: 700,
-        imageUrl: img,
-    });
+    // const doctorsDetails = Array(20).fill({
+    //     name: "Dr. A K Jain",
+    //     specialty: "Diabetologist",
+    //     location: "SaltLake",
+    //     availability: false,
+    //     rating: 5.0,
+    //     fees: 700,
+    //     imageUrl: img,
+    // });
+
+    const doctorsDetails = doctors;
+
+
 
     const filteredDoctors = isChecked
-  ? doctorsDetails.filter((doc) => doc.availability)
-  : doctorsDetails;
+        ? doctorsDetails.filter((doc) => doc.availability)
+        : doctorsDetails;
 
     const totalPages = Math.ceil(filteredDoctors.length / doctorsPerPage);
     const indexOfLastDoctor = currentPage * doctorsPerPage;
@@ -240,6 +245,7 @@ export default function GridMainSection() {
                     .map((doc, idx) => (
                         <DoctorCard
                             key={idx}
+                            id={doc.id}
                             name={doc.name}
                             specialty={doc.specialty}
                             location={doc.location}

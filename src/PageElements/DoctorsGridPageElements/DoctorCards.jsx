@@ -4,21 +4,31 @@ import { FaStar, FaHeart, FaMapMarkerAlt } from 'react-icons/fa';
 import { LuBookText } from "react-icons/lu";
 import { LuDot } from "react-icons/lu";
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function DoctorCard(params) {
+
+
+    // console.log("params: ", params)
 
     const [Liked, setLiked] = useState(false);
     const [available, setAvailable] = useState(true);
 
-    useEffect(()=>{
+    useEffect(() => {
         setAvailable(params.availability);
 
-    })
+    },[params.availability])
 
-    const handleLikedBtn = (e) =>{
+    const handleLikedBtn = (e) => {
         e.preventDefault();
         setLiked(prev => !prev)
     }
+
+    const navigate = useNavigate();
+    const handleBookNow = () => {
+        navigate(`/doctors-grid/${params.id}`);
+    };
+
 
     return (
         <div className="doctor-card">
@@ -26,7 +36,7 @@ export default function DoctorCard(params) {
                 <FaStar /> {parseFloat(params.rating).toFixed(1)}
             </div>
             <div className="favorite-icon" onClick={handleLikedBtn}>
-                <FaHeart size={22} style={{color: Liked?"red":"white"}}/>
+                <FaHeart size={22} style={{ color: Liked ? "red" : "white" }} />
             </div>
             <div className="doctorsImgSec">
                 <img src={params.imageUrl} alt={params.name} className="doctor-image" />
@@ -34,7 +44,7 @@ export default function DoctorCard(params) {
             <div className="doctor-info">
                 <div className="specialityAndAvailability">
                     <div className="specialty">{params.specialty}</div>
-                    <span className="status-dot" style={{backgroundColor:!available?'#FFEDE9':'', color:!available?"#FF0000":""}}><LuDot />{available?"Available":"Unavailable"}</span>
+                    <span className="status-dot" style={{ backgroundColor: !available ? '#FFEDE9' : '', color: !available ? "#FF0000" : "" }}><LuDot />{available ? "Available" : "Unavailable"}</span>
                 </div>
                 <div className="doctor-name-status">
                     <span className="doctor-name">{params.name}</span>
@@ -49,8 +59,8 @@ export default function DoctorCard(params) {
                 </div>
                 <div className="fees-book">
                     <div className="fees">₹{params.fees}</div>
-                    <button className="book-btn">
-                        <LuBookText size={18}/> Book Now
+                    <button className="book-btn" onClick={handleBookNow}>
+                        <LuBookText size={18} /> Book Now
                     </button>
                 </div>
             </div>

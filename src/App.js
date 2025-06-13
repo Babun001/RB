@@ -8,6 +8,7 @@ import OurPackagesPage from './Pages/OurPackages.Page';
 import DoctorsGridPage from './Pages/DoctorsGrid.Page';
 import FAQsPage from './Pages/FAQs.Page';
 import CorporateWellnessPage from './Pages/CorporateWellness.Page';
+import DoctorDetailsPage from './PageElements/DoctorsGridPageElements/DoctorDetailsPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/collection' element={<HomeCollection/>}/>
           <Route path='/OurPackagesPage' element={<OurPackagesPage/>}/>
           <Route path='/doctors-grid' element={<DoctorsGridPage/>}/>
+          <Route path="/doctors-grid/:id" element={<DoctorDetailsPage />} />
           <Route path='/faqs' element={<FAQsPage/>}/>
           <Route path='/corporate-wellness' element={<CorporateWellnessPage/>}/>
         </Route>
