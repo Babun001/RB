@@ -7,6 +7,7 @@ import HomeCollection from './Pages/HomeCollection.page';
 import OurPackagesPage from './Pages/OurPackages.Page';
 import DoctorsGridPage from './Pages/DoctorsGrid.Page';
 import FAQsPage from './Pages/FAQs.Page';
+import CorporateWellnessPage from './Pages/CorporateWellness.Page';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/OurPackagesPage' element={<OurPackagesPage/>}/>
           <Route path='/doctors-grid' element={<DoctorsGridPage/>}/>
           <Route path='/faqs' element={<FAQsPage/>}/>
+          <Route path='/corporate-wellness' element={<CorporateWellnessPage/>}/>
         </Route>
       </Routes>
     </Router>

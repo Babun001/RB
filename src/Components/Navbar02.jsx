@@ -13,7 +13,7 @@ const SecondaryNavbar = () => {
     <nav className="secondary-navbar">
       <div className="menu-toggle" onClick={toggleMenu}>
         {menuOpen ? (
-          <span className="close-icon">✕</span> // Cross icon
+          <span className="close-icon">✕</span> 
         ) : (
           <>
             <span className="bar"></span>
@@ -48,7 +48,7 @@ const SecondaryNavbar = () => {
 
         <li><Link to="/doctors-grid">OPD</Link></li>
         <li><Link to="/faqs">FAQs</Link></li>
-        <li><Link to="#">Corporate Wellness</Link></li>
+        <li><Link to="/corporate-wellness">Corporate Wellness</Link></li>
 
         <li className="dropdown">
           <span>About ▾</span>

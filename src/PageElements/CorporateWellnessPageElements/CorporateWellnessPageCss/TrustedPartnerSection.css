@@ -1,0 +1,26 @@
+.partner-section{
+    padding: 2rem 5rem;
+}
+
+.partner-logo {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 0 ;  /* Reduce horizontal padding (was probably 10px) */
+  margin: 0;
+  gap: 1rem;       /* Remove any margin */
+}
+
+.partner-logo img {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+
+.partner-section h2{
+    margin-bottom: 0 !important;
+}
