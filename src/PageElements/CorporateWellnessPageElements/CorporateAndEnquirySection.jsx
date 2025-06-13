@@ -126,7 +126,7 @@ export default function CorporateAndEnquirySection() {
                         </div>
 
 
-                        <textarea className= 'message' name="message" placeholder="Message" rows="4" value={formData.message} onChange={handleInputChange}></textarea>
+                        <textarea className='message' name="message" placeholder="Message" rows="4" value={formData.message} onChange={handleInputChange}></textarea>
 
                         <button type="submit" style={{
                             backgroundColor: '#0ca9a3',
