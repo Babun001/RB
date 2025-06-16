@@ -95,7 +95,7 @@
 }
 
 .testimonialTextSection {
-  padding: 4rem 2rem;
+  padding: 2rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -118,7 +118,7 @@
   /* border: 2px solid red; */
   background-color: #f2f9f9;
   border-radius: 0 0 150px 150px;
-  transform: translateY(-75px);
+  transform: translateY(-50px);
 }
 
 
