@@ -26,7 +26,8 @@ export default function DoctorCard(params) {
 
     const navigate = useNavigate();
     const handleBookNow = () => {
-        navigate(`/doctors-grid/${params.id}`);
+        navigate(`#`);
+        // navigate(`/doctors-grid/${params.id}`);
     };
 
 
