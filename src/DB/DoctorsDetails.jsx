@@ -61,7 +61,8 @@ const doctors = [
         contact: "033-4022-1122",
         rating: 4.8,
         reviews: 98,
-        availableDays: "Mon-Fri",
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         bio: "Heart care specialist with expertise in preventive cardiology and interventional treatments.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -97,7 +98,8 @@ const doctors = [
         contact: "033-4090-0022",
         rating: 4.6,
         reviews: 80,
-        availableDays: "Tue-Sat",
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         bio: "Skincare expert handling acne, pigmentation, and cosmetic dermatology.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -133,7 +135,8 @@ const doctors = [
         contact: "033-4055-1144",
         rating: 4.9,
         reviews: 120,
-        availableDays: "Mon-Sat",
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         bio: "Child health specialist providing neonatal and adolescent care.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -168,8 +171,9 @@ const doctors = [
         imageUrl: img,
         contact: "033-4099-1177",
         rating: 4.7,
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         reviews: 110,
-        availableDays: "Mon-Fri",
         bio: "Bone and joint specialist, expert in sports injuries and joint replacements.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -204,8 +208,9 @@ const doctors = [
         imageUrl: img,
         contact: "033-4044-1188",
         rating: 4.5,
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         reviews: 87,
-        availableDays: "Weekends",
         bio: "Mental health professional with experience in anxiety, depression and trauma therapy.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -241,7 +246,8 @@ const doctors = [
         contact: "033-4095-1199",
         rating: 4.8,
         reviews: 70,
-        availableDays: "Mon-Wed",
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         bio: "ENT surgeon for sinus, tonsils, ear problems and surgeries.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -277,7 +283,8 @@ const doctors = [
         contact: "033-4033-7788",
         rating: 4.6,
         reviews: 65,
-        availableDays: "Tue-Sat",
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         bio: "Women's health expert in fertility, pregnancy care and hormonal issues.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -313,7 +320,8 @@ const doctors = [
         contact: "033-4088-2299",
         rating: 4.9,
         reviews: 140,
-        availableDays: "Mon-Fri",
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         bio: "Kidney and urinary tract specialist, experienced in laparoscopy and prostate treatments.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -349,7 +357,8 @@ const doctors = [
         contact: "033-4012-2299",
         rating: 4.7,
         reviews: 95,
-        availableDays: "Weekdays",
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         bio: "Cancer care expert specializing in chemotherapy, radiation and palliative care.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -385,7 +394,8 @@ const doctors = [
         contact: "033-4066-8877",
         rating: 4.8,
         reviews: 130,
-        availableDays: "Mon-Sat",
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         bio: "Digestive tract expert with expertise in liver diseases and endoscopy.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
@@ -420,8 +430,9 @@ const doctors = [
         imageUrl: img,
         contact: "033-4000-9922",
         rating: 4.9,
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
         reviews: 155,
-        availableDays: "Weekdays",
         bio: "Brain and nervous system specialist, expert in stroke and epilepsy care.",
         Awards: [
             { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }

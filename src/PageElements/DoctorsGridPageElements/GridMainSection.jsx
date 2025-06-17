@@ -257,6 +257,10 @@ export default function GridMainSection() {
                             bio={doc.bio}
                             Awards={doc.Awards}
                             experienceDetails={doc.experienceDetails}
+                            availableDays = {doc.availableDays}
+                            contact = {doc.contact}
+                            languages = {doc.languages}
+                            reviews = {doc.reviews}
                         />
                     ))}
 

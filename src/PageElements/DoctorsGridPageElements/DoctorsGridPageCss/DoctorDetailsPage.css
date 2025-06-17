@@ -33,11 +33,13 @@
 }
 
 
-
+.availabilitySection{
+  /* background-color: red; */
+}
 
 .doctorImage {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 12px;
   object-fit: cover;
   border: 1px solid #ccc;
@@ -117,9 +119,6 @@
   text-align: center;
 }
 
-.ratingSection {
-  display: flex;
-}
 
 .ratingSection .stars {
   color: #0ca798;
@@ -203,7 +202,7 @@
 }
 
 .doctorDetailsPara {
-  padding: 1.5rem;
+  margin-top: 2.5rem;
 }
 .experienceCard {
   display: flex;
@@ -211,7 +210,14 @@
   padding: 1rem;
   border: 1px solid #989898;
   border-radius: 15px;
-  margin: 2rem;
+  margin: 1rem 0rem;
+}
+.doctorDetailsUpperButton{
+  margin-bottom: 1rem;
+}
+
+.doctorExperienceSection{
+  margin-top: 2.5rem;
 }
 
 .experienceCard img {
@@ -234,13 +240,21 @@
 }
 
 .awardsCarouselWrapper {
-  margin: 2rem;
+  /* margin: 2rem; */
 }
 
 /* this is rating section css */
 
 .ratingSection {
   display: flex;
+  /* flex-direction: column; */
+  /* margin-top: 2rem; */
+}
+
+.ratingCountSection{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
 }
 
 .ratingRow {
@@ -274,4 +288,37 @@
 .feedbackCount {
   font-size: 1rem;
   color: #000;
+}
+
+
+.doctorDetailsUpperRightText {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+.iconWithText {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.texticonCircle {
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  border-radius: 50%;
+  /* background-color: #0CA798; */
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.availableText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
 }

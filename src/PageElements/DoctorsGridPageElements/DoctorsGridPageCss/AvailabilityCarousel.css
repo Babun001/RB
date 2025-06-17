@@ -1,5 +1,5 @@
 .availabilityWrapper {
-  margin: 2rem;
+  /* margin: 2rem; */
 }
 
 .carouselContainer {
@@ -26,21 +26,21 @@
 .carouselNav.right {
   position: absolute;
   right: 0;
-  transform: translate(7px, -120px);
+  transform: translate(0px, -100px);
 }
 
 
 .carouselNav.left {
   position: absolute;
   right: 0;
-  transform: translate(-30px, -120px);
+  transform: translate(-40px, -100px);
 }
 .availabilityTrack {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 1rem;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   scrollbar-width: none;
 }
 

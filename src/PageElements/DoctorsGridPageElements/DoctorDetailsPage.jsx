@@ -8,6 +8,7 @@ import { BsCashCoin } from "react-icons/bs";
 import { FaPhone } from "react-icons/fa6";
 import { VscWatch } from "react-icons/vsc";
 import { IoMdClose } from "react-icons/io";
+import { RiSpeakFill } from "react-icons/ri";
 
 import AwardsCarousel from "./AwardCarousal";
 import AvailabilityCarousel from "./AvailabilityCarousel";
@@ -15,6 +16,7 @@ import './DoctorsGridPageCss/DoctorDetailsPage.css';
 
 export default function DoctorDetailsPage({ doctor, onClose }) {
     const [activeTab, setActiveTab] = useState("Doctor Bio");
+    const [showFullBio, setShowFullBio] = useState(false);
 
     const detailsTabs = ["Doctor Bio", "Experience", "Availability", "Awards", "Rating"];
 
@@ -29,13 +31,38 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
     const renderTabContent = () => {
         switch (activeTab) {
             case "Doctor Bio":
+                
+                const bioWords = doctor.bio?.split(" ") || [];
+                const shouldTruncate = bioWords.length > 30;
+                const displayedBio = showFullBio ? doctor.bio : bioWords.slice(0, 30).join(" ") + "...";
+
                 return (
                     <div className="doctorDetailsPara">
-                        <p className="doctorBio">{doctor.bio}</p>
+                        <p className="doctorBio">{displayedBio}</p>
+                        {shouldTruncate && (
+                            <button
+                                className="readMoreBtn"
+                                onClick={() => setShowFullBio(!showFullBio)}
+                                style={{
+                                    background: "none",
+                                    color: "#0CA798",
+                                    border: "none",
+                                    cursor: "pointer",
+                                    padding: 0,
+                                    fontWeight: "bold",
+                                    display:"flex",
+                                    justifyContent:"center"
+                                }}
+                            >
+                                {showFullBio ? "Read Less" : "Read More"}
+                            </button>
+                        )}
+                        <br />
                         <strong>Training</strong>
                         <p className="doctorBio">{doctor.bio}</p>
                     </div>
                 );
+
             case "Experience":
                 return (
                     <div className="doctorExperienceSection">
@@ -70,7 +97,7 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
                 );
             case "Rating":
                 return (
-                    <div className="ratingSection">
+                    <div className="ratingCountSection">
                         {ratingsData.map((rating, index) => (
                             <div key={index} className="ratingRow">
                                 <div className="stars">
@@ -132,12 +159,18 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
                                 <BsCashCoin /> <span style={{ fontSize: "1.3rem", color: "#0CA798" }}>₹{doctor.fees}/-</span> Consultant Fee</p>
                         </div>
                     </div>
-
                     <div className="doctorDetailsUpperRightSection">
                         <div className="doctorDetailsUpperRightText">
-                            <p className="availableDays"><VscWatch /> {doctor.availableDays?.join(", ")}</p>
-                            <p className="availableDays"><VscWatch /> {doctor.languages?.join(", ")}</p>
+                            <div className="iconWithText">
+                                <div className="texticonCircle"><VscWatch size="1.5rem" /></div>
+                                <p className="availableText">{doctor.availableDays?.join(", ")}</p>
+                            </div>
+                            <div className="iconWithText">
+                                <div className="texticonCircle"><RiSpeakFill size="1.5rem" /></div>
+                                <p className="availableText">{doctor.languages?.join(", ")}</p>
+                            </div>
                         </div>
+
                         <div className="doctorDetailsUpperButton">
                             <p className="doctorPhone"><FaPhone /> {doctor.contact}</p>
                             <button className="bookAppointmentBtn">BOOK APPOINTMENT</button>
