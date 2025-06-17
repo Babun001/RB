@@ -128,7 +128,7 @@ body {
   }
 } */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .NavbarDiv {
     flex-direction: row;
     flex-wrap: wrap;
@@ -166,7 +166,6 @@ body {
     flex-direction: column;
     align-items: flex-end;
     gap: 0.3rem;
-    /* flex: 0; */
   }
 
   .contactSection {
@@ -205,5 +204,77 @@ body {
     width: 100%;
     justify-content: flex-start;
   }
-}
+} */
 
+
+
+@media (max-width: 768px) {
+  .NavbarDiv {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .leftNavSection {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .logoSection img {
+    height: 50px;
+    margin-right: 1rem;
+  }
+
+  .playStoreSection .buttons {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .playStoreSection img {
+    height: 1.6rem;
+  }
+
+  .rightNavSection {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .contactSection {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    gap: 0.2rem;
+  }
+
+  .mailId p,
+  .phoneNumbers p {
+    font-size: 0.95rem;
+  }
+
+  .rightButtonSection {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .rightButtonSection button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .rightLeftSection {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .barDiv {
+    display: none;
+  }
+}

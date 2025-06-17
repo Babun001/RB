@@ -1,5 +1,4 @@
 .whyRBDContainer{
-    /* background-color: red; */
     background-image: url('../../../Assets/wcrbd.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -15,8 +14,6 @@
     color: white;
 }
 .rbdLowerSection{
-    /* background-color: red;
-    margin: 3rem; */
     width: 80%;
     margin: auto;
 
@@ -37,4 +34,34 @@
 
 .textArea p{
     width: 80%;
+}
+
+@media (max-width: 768px) {
+  .whyRBDContainer {
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .wcrbd-title {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .rbdLowerSection {
+    width: 100%;
+  }
+
+  .textArea {
+    flex-direction: column;
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 12px;
+  }
+
+  .textArea p {
+    width: 100%;
+    font-size: 12px;
+  }
 }
