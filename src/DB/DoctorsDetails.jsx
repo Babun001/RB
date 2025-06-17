@@ -1,11 +1,13 @@
 import img from '../Assets/doctorCardImg.jpg';
 
+
+
 const doctors = [
     {
         id: "1",
         name: "Dr. A K Jain",
         specialty: "Diabetologist",
-        experience: "7 Yrs Exp",
+        experience: 7,
         location: "Salt Lake",
         fees: 700,
         available: true,
@@ -13,8 +15,19 @@ const doctors = [
         contact: "033-4085-4085",
         rating: 5.0,
         reviews: 150,
-        availableDays: "weekdays",
-        bio: "Experienced in a wide variety of medical settings with a focus on diabetes management and lifestyle care.",
+        availableDays: ["Monday", "Wednessday", "Sunday"],
+        languages:["Bengali","English", "Hindi"],
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt vero aperiam, perferendis tempora saepe iure quas distinctio a recusandae eaque repudiandae sed doloribus tenetur. Consectetur nostrum placeat cum quibusdam. Ipsam eligendi",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" },
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" },
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" },
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" },
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" },
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" },
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" },
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" },
+        ],
         experienceDetails: [
             {
                 hospital: "Cambridge University Hospital, NHS Foundation Trust",
@@ -22,7 +35,8 @@ const doctors = [
                 location: "Cambridge",
                 duration: "Dec 2020 - Jan 2022",
                 total: "2 Years 2 months",
-                description: "Expert in diagnostics, primary care, and emergency medicine."
+                description: "Expert in diagnostics, primary care, and emergency medicine.",
+                logo:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMeQkx61Sz20haGctI4_ZuESB7OugXJcbipNlRW6SFWo7ni4y5PFNxCqWthWmyG-c3S0k&usqp=CAU'
             },
             {
                 hospital: "Hill Medical Hospital, Newcastle",
@@ -30,7 +44,8 @@ const doctors = [
                 location: "Newcastle",
                 duration: "Dec 2022 - Jan 2024",
                 total: "1 Year 2 months",
-                description: "Expertise in diagnostics, primary care and emergency medicine."
+                description: "Expertise in diagnostics, primary care and emergency medicine.",
+                logo:'https://penji.co/wp-content/uploads/2022/10/6-hill-medical-1024x1024.jpg.webp'
             }
         ]
     },
@@ -48,6 +63,9 @@ const doctors = [
         reviews: 98,
         availableDays: "Mon-Fri",
         bio: "Heart care specialist with expertise in preventive cardiology and interventional treatments.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "Apollo Gleneagles",
@@ -81,6 +99,9 @@ const doctors = [
         reviews: 80,
         availableDays: "Tue-Sat",
         bio: "Skincare expert handling acne, pigmentation, and cosmetic dermatology.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "Kaya Clinic",
@@ -108,12 +129,15 @@ const doctors = [
         location: "New Town",
         fees: 650,
         available: true,
-        imageUrl:img,
+        imageUrl: img,
         contact: "033-4055-1144",
         rating: 4.9,
         reviews: 120,
         availableDays: "Mon-Sat",
         bio: "Child health specialist providing neonatal and adolescent care.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "Rainbow Children's Hospital",
@@ -147,6 +171,9 @@ const doctors = [
         reviews: 110,
         availableDays: "Mon-Fri",
         bio: "Bone and joint specialist, expert in sports injuries and joint replacements.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "Fortis Hospital",
@@ -180,6 +207,9 @@ const doctors = [
         reviews: 87,
         availableDays: "Weekends",
         bio: "Mental health professional with experience in anxiety, depression and trauma therapy.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "NIMHANS",
@@ -213,6 +243,9 @@ const doctors = [
         reviews: 70,
         availableDays: "Mon-Wed",
         bio: "ENT surgeon for sinus, tonsils, ear problems and surgeries.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "AIIMS Delhi",
@@ -246,6 +279,9 @@ const doctors = [
         reviews: 65,
         availableDays: "Tue-Sat",
         bio: "Women's health expert in fertility, pregnancy care and hormonal issues.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "Cloudnine Hospital",
@@ -279,6 +315,9 @@ const doctors = [
         reviews: 140,
         availableDays: "Mon-Fri",
         bio: "Kidney and urinary tract specialist, experienced in laparoscopy and prostate treatments.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "Max Healthcare",
@@ -312,6 +351,9 @@ const doctors = [
         reviews: 95,
         availableDays: "Weekdays",
         bio: "Cancer care expert specializing in chemotherapy, radiation and palliative care.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "Tata Memorial Hospital",
@@ -345,6 +387,9 @@ const doctors = [
         reviews: 130,
         availableDays: "Mon-Sat",
         bio: "Digestive tract expert with expertise in liver diseases and endoscopy.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "KIMS Hospital",
@@ -378,6 +423,9 @@ const doctors = [
         reviews: 155,
         availableDays: "Weekdays",
         bio: "Brain and nervous system specialist, expert in stroke and epilepsy care.",
+        Awards: [
+            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
+        ],
         experienceDetails: [
             {
                 hospital: "AIIMS",

@@ -1,0 +1,277 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-height: 95vh;
+  overflow-y: auto;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+
+.doctorImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.doctorDetailsUpperMiddleSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  margin: 0 2rem;
+}
+
+.doctorName {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin:0;
+}
+
+.verifiedTick {
+  color: rgb(54, 116, 251);
+  font-size: 1rem;
+  /* margin-left: 0.5rem; */
+}
+
+.statusBadge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.statusBadge.available {
+  color: #0ca798;
+  border: 1px solid rgb(233, 233, 233);
+  width: fit-content;
+  font-size: 13px;
+}
+
+.statusBadge.unavailable {
+  color: #ff4d4f;
+  background-color: #ffe5e5;
+}
+
+.doctorHighlights p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 0.5rem;
+}
+.doctorHighlights img {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.doctorDetailsUpperRightSection {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 13rem;
+}
+
+.availableDays {
+  color: #555;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.ratingSection {
+  display: flex;
+}
+
+.ratingSection .stars {
+  color: #0ca798;
+  font-size: 15px;
+  margin-right: 0.3rem;
+}
+
+.ratingSection a {
+  color: #000;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  margin-left: 0.4rem;
+}
+
+.doctorPhone {
+  font-size: 1.1rem;
+  margin: 0.7rem 0;
+  font-weight: 600;
+}
+
+.bookAppointmentBtn {
+  background-color: #0ca798;
+  color: white;
+  font-weight: bold;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bookAppointmentBtn:hover {
+  background-color: #0a8c82;
+}
+
+.doctorDetailsPageContainer {
+  background-color: white;
+  width: 55%;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border: 1px solid #a0a0a0;
+  border-radius: 25px;
+}
+
+.doctorDetailsPageUpperSection {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 2rem; */
+}
+
+.doctorDetailsTabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #dbede7;
+  padding: 1rem;
+}
+
+.doctorTabButton {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid #0ca798;
+  width: 7rem;
+  cursor: pointer;
+}
+
+.doctorTabButton:hover {
+  background-color: #f0f0f0;
+  border-color: #707070;
+}
+
+.doctorTabButton.active {
+  background-color: #0ca798;
+  color: white;
+  border-color: #00b894;
+}
+
+.doctorDetailsPara {
+  padding: 1.5rem;
+}
+.experienceCard {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #989898;
+  border-radius: 15px;
+  margin: 2rem;
+}
+
+.experienceCard img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border: 1px solid #c2c2c2;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.expHeadLine {
+  margin: 0;
+  font-weight: normal;
+}
+
+.experienceParaDiv p {
+  line-height: 0.5;
+  font-size: 13px;
+}
+
+.awardsCarouselWrapper {
+  margin: 2rem;
+}
+
+/* this is rating section css */
+
+.ratingSection {
+  display: flex;
+}
+
+.ratingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.star {
+  color: #d3d3d3;
+  font-size: 1.5rem;
+}
+
+.star.filled {
+  color: #00a89d;
+}
+
+.count {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.feedbackCount {
+  font-size: 1rem;
+  color: #000;
+}

@@ -15,12 +15,13 @@ function App() {
     <Router>
       <ScrollToTop/>
       <Routes>
+        <Route path="/doctors-grid/:id" element={<DoctorDetailsPage />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Home/>}/>
           <Route path='/collection' element={<HomeCollection/>}/>
           <Route path='/OurPackagesPage' element={<OurPackagesPage/>}/>
           <Route path='/doctors-grid' element={<DoctorsGridPage/>}/>
-          <Route path="/doctors-grid/:id" element={<DoctorDetailsPage />} />
+          {/* <Route path="/doctors-grid/:id" element={<DoctorDetailsPage />} /> */}
           <Route path='/faqs' element={<FAQsPage/>}/>
           <Route path='/corporate-wellness' element={<CorporateWellnessPage/>}/>
         </Route>

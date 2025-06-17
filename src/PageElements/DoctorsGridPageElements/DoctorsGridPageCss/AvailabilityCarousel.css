@@ -1,0 +1,82 @@
+.availabilityWrapper {
+  margin: 2rem;
+}
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carouselNav {
+  background-color: #e5f5f3;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 2;
+  transition: background-color 0.3s;
+}
+
+.carouselNav:hover {
+  background-color: #d2ece9;
+}
+
+.carouselNav.right {
+  position: absolute;
+  right: 0;
+  transform: translate(7px, -120px);
+}
+
+
+.carouselNav.left {
+  position: absolute;
+  right: 0;
+  transform: translate(-30px, -120px);
+}
+.availabilityTrack {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.availabilityTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.availabilityCard {
+  flex: 0 0 170px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.availabilityCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.availabilityCard .date {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.availabilityCard .time {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.3rem 0;
+}
+
+.availabilityCard .period {
+  font-size: 0.85rem;
+  color: #666;
+}

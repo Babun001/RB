@@ -1,109 +1,168 @@
-import doctors from "../../DB/DoctorsDetails";
-import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
+import { MdVerified } from "react-icons/md";
+import { FaStethoscope } from "react-icons/fa6";
+import { TbStarsFilled } from "react-icons/tb";
+import { CiLocationOn } from "react-icons/ci";
+import { BsCashCoin } from "react-icons/bs";
+import { FaPhone } from "react-icons/fa6";
+import { VscWatch } from "react-icons/vsc";
+import { IoMdClose } from "react-icons/io";
+
+import AwardsCarousel from "./AwardCarousal";
+import AvailabilityCarousel from "./AvailabilityCarousel";
 import './DoctorsGridPageCss/DoctorDetailsPage.css';
 
-export default function DoctorDetailsPage() {
-  const { id } = useParams();
-  const doctor = doctors.find((doc) => doc.id === id);
+export default function DoctorDetailsPage({ doctor, onClose }) {
+    const [activeTab, setActiveTab] = useState("Doctor Bio");
 
-  if (!doctor) return <h2>Doctor not found</h2>;
+    const detailsTabs = ["Doctor Bio", "Experience", "Availability", "Awards", "Rating"];
 
-  const detailsTabs = [
-    "Doctor Bio",
-    "Experience",
-    "Availability",
-    "Awards",
-    "Rating"
-  ];
+    const ratingsData = [
+        { stars: 5, feedbackCount: 0 },
+        { stars: 4, feedbackCount: 0 },
+        { stars: 3, feedbackCount: 0 },
+        { stars: 2, feedbackCount: 0 },
+        { stars: 1, feedbackCount: 0 },
+    ];
 
-  return (
+    const renderTabContent = () => {
+        switch (activeTab) {
+            case "Doctor Bio":
+                return (
+                    <div className="doctorDetailsPara">
+                        <p className="doctorBio">{doctor.bio}</p>
+                        <strong>Training</strong>
+                        <p className="doctorBio">{doctor.bio}</p>
+                    </div>
+                );
+            case "Experience":
+                return (
+                    <div className="doctorExperienceSection">
+                        {doctor.experienceDetails?.map((exp, index) => (
+                            <div key={index} className="experienceCard">
+                                <img src={exp.logo} alt={exp.hospital} />
+                                <div className="expHeader">
+                                    <div>
+                                        <h2 className="expHeadLine">{exp.hospital}</h2>
+                                        <div className="experienceParaDiv">
+                                            <p>{exp.department ? `${exp.department} • ` : ""}{exp.location}</p>
+                                            <p>{exp.duration} ({exp.total})</p>
+                                            <p className="expDescription">{exp.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                );
+            case "Availability":
+                return (
+                    <div className="availabilitySection">
+                        <AvailabilityCarousel />
+                    </div>
+                );
+            case "Awards":
+                return (
+                    <div className="awardsSection">
+                        <AwardsCarousel awards={doctor.Awards} />
+                    </div>
+                );
+            case "Rating":
+                return (
+                    <div className="ratingSection">
+                        {ratingsData.map((rating, index) => (
+                            <div key={index} className="ratingRow">
+                                <div className="stars">
+                                    {[...Array(5)].map((_, i) => (
+                                        <FaStar
+                                            key={i}
+                                            className={i < rating.stars ? "star filled" : "star"}
+                                        />
+                                    ))}
+                                    <span className="count">({rating.feedbackCount})</span>
+                                </div>
+                                <div className="feedbackCount">{rating.feedbackCount} Feedbacks</div>
+                            </div>
+                        ))}
+                    </div>
+                );
+            default:
+                return null;
+        }
+    };
 
-    <div className="doctorDetailsPageContainer">
-      <div className="doctorDetailsPageUpperSection">
-        <img src={doctor.imageUrl} alt={doctor.name} className="doctorImage" />
+    const fullStars = parseInt(doctor.rating);
+    const halfStar = doctor.rating - fullStars >= 0.5;
+    const maxStars = 5;
 
-        <div className="doctorDetailsUpperMiddleSection">
-          <h1>{doctor.name}</h1>
-          <p className="statusBadge">• {doctor.availability}</p>
+    return (
+        <div className="modal-overlay">
+            <div className="modal-content doctorDetailsPageContainer">
+                <button className="close-modal-btn" onClick={onClose}><IoMdClose size={24} /></button>
 
-          <ul className="doctorHighlights">
-            <li><span role="img" aria-label="specialty">⚕️</span> {doctor.specialty}</li>
-            <li><span role="img" aria-label="experience">⏳</span> {doctor.experience} Yrs Exp</li>
-            <li><span role="img" aria-label="location">📍</span> {doctor.location}</li>
-            <li><span role="img" aria-label="fee">💰</span> ₹{doctor.fee}/- Consultant Fee</li>
-          </ul>
-        </div>
+                {/* Upper Section */}
+                <div className="doctorDetailsPageUpperSection">
+                    <img src={doctor.imageUrl} alt={doctor.name} className="doctorImage" />
 
-        <div className="doctorDetailsUpperRightSection">
-          <p className="availabilityText">{doctor.daysAvailable}</p>
-          <div className="ratingSection">
-            <span>⭐ {doctor.rating}</span>
-            <p><a href="#reviews">{doctor.reviews} Reviews</a></p>
-          </div>
-          <p className="doctorPhone">{doctor.phone}</p>
-          <button className="bookAppointmentBtn">BOOK APPOINTMENT</button>
-        </div>
-      </div>
+                    <div className="doctorDetailsUpperMiddleSection">
+                        <h1 className="doctorName">
+                            {doctor.name} <span className="verifiedTick"><MdVerified /></span>
+                        </h1>
 
-      <div className="doctorDetailsTabs">
-        {detailsTabs.map((tab) => (
-          <button key={tab} className="doctorTabButton">{tab}</button>
-        ))}
-      </div>
+                        <div className="ratingSection">
+                            <span className="stars">
+                                {[...Array(fullStars)].map((_, i) => (
+                                    <FaStar key={`full-${i}`} color="#0ca798" />
+                                ))}
+                                {halfStar && <FaStarHalfAlt color="#0ca798" />}
+                                {[...Array(maxStars - fullStars - (halfStar ? 1 : 0))].map((_, i) => (
+                                    <FaRegStar key={`empty-${i}`} color="#ccc" />
+                                ))}
+                            </span>
+                            <p>{doctor.rating}<a href="#reviews">{doctor.reviews} Reviews</a></p>
+                        </div>
 
-      <div className="doctorExperienceSection">
-        {doctor.experienceHistory?.map((exp, index) => (
-          <div key={index} className="experienceCard">
-            <div className="expHeader">
-              <img src={exp.hospitalLogo} alt={exp.hospitalName} />
-              <div>
-                <h4>{exp.hospitalName}</h4>
-                <p>{exp.department} • {exp.location}</p>
-                <p>{exp.duration}</p>
-              </div>
+                        <div className="doctorHighlights">
+                            <p><FaStethoscope /> {doctor.specialty}</p>
+                            <p >
+                                <TbStarsFilled /> {doctor.experience} Yrs Exp.</p>
+                            <p><CiLocationOn /> {doctor.location}</p>
+                            <p style={{ fontSize: "1.3rem", fontWeight: 'bold' }}>
+                                <BsCashCoin /> <span style={{ fontSize: "1.3rem", color: "#0CA798" }}>₹{doctor.fees}/-</span> Consultant Fee</p>
+                        </div>
+                    </div>
+
+                    <div className="doctorDetailsUpperRightSection">
+                        <div className="doctorDetailsUpperRightText">
+                            <p className="availableDays"><VscWatch /> {doctor.availableDays?.join(", ")}</p>
+                            <p className="availableDays"><VscWatch /> {doctor.languages?.join(", ")}</p>
+                        </div>
+                        <div className="doctorDetailsUpperButton">
+                            <p className="doctorPhone"><FaPhone /> {doctor.contact}</p>
+                            <button className="bookAppointmentBtn">BOOK APPOINTMENT</button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Tabs */}
+                <div className="doctorDetailsTabs">
+                    {detailsTabs.map((tab) => (
+                        <button
+                            key={tab}
+                            className={`doctorTabButton ${activeTab === tab ? 'active' : ''}`}
+                            onClick={() => setActiveTab(tab)}
+                        >
+                            {tab}
+                        </button>
+                    ))}
+                </div>
+
+                {/* Tab Content */}
+                <div className="doctorTabContent">
+                    {renderTabContent()}
+                </div>
             </div>
-            <p className="expDescription">{exp.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+        </div>
+    );
 }
-
-
-// <div className="doctor-details-wrapper">
-//   <div className="top-section">
-//     <img src={doctor.imageUrl} alt={doctor.name} className="doctor-img" />
-//     <div className="doctor-info">
-//       <h1>{doctor.name} <span className="verified">✔</span></h1>
-//       <p className="available">{doctor.available ? "• Available" : "• Unavailable"}</p>
-//       <p>🩺 {doctor.specialty}</p>
-//       <p>📅 {doctor.experience}</p>
-//       <p>📍 {doctor.location}</p>
-//       <p>💰 ₹{doctor.fees}/- Consultant Fee</p>
-//       <p>📞 {doctor.contact}</p>
-//       <p>📆 {doctor.availableDays}</p>
-//       <p>⭐ {doctor.rating} <span className="reviews">({doctor.reviews} Reviews)</span></p>
-//       <button className="book-btn">BOOK APPOINTMENT</button>
-//     </div>
-//   </div>
-
-//   <div className="tab-section">
-//     <button className="tab active">Doctor Bio</button>
-//     <button className="tab">Experience</button>
-//     <button className="tab">Availability</button>
-//     <button className="tab">Awards</button>
-//     <button className="tab">Rating</button>
-//   </div>
-
-//   <div className="experience-section">
-//     {doctor.experienceDetails.map((exp, idx) => (
-//       <div className="experience-card" key={idx}>
-//         <h3>{exp.hospital}</h3>
-//         <p>{exp.department && `${exp.department} • `}{exp.location}</p>
-//         <p>{exp.duration} &nbsp; <strong>{exp.total}</strong></p>
-//         <p>{exp.description}</p>
-//       </div>
-//     ))}
-//   </div>
-// </div>

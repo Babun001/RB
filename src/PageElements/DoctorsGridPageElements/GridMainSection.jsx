@@ -253,6 +253,10 @@ export default function GridMainSection() {
                             rating={doc.rating}
                             fees={doc.fees}
                             imageUrl={doc.imageUrl}
+                            experience={doc.experience}
+                            bio={doc.bio}
+                            Awards={doc.Awards}
+                            experienceDetails={doc.experienceDetails}
                         />
                     ))}
 

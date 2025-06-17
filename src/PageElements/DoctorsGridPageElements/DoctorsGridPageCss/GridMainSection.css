@@ -265,6 +265,7 @@ input + hr {
   padding: 4px;
   font-size: 14px;
   color: black;
+  margin-bottom: 0rem;
 }
 
 
