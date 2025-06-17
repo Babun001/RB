@@ -43,16 +43,7 @@
   display: none;
 }
 
-.awardCard {
-  flex: 0 0 200px;
-  border: 1px solid #dcdcdc;
-  border-radius: 12px;
-  padding: 1rem;
-  background: #fff;
-  color: black;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
+
 
 .awardCard:hover {
   transform: translateY(-5px);
@@ -74,4 +65,52 @@
   font-size: 0.9rem;
   color: #444;
   margin: 0.5rem 0rem;
+}
+
+
+.awardsCarouselWrapper {
+  margin: 2rem 0;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.carouselNav {
+  background: #e6e6e6;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  transition: background 0.3s ease;
+}
+
+.carouselNav:hover {
+  background: #ccc;
+}
+
+.awardsTrack.paginated {
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.awardCard {
+  flex: 0 0 219px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fff;
+  transition: transform 0.2s ease;
+  color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.awardCard:hover {
+  transform: translateY(-5px);
 }

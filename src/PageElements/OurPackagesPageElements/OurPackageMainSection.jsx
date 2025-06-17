@@ -178,12 +178,12 @@ export default function OurPackageMainSection() {
                                 <h2 style={{ lineHeight: "25px", margin: "5px 0px" }}>{card.title}</h2>
                             </div>
 
-                            <span className="testAndComp">
+                            <span className="testAndCompSpan">
                                 <p>Covers {card.TestsAndComp.join(' ')}</p>
                             </span>
 
                             <div className="cardsMiddleSec">
-                                <h4 style={{ fontSize: "1.2rem", fontWeight: "500" }}>Report Delivery</h4>
+                                <h4 style={{ fontSize: "1.2rem", fontWeight: "700", color:"red" }}>Report Delivery</h4>
                                 <p style={{ color: "gray" }}>Speak to our customer care</p>
                             </div>
 

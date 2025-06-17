@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./DoctorsGridPageCss/AvailabilityCarousel.css";
 
@@ -7,9 +7,9 @@ const generateRandomTimes = (count) => {
   const now = new Date();
   for (let i = 0; i < count; i++) {
     const date = new Date();
-    date.setDate(now.getDate() + i); 
+    date.setDate(now.getDate() + i);
 
-    const startHour = 9 + Math.floor(Math.random() * 8); 
+    const startHour = 9 + Math.floor(Math.random() * 8);
     const endHour = startHour + 1;
 
     slots.push({
@@ -22,27 +22,34 @@ const generateRandomTimes = (count) => {
 
 export default function AvailabilityCarousel() {
   const [slots, setSlots] = useState([]);
-  const scrollRef = useRef();
+  const [startIndex, setStartIndex] = useState(0);
+  const visibleCount = 5;
 
   useEffect(() => {
-    const generated = generateRandomTimes(14);
+    const generated = generateRandomTimes(20);
     setSlots(generated);
   }, []);
 
-  const scroll = (dir) => {
-    scrollRef.current.scrollBy({ left: dir === "left" ? -300 : 300, behavior: "smooth" });
+  const handlePrev = () => {
+    setStartIndex((prev) => Math.max(0, prev - visibleCount));
   };
+
+  const handleNext = () => {
+    setStartIndex((prev) => Math.min(slots.length - visibleCount, prev + visibleCount));
+  };
+
+  const visibleSlots = slots.slice(startIndex, startIndex + visibleCount);
 
   return (
     <div className="availabilityWrapper">
       <h3>Availability</h3>
       <div className="carouselContainer">
-        <button className="carouselNav left" onClick={() => scroll("left")}>
+        <button className="carouselNav left" onClick={handlePrev} disabled={startIndex === 0}>
           <FaChevronLeft />
         </button>
 
-        <div className="availabilityTrack" ref={scrollRef}>
-          {slots.map((slot, idx) => {
+        <div className="availabilityTrack paginated">
+          {visibleSlots.map((slot, idx) => {
             const dateParts = slot.date.split(" ");
             return (
               <div className="availabilityCard" key={idx}>
@@ -54,7 +61,11 @@ export default function AvailabilityCarousel() {
           })}
         </div>
 
-        <button className="carouselNav right" onClick={() => scroll("right")}>
+        <button
+          className="carouselNav right"
+          onClick={handleNext}
+          disabled={startIndex + visibleCount >= slots.length}
+        >
           <FaChevronRight />
         </button>
       </div>

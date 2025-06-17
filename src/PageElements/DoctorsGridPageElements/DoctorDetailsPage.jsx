@@ -3,12 +3,13 @@ import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 import { FaStethoscope } from "react-icons/fa6";
 import { TbStarsFilled } from "react-icons/tb";
-import { CiLocationOn } from "react-icons/ci";
+// import { CiLocationOn } from "react-icons/ci";
 import { BsCashCoin } from "react-icons/bs";
 import { FaPhone } from "react-icons/fa6";
 import { VscWatch } from "react-icons/vsc";
 import { IoMdClose } from "react-icons/io";
 import { RiSpeakFill } from "react-icons/ri";
+import { FaLocationDot } from "react-icons/fa6";
 
 import AwardsCarousel from "./AwardCarousal";
 import AvailabilityCarousel from "./AvailabilityCarousel";
@@ -31,7 +32,7 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
     const renderTabContent = () => {
         switch (activeTab) {
             case "Doctor Bio":
-                
+
                 const bioWords = doctor.bio?.split(" ") || [];
                 const shouldTruncate = bioWords.length > 30;
                 const displayedBio = showFullBio ? doctor.bio : bioWords.slice(0, 30).join(" ") + "...";
@@ -50,8 +51,8 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
                                     cursor: "pointer",
                                     padding: 0,
                                     fontWeight: "bold",
-                                    display:"flex",
-                                    justifyContent:"center"
+                                    display: "flex",
+                                    justifyContent: "center"
                                 }}
                             >
                                 {showFullBio ? "Read Less" : "Read More"}
@@ -151,28 +152,33 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
                         </div>
 
                         <div className="doctorHighlights">
-                            <p><FaStethoscope /> {doctor.specialty}</p>
+                            <p><FaStethoscope style={{ color: "rgb(24, 79, 123)" }} /> {doctor.specialty}</p>
                             <p >
-                                <TbStarsFilled /> {doctor.experience} Yrs Exp.</p>
-                            <p><CiLocationOn /> {doctor.location}</p>
+                                <TbStarsFilled style={{ color: "rgb(141, 77, 75)" }} /> {doctor.experience} Yrs Exp.</p>
+                            <p><FaLocationDot style={{ color: "rgb(58, 145, 116)" }} /> {doctor.location}</p>
                             <p style={{ fontSize: "1.3rem", fontWeight: 'bold' }}>
-                                <BsCashCoin /> <span style={{ fontSize: "1.3rem", color: "#0CA798" }}>₹{doctor.fees}/-</span> Consultant Fee</p>
+                                <BsCashCoin style={{ color: "rgb(194, 80, 31)" }} /> <span style={{ fontSize: "1.3rem", color: "#0CA798" }}>₹{doctor.fees}/-</span> Consultant Fee</p>
                         </div>
                     </div>
                     <div className="doctorDetailsUpperRightSection">
                         <div className="doctorDetailsUpperRightText">
                             <div className="iconWithText">
-                                <div className="texticonCircle"><VscWatch size="1.5rem" /></div>
+                                <div className="texticonCircle"><VscWatch color="rgb(16, 110, 79)" size="1.5rem" /></div>
                                 <p className="availableText">{doctor.availableDays?.join(", ")}</p>
                             </div>
                             <div className="iconWithText">
-                                <div className="texticonCircle"><RiSpeakFill size="1.5rem" /></div>
+                                <div className="texticonCircle"><RiSpeakFill color="rgb(16, 110, 79)" size="1.5rem" /></div>
                                 <p className="availableText">{doctor.languages?.join(", ")}</p>
                             </div>
+                            <div className="iconWithText">
+                                <div className="texticonCircle"><FaPhone color="rgb(16, 110, 79)" /></div>
+                                <p className="availableText" style={{fontWeight:"900"}}>{doctor.contact}</p>
+                            </div>
+                            {/* <p className="doctorPhone"><FaPhone /> {doctor.contact}</p> */}
                         </div>
 
                         <div className="doctorDetailsUpperButton">
-                            <p className="doctorPhone"><FaPhone /> {doctor.contact}</p>
+
                             <button className="bookAppointmentBtn">BOOK APPOINTMENT</button>
                         </div>
                     </div>

@@ -1,30 +1,32 @@
-// AwardsCarousel.jsx
-import { useRef } from "react";
+import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./DoctorsGridPageCss/AwardsCarousel.css";
 
 export default function AwardsCarousel({ awards }) {
-  const scrollRef = useRef();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const visibleCount = 5;
 
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -300 : 300,
-        behavior: "smooth",
-      });
-    }
+  const handleScroll = (direction) => {
+    const maxIndex = Math.max(0, awards.length - visibleCount);
+    setCurrentIndex((prev) => {
+      if (direction === "left") return Math.max(prev - visibleCount, 0);
+      if (direction === "right") return Math.min(prev + visibleCount, maxIndex);
+      return prev;
+    });
   };
+
+  const visibleAwards = awards.slice(currentIndex, currentIndex + visibleCount);
 
   return (
     <div className="awardsCarouselWrapper">
       <h3>Awards</h3>
       <div className="carouselContainer">
-        <button className="carouselNav left" onClick={() => scroll("left")}>
+        <button className="carouselNav left" onClick={() => handleScroll("left")} disabled={currentIndex === 0}>
           <FaChevronLeft />
         </button>
 
-        <div className="awardsTrack" ref={scrollRef}>
-          {awards.map((award, index) => (
+        <div className="awardsTrack paginated">
+          {visibleAwards.map((award, index) => (
             <div key={index} className="awardCard">
               <div className="icon" />
               <h4 className="awardTitle">{award.awdName}</h4>
@@ -33,7 +35,11 @@ export default function AwardsCarousel({ awards }) {
           ))}
         </div>
 
-        <button className="carouselNav right" onClick={() => scroll("right")}>
+        <button
+          className="carouselNav right"
+          onClick={() => handleScroll("right")}
+          disabled={currentIndex + visibleCount >= awards.length}
+        >
           <FaChevronRight />
         </button>
       </div>
