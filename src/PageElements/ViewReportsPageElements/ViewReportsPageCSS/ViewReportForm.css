@@ -45,7 +45,7 @@
 .send-otp-btn:hover {
   background: #cfcfcf;
 }
-.divider {
+.FormDivider {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,12 +56,12 @@
 .leftDivider {
   width: 48%;
   height: 1px;
-  background-color: black;
+  background-color: #ccc;
 }
 .rightDivider {
   width: 48%;
   height: 1px;
-  background-color: black;
+  background-color: #ccc;
 }
 
 .credentials-section {

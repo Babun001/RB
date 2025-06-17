@@ -14,7 +14,7 @@ export default function ViewReportFormSection() {
                 <button className="send-otp-btn">Send OTP</button>
             </div>
 
-            <div className="divider">
+            <div className="FormDivider">
                 <div className="leftDivider"></div>
                 <p>Or</p>
                 <div className="rightDivider"></div>
