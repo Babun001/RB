@@ -1,0 +1,21 @@
+.viewReportImageSection{
+    background-image: url('../../../Assets/viewReportBg.png') !important;
+    height: 29rem !important;
+}
+
+.viewReportImageUpperSection{
+    padding-top:10rem !important;
+}
+
+.viewReportUpperText{
+    display: inline;
+
+}
+
+.viewReportUpperText p{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 0.5rem;
+}

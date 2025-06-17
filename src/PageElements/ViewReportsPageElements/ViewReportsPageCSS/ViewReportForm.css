@@ -1,0 +1,101 @@
+.report-form-container {
+  width: 75%;
+  /* max-width: 1200px; */
+  margin: auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  box-sizing: border-box;
+  transform: translateY(-90px);
+}
+
+.form-heading {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mobile-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* margin-bottom: 1.2rem; */
+}
+
+.input-field {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f6f6f6;
+  font-size: 1rem;
+  outline: none;
+  margin: 0.5rem 0rem;
+}
+
+.send-otp-btn {
+  background-color: #e6e6e6;
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.send-otp-btn:hover {
+  background: #cfcfcf;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+}
+
+.leftDivider {
+  width: 48%;
+  height: 1px;
+  background-color: black;
+}
+.rightDivider {
+  width: 48%;
+  height: 1px;
+  background-color: black;
+}
+
+.credentials-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.download-btn {
+  width: 15rem;
+  padding: 0.9rem;
+  background-color: #00a88e;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+.input-wrapper label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  color: #333;
+}

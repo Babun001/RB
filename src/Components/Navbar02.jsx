@@ -26,7 +26,7 @@ const SecondaryNavbar = () => {
       <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/collection">Home Collection</Link></li>
-        <li><Link to="#">View Report</Link></li>
+        <li><Link to="/view-reports">View Report</Link></li>
 
         <li className="dropdown">
           <span>Health Package ▾</span>
