@@ -29,12 +29,12 @@ export default function Home() {
             <WelcomeSection />
             <AboutSection />
             <OurPackage/>
-            {/* <CorporateWillSection/> */}
+            <CorporateWillSection/>
             <PackagesSection/>
             <TestsSection/>
             <WhyChooseUsSection/>
             <TrustSection/>
-            {/* <TestimonialSection/> */}
+            <TestimonialSection/>
             <FAQSectionSection/>
             <ServiceSection/>
             <ConsultSection/>

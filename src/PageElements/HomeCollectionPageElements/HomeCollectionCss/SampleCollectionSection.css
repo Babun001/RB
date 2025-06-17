@@ -1,95 +1,192 @@
-.long-heading{
-    width: 22rem !important;
-    margin: auto !important;
-    justify-content: center !important;
+.long-heading {
+  width: 22rem !important;
+  margin: auto !important;
+  justify-content: center !important;
 }
 
-.hc-title{
-    width: 35%;
-    margin: auto;
+.hc-title {
+  width: 35%;
+  margin: auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.indexHeadline {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.sampleCollectionContainer {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  flex-direction: column;
+  margin: auto;
+  padding: 2rem;
+  margin-top: 6rem;
+  margin-bottom: -7rem;
+}
+
+.curvePng {
+  width: 70%;
+  opacity: 0.15;
+  margin: auto;
+}
+
+.sampleCollectionLowerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 8rem;
+}
+
+.processTextArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50rem;
+  /* padding: 2rem; */
+}
+
+.processTextArea h3 {
+  margin: 0;
+}
+
+.processTextArea p {
+  font-size: 13px;
+  color: #727272;
+}
+
+.indexing {
+  width: 6rem;
+  height: 6rem;
+  background-color: #0ca798;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 400;
+}
+
+.firstTextArea {
+  transform: translate(0px, -164px);
+}
+
+.secondTextArea {
+  transform: translate(0px, -130px);
+}
+
+.thirdTextArea {
+  transform: translate(0px, -111px);
+}
+
+.fourthTextArea {
+  transform: translate(0px, -205px);
+}
+
+
+
+.indexing {
+  animation: flickerGlow 2s infinite alternate;
+  box-shadow: 0 0 8px #0ca798aa;
+}
+
+@keyframes flickerGlow {
+  0% {
+    box-shadow: 0 0 10px #0ca79866;
+  }
+  50% {
+    box-shadow: 0 0 25px #0ca798ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #0ca79866;
+  }
+}
+
+/* Add staggered delays */
+.index1 {
+  animation-delay: 0s;
+}
+.index2 {
+  animation-delay: 0.5s;
+}
+.index3 {
+  animation-delay: 1s;
+}
+.index4 {
+  animation-delay: 1.5s;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .processTextArea h3 {
+    margin-bottom: 1rem;
+  }
+
+  .long-heading {
+    width: 90% !important;
     text-align: center;
-    margin-top: 2rem;
-}
+  }
 
-.indexHeadline{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    font-weight: 500;
-    align-items: center;
-    font-size: 1.3rem;
-}
-
-.sampleCollectionContainer{
-    display: flex;
-    justify-content: center;
+  .hc-title {
     width: 90%;
+    font-size: 1.4rem;
+  }
+
+  .indexHeadline {
+    width: 100%;
+    font-size: 1.1rem;
     flex-direction: column;
-    margin: auto;
-    padding: 2rem;
-    margin-top: 6rem;
-    margin-bottom: -7rem;
-}
-
-.curvePng{
-    width: 70%;
-    /* transform: translateX(-40px); */
-    opacity: 0.15;
-    margin: auto;
-}
-
-.sampleCollectionLowerSection{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    padding: 1rem 8rem;
-}
-
-
-.processTextArea{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    width: 50rem;
-    /* padding: 2rem; */
-}
+  }
 
-.processTextArea h3{
-    margin: 0;
-}
+  .sampleCollectionContainer {
+    width: fit-content;
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
 
-.processTextArea p{
-    font-size: 13px;
-    color: #727272;
-}
+  .curvePng {
+    display: none;
+  }
 
-.indexing{
-    width: 6rem;
-    height: 6rem;
-    background-color: #0CA798;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
-    font-weight: 400;
-}
+  .sampleCollectionLowerSection {
+    flex-direction: column;
+    padding: 0;
+    gap: 2rem;
+  }
 
-.firstTextArea{
-    transform: translate(0px, -164px);
-}
+  .processTextArea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
 
-.secondTextArea{
-    transform: translate(0px, -130px);
-}
+  .processTextArea p {
+    font-size: 0.95rem;
+    padding-inline: 1rem;
+    margin: 0rem;
+  }
 
-.thirdTextArea{
-    transform: translate(0px, -111px);
-}
+  .indexing {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.4rem;
+  }
 
-.fourthTextArea{
-    transform: translate(0px, -205px);
+  .firstTextArea,
+  .secondTextArea,
+  .thirdTextArea,
+  .fourthTextArea {
+    transform: none;
+  }
 }

@@ -25,7 +25,7 @@
 
 .collectionUpperSection {
     width: 90%;
-    position: relative; /* So .dottetLine can position absolutely inside it */
+    position: relative;
 }
 
 .upperTextSection {
@@ -55,7 +55,7 @@
 
 .secondPngSection {
     width: 55%;
-    transform: translate(196px, -35px); /* FIXED: removed invalid syntax */
+    transform: translate(196px, -35px);
     position: relative;
 }
 
@@ -71,4 +71,49 @@
     left: 0;
     transform: translateY(307px);
     color: #333;
+}
+
+
+@media (max-width: 768px) {
+  .collectionContainer {
+    width: 95%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .collectionTitle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .upperTextSection {
+    width: 100%;
+    transform: none;
+    text-align: center;
+  }
+
+  .upperTextSection p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .collectionLowerSec {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .pngSection,
+  .secondPngSection {
+    width: 90%;
+    transform: none;
+  }
+
+  .dottetLine {
+    font-size: 2rem;
+    transform: none;
+    position: static;
+    text-align: center;
+    margin-top: 1rem;
+  }
 }

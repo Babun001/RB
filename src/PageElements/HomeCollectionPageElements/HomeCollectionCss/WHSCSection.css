@@ -7,7 +7,6 @@
     gap: 3rem;
     margin-top: 6rem;
     position: relative;
-    /* margin-bottom: 3rem; */
 }
 
 .whscLeftSection{
@@ -27,4 +26,32 @@
 .whscLowerText{
     margin-top: 4rem;
     transform: translateX(-25px);
+}
+
+@media (max-width: 768px) {
+  .whscContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .whscLowerText li{
+    margin-top: 0.5rem;
+  }
+
+  .whscLeftSection,
+  .whscRightSection {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .whsc-title {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .whscLowerText {
+    margin-top: 2rem;
+    transform: translateX(0);
+  }
 }

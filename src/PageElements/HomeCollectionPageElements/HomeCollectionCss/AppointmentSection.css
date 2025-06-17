@@ -4,11 +4,10 @@
   padding: 4rem;
   border-radius: 16px;
   box-shadow: 0 10px 20px rgba(187, 225, 216, 0.8);
-  /* background-color: #cccccc; */
   position: relative;
 }
 
-label{
+label {
   font-size: 1.4rem;
 }
 
@@ -19,7 +18,7 @@ label{
   margin-top: 0;
 }
 
-.halfSection{
+.halfSection {
   width: 80%;
 }
 
@@ -79,7 +78,7 @@ label{
 }
 
 .location-btn {
-  background-color: #56D6CA;
+  background-color: #56d6ca;
   border: none;
   padding: 10px 20px;
   color: white;
@@ -94,10 +93,9 @@ label{
   gap: 1rem;
 }
 
-.location-btn:hover{
+.location-btn:hover {
   background-color: #4ec7bb;
 }
-
 
 .doctor-img {
   position: absolute;
@@ -106,19 +104,18 @@ label{
   object-fit: contain;
 }
 
-
-.lowerSectionButton{
+.lowerSectionButton {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
-.lowerSectionButton button{
+.lowerSectionButton button {
   width: 15rem;
 }
 
-.resetBtn{
+.resetBtn {
   background-color: #ddd;
   color: black;
   border: none;
@@ -132,11 +129,68 @@ label{
   align-items: center;
 }
 
-
-.lowerSectionButton .resetBtn:hover{
+.lowerSectionButton .resetBtn:hover {
   background-color: #cacaca;
 }
 
-.lowerSectionButton button:hover{
+.lowerSectionButton button:hover {
   background-color: #4ec7bb;
+}
+
+@media (max-width: 768px) {
+  .appointment-form input[type="text"],
+  .appointment-form input[type="email"],
+  .appointment-form input[type="date"] {
+    padding: 13px;
+  }
+  .appointment-container {
+    width: 80%;
+    padding: 2rem;
+  }
+
+  .appointmentHeading {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .appointment-form {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .halfSection {
+    width: 100%;
+  }
+
+  label {
+    font-size: 1.1rem;
+  }
+
+  .location-btn {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .doctor-img {
+    display: none;
+  }
+
+  .lowerSectionButton {
+    flex-direction: column;
+  }
+
+  .lowerSectionButton button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .resetBtn {
+    width: 100%;
+    font-size: 1.2rem;
+  }
 }
