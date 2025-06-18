@@ -67,7 +67,216 @@ const ServiceData = {
         image: fibroscanImg
       }
     ]
-  }
+  },
+
+  Radiology: {
+    intro: "",
+    services: [
+      {
+        title: "PFT",
+        color: "black",
+        description:
+          "Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.",
+        image: pulmonologyImg1
+      },
+      {
+        title: "DLCO Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg2
+      },
+      {
+        title: "Feno Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg3
+      }
+    ]
+  },
+  Neurology: {
+    intro: "",
+    services: [
+      {
+        title: "PFT",
+        color: "black",
+        description:
+          "Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.",
+        image: pulmonologyImg1
+      },
+      {
+        title: "DLCO Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg2
+      },
+      {
+        title: "Feno Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg3
+      }
+    ]
+  },
+  Dental: {
+    intro: "",
+    services: [
+      {
+        title: "PFT",
+        color: "black",
+        description:
+          "Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.",
+        image: pulmonologyImg1
+      },
+      {
+        title: "DLCO Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg2
+      },
+      {
+        title: "Feno Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg3
+      }
+    ]
+  },
+  Dialysis: {
+    intro: "",
+    services: [
+      {
+        title: "PFT",
+        color: "black",
+        description:
+          "Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.",
+        image: pulmonologyImg1
+      },
+      {
+        title: "DLCO Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg2
+      },
+      {
+        title: "Feno Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg3
+      }
+    ]
+  },
+  Dermatology: {
+    intro: "",
+    services: [
+      {
+        title: "PFT",
+        color: "black",
+        description:
+          "Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.",
+        image: pulmonologyImg1
+      },
+      {
+        title: "DLCO Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg2
+      },
+      {
+        title: "Feno Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg3
+      }
+    ]
+  },
+  Homecare: {
+    intro: "",
+    services: [
+      {
+        title: "PFT",
+        color: "black",
+        description:
+          "Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.",
+        image: pulmonologyImg1
+      },
+      {
+        title: "DLCO Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg2
+      },
+      {
+        title: "Feno Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg3
+      }
+    ]
+  },
+  Ophthalmology: {
+    intro: "",
+    services: [
+      {
+        title: "PFT",
+        color: "black",
+        description:
+          "Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.",
+        image: pulmonologyImg1
+      },
+      {
+        title: "DLCO Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg2
+      },
+      {
+        title: "Feno Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg3
+      }
+    ]
+  },
+  Physiotherapy: {
+    intro: "",
+    services: [
+      {
+        title: "PFT",
+        color: "black",
+        description:
+          "Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.Pulmonary Function Tests (PFTs) are noninvasive tests that measure how well your lungs inhale and exhale air and how efficiently they transfer oxygen to the blood. PFTs are vital in diagnosing and managing asthma, COPD, and other lung conditions.",
+        image: pulmonologyImg1
+      },
+      {
+        title: "DLCO Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg2
+      },
+      {
+        title: "Feno Test",
+        color: "black",
+        description:
+          "The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.The DLCO test assesses how well gases like oxygen move from your lungs into your blood. It helps detect early signs of lung diseases such as pulmonary fibrosis and emphysema, especially when symptoms are not obvious.",
+        image: pulmonologyImg3
+      }
+    ]
+  },
 };
 
 export default ServiceData;
