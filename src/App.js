@@ -11,6 +11,19 @@ import CorporateWellnessPage from './Pages/CorporateWellness.Page';
 import DoctorDetailsPage from './PageElements/DoctorsGridPageElements/DoctorDetailsPage';
 import ViewReportsPage from './Pages/ViewReports.Page';
 
+
+// services pages
+import PulmonologyPage from './Pages/ServicePages/Pulmonology.Page';
+import GastroenterologyPage from './Pages/ServicePages/Gastroenterology.Page';
+import RadiologyPage from './Pages/ServicePages/Radiology.Page';
+import NeurologyPage from './Pages/ServicePages/Neurology.Page';
+import DentalPage from './Pages/ServicePages/Dental.Page';
+import DialysisPage from './Pages/ServicePages/Dialysis.Page';
+import DermatologyPage from './Pages/ServicePages/Dermatology.Page';
+import HomecarePage from './Pages/ServicePages/Homecare.Page';
+import OphthalmologyPage from './Pages/ServicePages/Ophthalmology.Page';
+import PhysiotherapyPage from './Pages/ServicePages/Physiotherapy.Page';
+
 function App() {
   return (
     <Router>
@@ -25,6 +38,22 @@ function App() {
           <Route path='/view-reports' element={<ViewReportsPage/>}/>
           <Route path='/faqs' element={<FAQsPage/>}/>
           <Route path='/corporate-wellness' element={<CorporateWellnessPage/>}/>
+
+          {/*services routes */}
+
+
+          <Route path='/service/pulmonology' element={<PulmonologyPage/>}/>
+          <Route path='/service/gastroenterology' element={<GastroenterologyPage/>}/>
+          <Route path='/service/radiology' element={<RadiologyPage/>}/>
+          <Route path='/service/neurology' element={<NeurologyPage/>}/>
+          <Route path='/service/dental' element={<DentalPage/>}/>
+          <Route path='/service/dialysis' element={<DialysisPage/>}/>
+          <Route path='/service/dermatology' element={<DermatologyPage/>}/>
+          <Route path='/service/homecare' element={<HomecarePage/>}/>
+          <Route path='/service/ophthalmology' element={<OphthalmologyPage/>}/>
+          <Route path='/service/physiotherapy' element={<PhysiotherapyPage/>}/>
+
+
         </Route>
       </Routes>
     </Router>

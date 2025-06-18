@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import './ComponentsStyles/Navbar02.css';
+import ServiceList from "../DB/AllServicesList";
 
 const SecondaryNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const SecondaryNavbar = () => {
     <nav className="secondary-navbar">
       <div className="menu-toggle" onClick={toggleMenu}>
         {menuOpen ? (
-          <span className="close-icon">✕</span> 
+          <span className="close-icon">✕</span>
         ) : (
           <>
             <span className="bar"></span>
@@ -38,11 +39,13 @@ const SecondaryNavbar = () => {
         </li>
 
         <li className="dropdown">
-          <span>Health Problems ▾</span>
+          <span>Services ▾</span>
           <ul className="dropdown-menu">
-            <li><Link to="#">Diabetes</Link></li>
-            <li><Link to="#">Thyroid</Link></li>
-            <li><Link to="#">Heart Issues</Link></li>
+            {
+              ServiceList.map((svs, inds) => (
+                <li key={inds}><Link to={`/service/${svs.path}`}>{svs.name}</Link></li>
+              ))
+            }
           </ul>
         </li>
 

@@ -8,7 +8,7 @@ export default function ViewReportImageSection() {
             <div className="packageFirstContainer viewReportImageSection">
                 <div className="packageFirstUpperSection viewReportImageUpperSection">
                     <div className="viewReportUpperText">
-                        <p><MdHome size={40}/><FaGreaterThan size={36}/>View Report</p>
+                        <p><MdHome size={40} style={{color:"#0A8E7F"}}/><FaGreaterThan size={36}/>View Report</p>
                     </div>
                     <h2 className='rb-title'>View Reports</h2>
                 </div>

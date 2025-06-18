@@ -1,0 +1,65 @@
+.right-content {
+  flex: 1;
+  background-color: white;
+  padding: 0;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.test-block {
+  margin-bottom: 2.5rem;
+}
+
+.test-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.test-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.test-text, .test-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.test-text p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.test-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.test-title.blue {
+  color: #007aff;
+}
+
+.test-title.green {
+  color: #007b4b;
+}
+
+.test-image {
+  text-align: center;
+}
+
+.test-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.test-details-block {
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,79 @@
+.serviceBody-wrapper {
+  display: flex;
+  padding: 2rem 6rem;
+  margin-top: 5rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.left-sidebar {
+  flex: 1;
+  min-width: 280px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.services-box {
+  background-color: #eee8fb;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.consult-box {
+  background-color: #f0fff6;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.services-box h4,
+.consult-box h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services-box li {
+  margin-bottom: 0.8rem;
+}
+
+.services-box a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.arrow {
+  display: flex;
+}
+
+.consult-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.consult-box input,
+.consult-box select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.consult-box button {
+  background-color: #00a48a;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
