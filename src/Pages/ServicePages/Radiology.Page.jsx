@@ -10,7 +10,7 @@ export default function RadiologyPage() {
     return (
         <>
             <ServiceHeader
-                childClass="pulmonologybgSection"
+                childClass="radiologyBGSection"
                 breadcrumb={<>Services <FaGreaterThan size={36} /> Radiology</>}
                 title="Radiology"
             />

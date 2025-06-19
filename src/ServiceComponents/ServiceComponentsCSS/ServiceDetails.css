@@ -63,3 +63,8 @@
 .test-details-block {
   margin-bottom: 0.5rem;
 }
+
+
+.service-headingTag{
+  width: fit-content !important;
+}

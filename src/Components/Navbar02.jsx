@@ -67,8 +67,8 @@ const SecondaryNavbar = () => {
         <li className="dropdown">
           <span>Login ▾</span>
           <ul className="dropdown-menu">
-            <li><Link to="#">User Login</Link></li>
-            <li><Link to="#">Admin Login</Link></li>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/registration">Registration</Link></li>
           </ul>
         </li>
       </ul>

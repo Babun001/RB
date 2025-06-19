@@ -5,3 +5,35 @@
 .gastroenterologyBgSection{
     background-image: url('../../Assets/GEBackground.png') !important;
 }
+
+.physiotherapyBGSection{
+    background-image: url('../../Assets/pt4.png') !important;
+}
+
+.OphthalmologyBGSection{
+    background-image: url('../../Assets/om5.png') !important;
+}
+
+.homecareBGSection{
+    background-image: url('../../Assets/hc4.png') !important;
+}
+
+.dermatologyBGSection{
+    background-image: url('../../Assets/dl5.png') !important;
+}
+
+.dialysisBgSection{
+    background-image: url('../../Assets/ds5.png') !important;
+}
+
+.dentalBGSection{
+    background-image: url('../../Assets/dn5.png') !important;
+}
+
+.neurologyBGSection{
+    background-image: url('../../Assets/nlBackground.png') !important;
+}
+
+.radiologyBGSection{
+    background-image: url('../../Assets/rl5.png') !important;
+}

@@ -31,7 +31,7 @@ export default function ServiceDetails({ serviceName }) {
                 <section className="test-details-block" key={i}>
                     <div className={`test-content ${i % 2 === 0 ? 'normal' : 'reverse'}`}>
                         <div className="test-text ">
-                            <h3 className="test-title rb-headingTag" style={{ color: test.color }}>{test.title}</h3>
+                            <h3 className="test-title rb-headingTag service-headingTag" style={{ color: test.color }}>{test.title}</h3>
                             <p>{test.description}</p>
                         </div>
                         <div className="test-image">

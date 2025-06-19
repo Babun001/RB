@@ -10,7 +10,8 @@ import FAQsPage from './Pages/FAQs.Page';
 import CorporateWellnessPage from './Pages/CorporateWellness.Page';
 import DoctorDetailsPage from './PageElements/DoctorsGridPageElements/DoctorDetailsPage';
 import ViewReportsPage from './Pages/ViewReports.Page';
-
+import LoginPage from './Pages/Login.Page';
+import RegistrationPage from './Pages/Registration.Page';
 
 // services pages
 import PulmonologyPage from './Pages/ServicePages/Pulmonology.Page';
@@ -38,6 +39,9 @@ function App() {
           <Route path='/view-reports' element={<ViewReportsPage/>}/>
           <Route path='/faqs' element={<FAQsPage/>}/>
           <Route path='/corporate-wellness' element={<CorporateWellnessPage/>}/>
+          <Route path='/login' element={<LoginPage/>}/>
+          <Route path='/registration' element={<RegistrationPage/>}/>
+
 
           {/*services routes */}
 

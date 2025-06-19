@@ -10,7 +10,7 @@ export default function PhysiotherapyPage() {
     return (
         <>
             <ServiceHeader
-                childClass="pulmonologybgSection"
+                childClass="physiotherapyBGSection"
                 breadcrumb={<>Services <FaGreaterThan size={36} /> Physiotherapy</>}
                 title="Physiotherapy"
             />

@@ -10,7 +10,7 @@ export default function DermatologyPage() {
     return (
         <>
             <ServiceHeader
-                childClass="pulmonologybgSection"
+                childClass="dermatologyBGSection"
                 breadcrumb={<>Services <FaGreaterThan size={36} /> Dermatology</>}
                 title="Dermatology"
             />
