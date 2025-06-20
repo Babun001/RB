@@ -1,16 +1,23 @@
 .secondary-navbar {
   position: sticky;
   top: 6rem;
-  z-index: 1000;
-  background-color: #ffffff;
+  z-index: 999;
+  background-color: transparent;
   padding: 0.6rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   font-family: "Segoe UI", sans-serif;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Menu Toggle Button (Hamburger) */
+.secondary-navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* the actual blur effect */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -38,7 +45,6 @@
   color: #0fb7a4;
 }
 
-/* Main Navigation Menu */
 .nav-menu {
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +76,7 @@
   color: #0fb7a4;
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu {
   position: absolute;
   top: 110%;

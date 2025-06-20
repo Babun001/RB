@@ -10,10 +10,18 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
   flex-wrap: wrap;
   font-family: sans-serif;
+}
+
+.NavbarDiv.navbar-scrolled {
+ background-color: rgba(255, 255, 255, 0.4); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* the actual blur effect */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .leftNavSection {
@@ -205,8 +213,6 @@ body {
     justify-content: flex-start;
   }
 } */
-
-
 
 @media (max-width: 768px) {
   .NavbarDiv {

@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import DoctorCard from './DoctorCards';
-// import img from '../../Assets/doctorCardImg.jpg';
 import { FaCheck, FaTimes } from "react-icons/fa";
 import './DoctorsGridPageCss/GridMainSection.css';
 import doctors from '../../DB/DoctorsDetails';
-
+import DoctorsGridFirstSection from './DoctorGridFirstSection';
 
 import { FaChevronDown } from "react-icons/fa";
 import { FaChevronUp } from "react-icons/fa";
@@ -15,6 +14,8 @@ export default function GridMainSection() {
     const [currentPage, setCurrentPage] = useState(1);
     const [showMoreSpecialties, setShowMoreSpecialties] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
+    const [searchFilters, setSearchFilters] = useState({ doctorName: '', department: '' });
+
 
 
 
@@ -257,10 +258,10 @@ export default function GridMainSection() {
                             bio={doc.bio}
                             Awards={doc.Awards}
                             experienceDetails={doc.experienceDetails}
-                            availableDays = {doc.availableDays}
-                            contact = {doc.contact}
-                            languages = {doc.languages}
-                            reviews = {doc.reviews}
+                            availableDays={doc.availableDays}
+                            contact={doc.contact}
+                            languages={doc.languages}
+                            reviews={doc.reviews}
                         />
                     ))}
 

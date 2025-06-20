@@ -9,7 +9,7 @@ export default function ServiceDetails({ serviceName }) {
         if (ServiceData[serviceName]?.intro) {
             setIntroLength(ServiceData[serviceName].intro.length);
         }
-    }, [serviceName]); // add dependency so it runs when serviceName changes
+    }, [serviceName]); 
 
     const service = ServiceData[serviceName];
 

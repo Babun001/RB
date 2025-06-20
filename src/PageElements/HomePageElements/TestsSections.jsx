@@ -35,10 +35,10 @@ export default function TestsSections() {
                 <div className="ourPackageUpperSection">
                     <h4 className="rb-headingTag pk-tag">TESTS</h4>
                     <h2 className="rb-title temp-title">Explore Tests by Organ for Smarter Health Screening</h2>
-                    <p className="paraText">
+                    <p className="paraText abc">
                         At RB Diagnostic, we offer an extensive range of tests convering all major health parameters. From routine screenings to advanced diagnostics,
                     </p>
-                    <p className="paraText">
+                    <p className="paraText abc">
                         our tests are designed to deliver accurate results with the highest precision -empowering you and your doctor to make informed health decisions at every step..
                     </p>
                 </div>

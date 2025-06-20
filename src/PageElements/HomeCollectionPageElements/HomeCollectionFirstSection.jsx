@@ -13,7 +13,7 @@ export default function CollectionFirstSec() {
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis unde nihil cupiditate, iste totam </p>
 
                     </div>
-                    <div className="dottetLine">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</div>
+                    <div className="dottetLine">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</div>
                     <div className="collectionLowerSec">
                         <div className="pngSection">
 

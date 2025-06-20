@@ -2,6 +2,9 @@
     padding: 2rem 4ren;
 }
 
+.abc{
+  margin-top: 0 !important;
+}
 .temp-title{
     max-width: 48rem !important;
     text-align: center !important;

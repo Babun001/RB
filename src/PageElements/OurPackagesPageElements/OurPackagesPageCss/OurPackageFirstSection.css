@@ -1,14 +1,14 @@
 .packageFirstContainer {
   background-image: url("../../../Assets/ourpackageBg.png");
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  /* margin: auto; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 50px;
-  height: 40rem;
+  /* border-radius: 50px; */
+  height: 900px;
   position: relative;
-  margin-top: 2rem;
+  margin-top: -10rem;
 }
 
 .packageFirstUpperSection {

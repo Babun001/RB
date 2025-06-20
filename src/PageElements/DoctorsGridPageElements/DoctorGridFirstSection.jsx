@@ -4,14 +4,12 @@ import { FaSearch, FaStethoscope } from 'react-icons/fa';
 import { FaUser } from "react-icons/fa";
 
 
-export default function DoctorsGridFirstSection() {
+export default function DoctorsGridFirstSection({ onSearch }) {
     const [doctorName, setDoctorName] = useState('');
     const [department, setDepartment] = useState('');
 
     const handleSearch = () => {
-        console.log("Doctor Name:", doctorName);
-        console.log("Department:", department);
-        // Handle your search logic here
+        onSearch({ doctorName, department });
     };
 
     return (

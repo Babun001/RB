@@ -24,7 +24,7 @@ const sliderSettings = {
 
 const FirstSection = () => {
     return (
-        <div className="hero-slider-container" style={{ position: 'relative', borderRadius: '1rem', overflow: 'hidden' }}>
+        <div className="hero-slider-container" style={{ position: 'relative', overflow: 'hidden' }}>
             {/* Slider Images */}
             <Slider {...sliderSettings}>
                 {images.map((image, index) => (
@@ -37,7 +37,6 @@ const FirstSection = () => {
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 height: '700px',
-                                borderRadius:"2rem"
                             }}
                         />
                     </div>

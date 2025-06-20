@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Layout from './Layout';
 import ScrollToTop from './ScrollToTop';
+
+// all pages
 import Home from './Pages/Home.Page';
 import HomeCollection from './Pages/HomeCollection.page';
 import OurPackagesPage from './Pages/OurPackages.Page';
@@ -12,6 +14,8 @@ import DoctorDetailsPage from './PageElements/DoctorsGridPageElements/DoctorDeta
 import ViewReportsPage from './Pages/ViewReports.Page';
 import LoginPage from './Pages/Login.Page';
 import RegistrationPage from './Pages/Registration.Page';
+import AboutPage from './Pages/About.Page';
+import ContactUsPage from './Pages/Contact.Page';
 
 // services pages
 import PulmonologyPage from './Pages/ServicePages/Pulmonology.Page';
@@ -41,6 +45,8 @@ function App() {
           <Route path='/corporate-wellness' element={<CorporateWellnessPage/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/registration' element={<RegistrationPage/>}/>
+          <Route path='/about-us' element={<AboutPage/>}/>
+          <Route path='/contact-us' element={<ContactUsPage/>}/>
 
 
           {/*services routes */}

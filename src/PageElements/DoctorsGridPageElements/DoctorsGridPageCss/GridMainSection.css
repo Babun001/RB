@@ -74,7 +74,7 @@
 }
 
 .filter-range {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .view-more-btn {
@@ -178,6 +178,7 @@ input + hr {
 .checkbox-group {
   color: gray;
   margin-top: 0.8rem;
+  align-items: start;
 }
 
 .doctors-header-bar {
