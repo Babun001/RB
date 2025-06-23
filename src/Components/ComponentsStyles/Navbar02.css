@@ -1,21 +1,65 @@
 .secondary-navbar {
-  position: sticky;
-  top: 6rem;
-  z-index: 999;
+  /* position: relative;
+  top: 0; */
+  z-index: 998;
   background-color: transparent;
   padding: 0.6rem 2rem;
-  box-shadow: none;
   display: flex;
   flex-direction: column;
   font-family: "Segoe UI", sans-serif;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.secondary-navbar.below-primary {
+  position: relative;
+  /* top: 0; */
+  background-color: transparent;
+  /* padding: 0.6rem 2rem; */
+}
+
+.secondary-navbar.sticky.with-primary {
+  position: sticky;
+  top: 6rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.secondary-navbar.sticky.no-primary {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .secondary-navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent white */
-  backdrop-filter: blur(10px); /* the actual blur effect */
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-navbar.sticky {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.6rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* In global CSS or layout wrapper */
+body {
+  padding-top: 6rem; /* Adjust based on combined navbar height */
 }
 
 .menu-toggle {
@@ -107,7 +151,6 @@
   color: #0fb7a4;
 }
 
-/* Show dropdown on hover for desktop */
 .dropdown:hover .dropdown-menu {
   display: block;
 }

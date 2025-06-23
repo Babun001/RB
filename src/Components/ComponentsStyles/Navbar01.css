@@ -1,27 +1,48 @@
+/* Base Reset */
 body {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
+  padding-top: 6rem; /* Adjust based on navbar height */
+  font-family: sans-serif;
 }
+
+/* ------------------ Main Navbar ------------------ */
 .NavbarDiv {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: none;
-  flex-wrap: wrap;
-  font-family: sans-serif;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  /* -webkit-backdrop-filter: blur(10px); */
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  transition: top 0.2s ease, background-color 0.3s ease;
 }
 
+.atthetop {
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+}
+
+/* Hidden when scrolling down */
+.NavbarDiv.navbar-hidden {
+  top: -100px;
+}
+
+.navbar-hidden {
+  top: -100px;
+}
+
+/* Optional style tweak while scrolling */
 .NavbarDiv.navbar-scrolled {
- background-color: rgba(255, 255, 255, 0.4); /* semi-transparent white */
-  backdrop-filter: blur(10px); /* the actual blur effect */
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
-  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .leftNavSection {
@@ -75,6 +96,7 @@ body {
   justify-content: flex-end;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-right: 4rem;
 }
 
 .rightButtonSection button {
@@ -116,103 +138,6 @@ body {
 .rightButtonSection button:hover {
   background-color: #10d2bb;
 }
-
-/* @media (max-width: 768px) {
-  .NavbarDiv {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .leftNavSection,
-  .rightNavSection {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .rightButtonSection {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-} */
-
-/* @media (max-width: 768px) {
-  .NavbarDiv {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .leftNavSection {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    flex: 1;
-  }
-
-  .logoSection img {
-    height: 50px;
-    margin-right: 1rem;
-  }
-
-  .playStoreSection .buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-  }
-
-  .playStoreSection img {
-    height: 1.8rem;
-    width: auto;
-  }
-
-  .rightNavSection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.3rem;
-  }
-
-  .contactSection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.2rem;
-    margin: 0;
-    transform: none;
-  }
-
-  .mailId p,
-  .phoneNumbers p {
-    font-size: 0.9rem;
-    margin: 0;
-  }
-
-  .rightButtonSection {
-    width: 100%;
-    margin-top: 0.5rem;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .rightButtonSection button {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-
-  .barDiv {
-    display: none;
-  }
-
-  .rightLeftSection {
-    width: 100%;
-    justify-content: flex-start;
-  }
-} */
 
 @media (max-width: 768px) {
   .NavbarDiv {

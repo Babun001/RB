@@ -7,19 +7,36 @@ import './ComponentsStyles/Navbar01.css';
 import logo from '../Assets/logo.png';
 
 const Navbar = () => {
-    const [scrolled, setScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(true);
+    const [atTop, setAtTop] = useState(true);
 
     useEffect(() => {
-        const onScroll = () => {
-            setScrolled(window.scrollY > 0);
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY <= 0) {
+                setScrolled(true); // at top, show navbar
+                setAtTop(true);
+            } else if (currentScrollY > lastScrollY) {
+                setScrolled(false); // scrolling down, hide navbar
+                setAtTop(false);
+            } else {
+                setScrolled(true); // scrolling up, show navbar
+                setAtTop(false);
+            }
+
+            lastScrollY = currentScrollY;
         };
 
-        window.addEventListener('scroll', onScroll);
-        return () => window.removeEventListener('scroll', onScroll);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+
     return (
-        <div className={`NavbarDiv ${scrolled ? 'navbar-scrolled' : ''}`}>
+        <div className={`NavbarDiv ${atTop ? 'atthetop' : ''} ${scrolled ? '' : 'navbar-hidden'}`}>
             <div className="leftNavSection">
                 <div className="logoSection">
                     <img src={logo} alt="logo" />

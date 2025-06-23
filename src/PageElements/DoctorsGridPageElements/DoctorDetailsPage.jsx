@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 import { FaStethoscope } from "react-icons/fa6";
@@ -124,6 +125,15 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
     const halfStar = doctor.rating - fullStars >= 0.5;
     const maxStars = 5;
 
+
+
+    const navigator = useNavigate();
+
+    const handleBookAppointment = (e) => {
+        e.preventDefault();
+        navigator('/appointment')
+    }
+
     return (
         <div className="modal-overlay">
             <div className="modal-content doctorDetailsPageContainer">
@@ -172,14 +182,14 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
                             </div>
                             <div className="iconWithText">
                                 <div className="texticonCircle"><FaPhone color="rgb(16, 110, 79)" /></div>
-                                <p className="availableText" style={{fontWeight:"900"}}>{doctor.contact}</p>
+                                <p className="availableText" style={{ fontWeight: "900" }}>{doctor.contact}</p>
                             </div>
                             {/* <p className="doctorPhone"><FaPhone /> {doctor.contact}</p> */}
                         </div>
 
                         <div className="doctorDetailsUpperButton">
 
-                            <button className="bookAppointmentBtn">BOOK APPOINTMENT</button>
+                            <button className="bookAppointmentBtn" onClick={handleBookAppointment}>BOOK APPOINTMENT</button>
                         </div>
                     </div>
                 </div>

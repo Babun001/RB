@@ -6,26 +6,48 @@ import ServiceList from "../DB/AllServicesList";
 const SecondaryNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [showPrimary, setShowPrimary] = useState(true);
 
   const toggleMenu = () => {
     setMenuOpen(prev => !prev);
   };
 
+
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      if (window.scrollY > 30) {
-        setIsScrolled(true);
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 0) {
+        setShowPrimary(true);
+        setIsSticky(false);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setShowPrimary(false);
+        setIsSticky(true);
       } else {
-        setIsScrolled(false);
+        // Scrolling up
+        setShowPrimary(true);
+        setIsSticky(true); // ❗️IMPORTANT: keep sticky on scroll up
       }
+
+      lastScrollY = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
   return (
-    <nav className={`secondary-navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <div className={`secondary-navbar ${isSticky
+        ? showPrimary
+          ? 'sticky with-primary'
+          : 'sticky no-primary'
+        : 'below-primary'
+      }`}>
       <div className="menu-toggle" onClick={toggleMenu}>
         {menuOpen ? (
           <span className="close-icon">✕</span>
@@ -58,8 +80,8 @@ const SecondaryNavbar = () => {
         <li><Link to="/doctors-grid">OPD</Link></li>
         <li><Link to="/faqs">FAQs</Link></li>
         <li><Link to="/corporate-wellness">Corporate Wellness</Link></li>
-        <li><Link to="/about-us">About Us</Link></li>
-        <li><Link to="/contact-us">Contact</Link></li>
+        <li><Link to="#">About Us</Link></li>
+        <li><Link to="#">Contact</Link></li>
 
         <li className="dropdown">
           <span>Login ▾</span>
@@ -69,7 +91,7 @@ const SecondaryNavbar = () => {
           </ul>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 };
 

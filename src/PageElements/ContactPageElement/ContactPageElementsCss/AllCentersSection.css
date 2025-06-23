@@ -1,0 +1,52 @@
+.center-wrapper {
+  padding: 3rem 2rem;
+  background: #fff;
+  font-family: sans-serif;
+}
+
+.center-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.center-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.center-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.center-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.center-info {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.center-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.center-directions {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #0fb7a4;
+  cursor: pointer;
+}

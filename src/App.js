@@ -17,6 +17,8 @@ import RegistrationPage from './Pages/Registration.Page';
 import AboutPage from './Pages/About.Page';
 import ContactUsPage from './Pages/Contact.Page';
 
+
+
 // services pages
 import PulmonologyPage from './Pages/ServicePages/Pulmonology.Page';
 import GastroenterologyPage from './Pages/ServicePages/Gastroenterology.Page';
@@ -29,41 +31,51 @@ import HomecarePage from './Pages/ServicePages/Homecare.Page';
 import OphthalmologyPage from './Pages/ServicePages/Ophthalmology.Page';
 import PhysiotherapyPage from './Pages/ServicePages/Physiotherapy.Page';
 
+// Booking route
+import BookAppointmentPage from './Pages/BookingAppointment.Page';
+
+
 function App() {
   return (
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
         <Route path="/doctors-grid/:id" element={<DoctorDetailsPage />} />
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home/>}/>
-          <Route path='/collection' element={<HomeCollection/>}/>
-          <Route path='/OurPackagesPage' element={<OurPackagesPage/>}/>
-          <Route path='/doctors-grid' element={<DoctorsGridPage/>}/>
-          <Route path='/view-reports' element={<ViewReportsPage/>}/>
-          <Route path='/faqs' element={<FAQsPage/>}/>
-          <Route path='/corporate-wellness' element={<CorporateWellnessPage/>}/>
-          <Route path='/login' element={<LoginPage/>}/>
-          <Route path='/registration' element={<RegistrationPage/>}/>
-          <Route path='/about-us' element={<AboutPage/>}/>
-          <Route path='/contact-us' element={<ContactUsPage/>}/>
+          <Route index element={<Home />} />
+          <Route path='/collection' element={<HomeCollection />} />
+          <Route path='/OurPackagesPage' element={<OurPackagesPage />} />
+          <Route path='/doctors-grid' element={<DoctorsGridPage />} />
+          <Route path='/view-reports' element={<ViewReportsPage />} />
+          <Route path='/faqs' element={<FAQsPage />} />
+          <Route path='/corporate-wellness' element={<CorporateWellnessPage />} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route path='/registration' element={<RegistrationPage />} />
+          <Route path='/about-us' element={<AboutPage />} />
+          <Route path='/contact-us' element={<ContactUsPage />} />
 
 
           {/*services routes */}
 
 
-          <Route path='/service/pulmonology' element={<PulmonologyPage/>}/>
-          <Route path='/service/gastroenterology' element={<GastroenterologyPage/>}/>
-          <Route path='/service/radiology' element={<RadiologyPage/>}/>
-          <Route path='/service/neurology' element={<NeurologyPage/>}/>
-          <Route path='/service/dental' element={<DentalPage/>}/>
-          <Route path='/service/dialysis' element={<DialysisPage/>}/>
-          <Route path='/service/dermatology' element={<DermatologyPage/>}/>
-          <Route path='/service/homecare' element={<HomecarePage/>}/>
-          <Route path='/service/ophthalmology' element={<OphthalmologyPage/>}/>
-          <Route path='/service/physiotherapy' element={<PhysiotherapyPage/>}/>
+          <Route path='/service/pulmonology' element={<PulmonologyPage />} />
+          <Route path='/service/gastroenterology' element={<GastroenterologyPage />} />
+          <Route path='/service/radiology' element={<RadiologyPage />} />
+          <Route path='/service/neurology' element={<NeurologyPage />} />
+          <Route path='/service/dental' element={<DentalPage />} />
+          <Route path='/service/dialysis' element={<DialysisPage />} />
+          <Route path='/service/dermatology' element={<DermatologyPage />} />
+          <Route path='/service/homecare' element={<HomecarePage />} />
+          <Route path='/service/ophthalmology' element={<OphthalmologyPage />} />
+          <Route path='/service/physiotherapy' element={<PhysiotherapyPage />} />
 
 
+          {/* BookingAppointment */}
+
+
+          <Route path='/appointment/:id' element={<BookAppointmentPage />} />
+
+          
         </Route>
       </Routes>
     </Router>
