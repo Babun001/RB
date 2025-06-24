@@ -5,8 +5,12 @@
   height: 900px;
   /* margin-top: -2rem; */
   margin-top: -14rem;
+  margin-bottom: -10rem;
 }
 
+.slick-dots{
+  display: none !important;
+}
 .hero-section-degins {
   position: absolute;
   top: 0;

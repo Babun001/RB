@@ -1,38 +1,30 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // ✅ add useLocation
 import './ComponentsStyles/Navbar02.css';
 import ServiceList from "../DB/AllServicesList";
 
 const SecondaryNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [showPrimary, setShowPrimary] = useState(true);
+  const location = useLocation(); // ✅ get current URL path
 
-  const toggleMenu = () => {
-    setMenuOpen(prev => !prev);
-  };
-
+  const toggleMenu = () => setMenuOpen(prev => !prev);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       if (currentScrollY <= 0) {
         setShowPrimary(true);
         setIsSticky(false);
       } else if (currentScrollY > lastScrollY) {
-        // Scrolling down
         setShowPrimary(false);
         setIsSticky(true);
       } else {
-        // Scrolling up
         setShowPrimary(true);
-        setIsSticky(true); // ❗️IMPORTANT: keep sticky on scroll up
+        setIsSticky(true);
       }
-
       lastScrollY = currentScrollY;
     };
 
@@ -40,18 +32,13 @@ const SecondaryNavbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-
   return (
     <div className={`secondary-navbar ${isSticky
-        ? showPrimary
-          ? 'sticky with-primary'
-          : 'sticky no-primary'
+        ? showPrimary ? 'sticky with-primary' : 'sticky no-primary'
         : 'below-primary'
       }`}>
       <div className="menu-toggle" onClick={toggleMenu}>
-        {menuOpen ? (
-          <span className="close-icon">✕</span>
-        ) : (
+        {menuOpen ? <span className="close-icon">✕</span> : (
           <>
             <span className="bar"></span>
             <span className="bar"></span>
@@ -61,33 +48,38 @@ const SecondaryNavbar = () => {
       </div>
 
       <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/collection">Home Collection</Link></li>
-        <li><Link to="/view-reports">View Report</Link></li>
-        <li><Link to="/OurPackagesPage">Health Package</Link></li>
+        <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
+        <li><Link to="/collection" className={location.pathname === '/collection' ? 'active' : ''}>Home Collection</Link></li>
+        <li><Link to="/view-reports" className={location.pathname === '/view-reports' ? 'active' : ''}>View Report</Link></li>
+        <li><Link to="/OurPackagesPage" className={location.pathname === '/OurPackagesPage' ? 'active' : ''}>Health Package</Link></li>
 
         <li className="dropdown">
           <span>Services ▾</span>
           <ul className="dropdown-menu">
-            {
-              ServiceList.map((svs, inds) => (
-                <li key={inds}><Link to={`/service/${svs.path}`}>{svs.name}</Link></li>
-              ))
-            }
+            {ServiceList.map((svs, i) => (
+              <li key={i}>
+                <Link
+                  to={`/service/${svs.path}`}
+                  className={location.pathname === `/service/${svs.path}` ? 'active' : ''}
+                >
+                  {svs.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </li>
 
-        <li><Link to="/doctors-grid">OPD</Link></li>
-        <li><Link to="/faqs">FAQs</Link></li>
-        <li><Link to="/corporate-wellness">Corporate Wellness</Link></li>
-        <li><Link to="#">About Us</Link></li>
-        <li><Link to="#">Contact</Link></li>
+        <li><Link to="/doctors-grid" className={location.pathname === '/doctors-grid' ? 'active' : ''}>OPD</Link></li>
+        <li><Link to="/faqs" className={location.pathname === '/faqs' ? 'active' : ''}>FAQs</Link></li>
+        <li><Link to="/corporate-wellness" className={location.pathname === '/corporate-wellness' ? 'active' : ''}>Corporate Wellness</Link></li>
+        <li><Link to="#" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
+        <li><Link to="#" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
 
         <li className="dropdown">
           <span>Login ▾</span>
           <ul className="dropdown-menu">
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/registration">Registration</Link></li>
+            <li><Link to="/login" className={location.pathname === '/login' ? 'active' : ''}>Login</Link></li>
+            <li><Link to="/registration" className={location.pathname === '/registration' ? 'active' : ''}>Registration</Link></li>
           </ul>
         </li>
       </ul>

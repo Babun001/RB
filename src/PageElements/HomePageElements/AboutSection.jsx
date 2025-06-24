@@ -18,7 +18,7 @@ const AboutSection = () => {
                                     />
                                 </defs>
 
-                                <text fontSize="14" fill="#333" fontWeight="500">
+                                <text fontSize="22" fill="#333" fontWeight="500">
                                     <textPath
                                         href="#topTextPath"
                                         startOffset="50%"
@@ -30,7 +30,7 @@ const AboutSection = () => {
                                 </text>
 
                                 <text x="100" y="110" textAnchor="middle" fontSize="40" fontWeight="bold" fill="black">
-                                    20+
+                                    50+
                                 </text>
                             </svg>
                         </div>
@@ -45,9 +45,21 @@ const AboutSection = () => {
                     </p>
                     <div className="about-right-buttom">
                         <ul className="features">
-                            <li><h3>NABL Accredited Labs</h3><br />Ensuring the highest standards in testing accuracy and reliability across all diagnostic services.</li>
-                            <li><h3>Comprehensive Test Menu</h3><br />From routine check-ups to advanced diagnostics, we offer a wide range of tests under one roof.</li>
-                            <li><h3>Expert Medical Team</h3><br />Our experienced doctors and technicians ensure precise reports and professional guidance at every step.</li>
+                            <li>
+                                <h3>NABL Accredited Labs</h3>
+                                <br />
+                                Ensuring the highest standards in testing accuracy and reliability across all diagnostic services.
+                            </li>
+                            <li>
+                                <h3>Home Collection</h3>
+                                <br />
+                                Enjoy hassle-free sample collection services from the comfort of your home.
+                            </li>
+                            <li>
+                                <h3>Fast Reports</h3>
+                                <br />
+                                Receive accurate and timely diagnostic reports to support quicker decisions.
+                            </li>
                         </ul>
 
                         <button className="read-more-btn">Read More</button>

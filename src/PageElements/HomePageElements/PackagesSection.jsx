@@ -44,9 +44,13 @@ export default function PackagesSection() {
                     </div>
                 ))}
             </div>
-            {!showAll && diseaseData.length > 8 && (
+
+            {/* Toggle Buttons */}
+            {diseaseData.length > 8 && (
                 <div className="viewMoreContainer">
-                    <button className="viewMoreBtn" onClick={() => setShowAll(true)}>View All</button>
+                    <button className="viewMoreBtn" onClick={() => setShowAll(!showAll)}>
+                        {showAll ? 'View Less' : 'View All'}
+                    </button>
                 </div>
             )}
         </div>

@@ -1,3 +1,7 @@
+.linksDieases a{
+  color: #003588;
+}
+
 .TestsContainer{
     padding: 2rem 4ren;
 }
@@ -22,15 +26,16 @@
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
-    width: 10rem;
+    /* width: 10rem; */
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
 .cardDiseaseSection img{
-    width: 100%;
-    height: auto;
+    width: 10rem;
+    height: 10rem;
+    /* height: auto; */
     object-fit: cover;
     border-radius: 50%;
 }

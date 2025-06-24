@@ -17,7 +17,7 @@ const WelcomeSection = () => {
 
                 <div className="leftBottomWelcomeSection">
                     <div className="cardUpSection">
-                        <div className="cardsSection" style={{ backgroundColor: "#e0f7fa" }}>
+                        <div className="cardsSection" style={{ backgroundColor: "#cfdfec" }}>
 
                             <div className="cardUpperSection">
                                 <span className="iconBackground">
@@ -29,7 +29,7 @@ const WelcomeSection = () => {
                             <h4>Book an Appointment</h4>
                             <p>Schedule your diagnostic tests effortlessly with our easy online booking system</p>
                         </div>
-                        <div className="cardsSection" style={{ backgroundColor: "#fce4ec" }}>
+                        <div className="cardsSection" style={{ backgroundColor: "#d7ece5" }}>
 
                             <div className="cardUpperSection">
                                 <div className="iconBackground">
@@ -46,7 +46,7 @@ const WelcomeSection = () => {
                     </div>
                     <div className="cardUpSection">
 
-                        <div className="cardsSection" style={{ backgroundColor: "#fff3e0" }}>
+                        <div className="cardsSection" style={{ backgroundColor: "#f1ded8" }}>
 
 
                             <div className="cardUpperSection">
@@ -60,7 +60,7 @@ const WelcomeSection = () => {
                             <h4>View Report</h4>
                             <p>Access your medical reports securely anytime from our online portal</p>
                         </div>
-                        <div className="cardsSection" style={{ backgroundColor: "#ede7f6" }}>
+                        <div className="cardsSection" style={{ backgroundColor: "#d6d3f2" }}>
 
 
 

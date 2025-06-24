@@ -2,8 +2,8 @@
 body {
   margin: 0;
   padding: 0;
-  padding-top: 6rem; /* Adjust based on navbar height */
-  font-family: sans-serif;
+  padding-top: 6rem;
+  font-family: "Noto Serif", serif;
 }
 
 /* ------------------ Main Navbar ------------------ */
@@ -13,20 +13,21 @@ body {
   top: 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   overflow: hidden;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  /* -webkit-backdrop-filter: blur(10px); */
-  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  background-color: rgb(255, 255, 255);
+  /* backdrop-filter: blur(10px); */
   transition: top 0.2s ease, background-color 0.3s ease;
+  color: black;
+  font-weight: 700;
 }
 
 .atthetop {
   background-color: transparent;
   backdrop-filter: blur(0px);
+  color: white;
 }
 
 /* Hidden when scrolling down */
@@ -77,6 +78,8 @@ body {
   gap: 0.5rem;
   font-size: 0.9rem;
   margin-left: 2rem;
+  align-items: center;
+  
 }
 
 .contactSection .phoneNumbers p,

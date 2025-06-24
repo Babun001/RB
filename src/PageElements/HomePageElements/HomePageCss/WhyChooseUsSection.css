@@ -8,17 +8,80 @@
   top: 0;
 }
 
-.headingText {
-  width: 40%;
+.contentArea{
+  width: 50%;
 }
 
-.questionRow {
+.headingText {
+  /* width: 40%; */
+}
+
+/* .paragraphStyle{
+    fontSize: '1rem';
+    marginBottom: '1.5rem';
+    lineHeight: '1.6';
+  }; */
+
+
+.paragraphStyle {
+  color: #515151;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.bulletStyle{
+  color: #0FB7A4;
+}
+
+/* const listStyle = {
+    listStyle: 'none',
+    paddingLeft: 0,
+    marginBottom: '2rem',
+  }; */
+.listStyle {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+/* const listItemStyle = {
+    marginBottom: '0.75rem',
+    display: 'flex',
+    alignItems: 'flex-start',
+  }; */
+
+.listItemStyle {
+  margin-bottom: 1.3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* const paragraphStyle = {
+    color: 'purple',
+    marginRight: '0.5rem',
+    fontWeight: 'bold',
+  }; */
+
+
+/* const buttonStyle = {
+    padding: '0.6rem 1.5rem',
+    border: '2px solid #333',
+    backgroundColor: '#fff',
+    color: '#333',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    fontWeight: '600',
+  }; */
+
+/* .questionRow {
   display: flex;
   gap: 15px;
   margin: 1.5rem 0rem;
-}
+} */
 
-.iconCircle {
+/* .iconCircle {
   width: 35px;
   height: 35px;
   background-color: #b5ebfe;
@@ -30,20 +93,19 @@
   cursor: pointer;
   line-height: 36px;
   text-align: center;
-}
+} */
 
-.questionText {
+/* .questionText {
   margin: 0;
   font-size: 1.5rem;
   color: #000000;
-}
+} */
 
-.answerText {
+/* .answerText {
   width: 50%;
   font-size: 15px;
   transform: translateX(60px);
-  /* margin-top: -15px; */
-}
+} */
 
 @media (max-width: 768px) {
   .whychooseUsContainer {

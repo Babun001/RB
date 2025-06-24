@@ -2,65 +2,33 @@ import React, { useState } from "react";
 import "./HomePageCss/WhyChooseUsSection.css";
 
 export default function WhyChooseUsSection() {
-    const [openIndex, setOpenIndex] = useState(null);
-
-    const queries = [
-        {
-            q: "NABL-Accredited Quality Standards",
-            ans: "We adhere to the highest standards of diagnostic accuracy, with NABL accreditation that ensures quality you can rely on."
-        },
-        {
-            q: "State-of-the-Art Imaging & Lab Technology",
-            ans: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quaerat autem? Ad facilis odit delectus."
-        },
-        {
-            q: "13+ Easily Accessible Centres Across Kolkata & Beyond",
-            ans: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quaerat autem? Ad facilis odit delectus."
-        },
-        {
-            q: "Door-step Home Sample Collection & Home-Care Services",
-            ans: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quaerat autem? Ad facilis odit delectus."
-        },
-        {
-            q: "Fast Digital Reports with Secure Online Access",
-            ans: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quaerat autem? Ad facilis odit delectus."
-        },
-        {
-            q: "Experienced Doctors & Skilled Technologists",
-            ans: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quaerat autem? Ad facilis odit delectus."
-        },
-    ];
-
-    const handleToggle = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
-    };
-
     return (
         <div className="whychooseUsContainer">
             <div className="contentArea">
-                <div className="headingTag">
-                    <h4 className="rb-headingTag">Why choose us</h4>
-                </div>
+
                 <div className="headingText">
-                    <h2 className="rb-title">The Smart Choice for Smarter Healthcare</h2>
+                    <h2 className="rb-title">Bringing Complete Healthcare Services to Your Home</h2>
                 </div>
-                <div className="queriesSection">
-                    {queries.map((qs, index) => (
-                        <div
-                            key={index}
-                            className="queryItem"
-                            onClick={() => handleToggle(index)}
-                        >
-                            <div className="questionRow">
-                                <span className="iconCircle">
-                                    {openIndex === index ? "−" : "+"}
-                                </span>
-                                <h4 className="questionText">{qs.q}</h4>
-                            </div>
-                            {openIndex === index && <p className="answerText">{qs.ans}</p>}
-                        </div>
-                    ))}
-                </div>
+
+
+                <p className="paragraphStyle">
+                    Expert medical care is now at your doorstep. RB Diagnostic Home Care delivers a full spectrum of medical and rehabilitation services to your home—cutting travel and hospital stays—whether you're a child, senior, or in need of post-operative or chronic care. 
+                </p>
+
+                <ul className="listStyle">
+                    <li className="listItemStyle" style={{borderBottom:"1px solid gray", padding:"0rem 0rem 1rem 0rem", width:"100%"}}>
+                        <span className="bulletStyle" >✔</span>
+                        In-home doctor consultations with various specialists, available physically, virtually, or on-call.
+                    </li>
+                    <li className="listItemStyle" style={{borderBottom:"1px solid gray", padding:"0rem 0rem 1rem 0rem", width:"100%"}}>
+                        <span className="bulletStyle">✔</span>
+                        24/7 skilled nursing care for everything from dressings and injections to continuous monitoring.
+                    </li>
+                    <li className="listItemStyle">
+                        <span className="bulletStyle">✔</span>
+                        At-home physiotherapy & rehabilitation for post-surgical, orthopedic, cardiac, and neuro-rehab needs.
+                    </li>
+                </ul>
 
             </div>
 

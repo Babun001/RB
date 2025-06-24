@@ -1,3 +1,21 @@
+.KnowMoreBtn{
+  padding: 12px 16px;
+  background-color: #d9ede6;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  /* font-weight: 600; */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  width: 20%;
+}
+
+/* .buttonsection{
+  background-color: red;
+} */
+
+
 .rb-headingTag {
   width: 10rem !important;
   margin-top: 1.5rem;

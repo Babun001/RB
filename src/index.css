@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", "Merriweather", "Noto Serif", serif;
 }
 
 code {
@@ -15,10 +19,10 @@ code {
 
 .rb-title {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 100;
   margin: 1rem 0rem;
-  color: #000000;
-  line-height: 1.2;
+  color: #001a26;
+  /* line-height: 1.2; */
   margin-bottom: 2rem;
 }
 
@@ -47,13 +51,14 @@ code {
 
 h1,
 h2,
-h3,
-h4,
-h5,
+h3 {
+  font-family: "Merriweather", serif;
+}
+
 strong,
 li,
 p {
-  font-family: sans-serif !important;
+  font-family: "Inter",sans-serif;
 }
 
 @media (max-width: 768px) {

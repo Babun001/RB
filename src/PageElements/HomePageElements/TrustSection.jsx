@@ -20,7 +20,7 @@ export default function TrustSection() {
             <div className="trustContainer">
                 <div className="trustUpperSection">
                     <h2 className="rb-title trust-title" style={{ color: "white", lineHeight:"1", marginTop:"3rem", textAlign:"center" }}>Your Trusted Diagnostic Partner Since 2010</h2>
-                    <p className="paraText" style={{ color: "white" }}>
+                    <p className="paraText" style={{ color: "white", lineHeight:"0" }}>
                         Delivering accurate, affordable, and timely diagnostic services with NABL-accredited labs,
                     </p>
                     <p className="paraText" style={{ color: "white" }}>

@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
-  padding: 3rem 2rem;
+  padding: 1rem 2rem;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -36,6 +36,9 @@
 
 .headingText {
   margin-bottom: 10px;
+  font-family: "Inter",sans-serif !important;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .contactDiv {
@@ -56,7 +59,7 @@
 
 .short-links li:hover {
   color: rgb(206, 206, 206);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .footer-right {
@@ -79,7 +82,7 @@
 }
 
 .footer-bottom {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 1rem;

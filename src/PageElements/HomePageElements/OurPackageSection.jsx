@@ -17,7 +17,7 @@ export default function OurPackage() {
         price: 1600.00
       },
       {
-        title: 'KFT',
+        title: 'KFT (Kidney Function Test)',
         TestsAndComp: ['7 Tests', '7 Components'],
         price: 1300.00
       },
@@ -26,7 +26,7 @@ export default function OurPackage() {
         TestsAndComp: ['21 Tests', '93 Components'],
         price: 6500.00
       }, {
-        title: 'KFT',
+        title: 'KFT (Kidney Function Test)',
         TestsAndComp: ['7 Tests', '7 Components'],
         price: 1300.00
       },
@@ -84,7 +84,7 @@ export default function OurPackage() {
 
 
             <div className="cardTitlePack">
-              <h2 style={{ lineHeight: "25px", margin: "5px 0px" }}>{card.title}</h2>
+              <h2 style={{ lineHeight: "1.3", margin: "5px 0px" }}>{card.title}</h2>
             </div>
 
             <span className="testAndComp">
@@ -97,7 +97,7 @@ export default function OurPackage() {
             </div>
 
             <div className="priceSection">
-              <h2 style={{ fontSize: "2rem", color: "black" }}>₹{card.price.toFixed(2)}</h2>
+              <h2 style={{ fontSize: "2rem", color: "black" }}>₹ {card.price.toFixed(2)}</h2>
             </div>
 
             <div className="cardLowerSec">
