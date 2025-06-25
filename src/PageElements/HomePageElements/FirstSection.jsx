@@ -5,8 +5,8 @@ import './HomePageCss/FirstSection.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import img1 from '../../Assets/faqBackground.png';
-import img2 from '../../Assets/wcrbd.png';
+import img1 from '../../Assets/bg1.jpg';
+import img2 from '../../Assets/bg2.jpg';
 import img3 from '../../Assets/WhyChooseUs.png';
 
 const images = [img1,img2,img3];
@@ -59,14 +59,14 @@ const FirstSection = () => {
                     </div>
                 </div>
 
-                <div className="hero-float-icons">
+                {/* <div className="hero-float-icons">
                     <div className="icon-circle">
                         <FaPhone title='Phone' size={25} />
                     </div>
                     <div className="icon-circle">
                         <IoMdMail title="Mail" size={25} />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

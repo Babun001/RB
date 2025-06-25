@@ -1,3 +1,7 @@
+.testimonial-title{
+  z-index: 2;
+}
+
 .testimonialContainer {
   display: flex;
   justify-content: center;
@@ -92,7 +96,15 @@
   cursor: pointer;
   width: 9rem;
   margin: 2rem;
+  transition: all 0.3s ease;
 }
+
+.testimonianlButton button:hover {
+  background-color: #3cbeb1;
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
 
 .testimonialTextSection {
   padding: 2rem;
@@ -105,6 +117,7 @@
   background-color: #ffffff;
   box-shadow: 0 5px 10px #c3e7e7;
   font-size: 1rem;
+  height: 12rem;
 }
 
 .buttonWrapper {

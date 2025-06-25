@@ -1,42 +1,48 @@
+import React, { useState } from 'react';
 import './HomePageCss/TestimonialSection.css';
-import TestimonialCarousel from './TestimonialCarousal';
-export default function TestimonialSection() {
+import TestimonialCarousel, { users } from './TestimonialCarousal';
 
+export default function TestimonialSection() {
+    const [activeTestimonial, setActiveTestimonial] = useState(users[0]);
+
+    const getTrimmedComment = (comment) => {
+        return comment.length > 300 ? comment.slice(0, 300) + '...' : comment;
+    };
 
     return (
-        <>
-            <div className="testimonialContainer">
-                <h2 className="rb-title">Client Testimonial</h2>
-                <div className="testimonialMiddleSection">
-                    <TestimonialCarousel />
-                </div>
-                <div className="testimonialLowerSection">
-                    <div className="videoSection">
-                        <video controls className="responsiveVideo">
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div className="testimonialTextSection">
-                        <div className="testimonialTextCircleDiv">
-                            
-                        </div>
-                        <p style={{margin:"0"}}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint facere delectus exercitationem ducimus fugiat
-                            aliquid iste vero deleniti cum a. Eligendi cumque eos, architecto placeat ex expedita voluptatem
-                            repellendus? Quos?
-                        </p>
-                    </div>
-                    <div className="testimonianlButton">
-                        <div className="buttonWrapper">
-                            <button>Lorem Ipsum</button>
-                        </div>
-                    </div>
-                </div>
+        <div className="testimonialContainer">
+            <h2 className="rb-title testimonial-title">Client Testimonial</h2>
 
-
-
+            <div className="testimonialMiddleSection">
+                <TestimonialCarousel onSlideChange={setActiveTestimonial} />
             </div>
-        </>
-    )
+
+            <div className="testimonialLowerSection">
+                <div className="videoSection">
+                    <video controls className="responsiveVideo">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div className="testimonialTextSection">
+                    <div className="testimonialTextCircleDiv">
+                        {/* Optional: show profile circle or initials */}
+                    </div>
+                    <p style={{ margin: "0", fontStyle: "italic", color: "#333" }}>
+                        "{getTrimmedComment(activeTestimonial.comments)}"
+                    </p>
+                    <p style={{ marginTop: "0.5rem", fontWeight: "bold" }}>
+                        - {activeTestimonial.name}, {activeTestimonial.recedential}
+                    </p>
+                </div>
+
+                <div className="testimonianlButton">
+                    <div className="buttonWrapper">
+                        <button className='feedbackbtn'>Give Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }

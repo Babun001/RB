@@ -9,28 +9,100 @@ export default function OurPackage() {
   const categories = ['General Wellness', 'Lifestyle', 'Gynecology Packages', 'Offers'];
 
   const getCardsForCategory = (category) => {
-    // You can customize data per category here
-    return [
-      {
-        title: 'Serology Profile',
-        TestsAndComp: ['4 Tests', '7 Components'],
-        price: 1600.00
-      },
-      {
-        title: 'KFT (Kidney Function Test)',
-        TestsAndComp: ['7 Tests', '7 Components'],
-        price: 1300.00
-      },
-      {
-        title: 'RBD Healthy Life, Blood (Female)',
-        TestsAndComp: ['21 Tests', '93 Components'],
-        price: 6500.00
-      }, {
-        title: 'KFT (Kidney Function Test)',
-        TestsAndComp: ['7 Tests', '7 Components'],
-        price: 1300.00
-      },
-    ];
+    const data = {
+      'General Wellness': [
+        {
+          title: 'Serology Profile',
+          TestsAndComp: ['4 Tests', '7 Components'],
+          price: 1600.00
+        },
+        {
+          title: 'KFT (Kidney Function Test)',
+          TestsAndComp: ['7 Tests', '7 Components'],
+          price: 1300.00
+        },
+        {
+          title: 'RBD Healthy Life, Blood (Female)',
+          TestsAndComp: ['21 Tests', '93 Components'],
+          price: 6500.00
+        }, {
+          title: 'KFT (Kidney Function Test)',
+          TestsAndComp: ['7 Tests', '7 Components'],
+          price: 1300.00
+        },
+      ],
+
+      'Lifestyle': [
+        {
+          title: 'Fitness Pro Package',
+          TestsAndComp: ['25 Tests', '68 Components'],
+          price: 2799.00
+        },
+        {
+          title: 'Smoker’s Risk Assessment',
+          TestsAndComp: ['10 Tests', '25 Components'],
+          price: 1899.00
+        },
+        {
+          title: 'Stress & Sleep Health Panel',
+          TestsAndComp: ['6 Tests', '18 Components'],
+          price: 1299.00
+        },
+        {
+          title: 'Nutritional Health Screening',
+          TestsAndComp: ['14 Tests', '30 Components'],
+          price: 1699.00
+        }
+      ],
+
+      'Gynecology Packages': [
+        {
+          title: 'Women’s Hormonal Profile',
+          TestsAndComp: ['9 Tests', '21 Components'],
+          price: 2299.00
+        },
+        {
+          title: 'PCOD/PCOS Screening',
+          TestsAndComp: ['7 Tests', '17 Components'],
+          price: 1999.00
+        },
+        {
+          title: 'Pregnancy Wellness Package',
+          TestsAndComp: ['12 Tests', '30 Components'],
+          price: 2599.00
+        },
+        {
+          title: 'Anaemia Panel (Female)',
+          TestsAndComp: ['5 Tests', '14 Components'],
+          price: 899.00
+        }
+      ],
+
+      'Offers': [
+        {
+          title: 'RBD Smart Combo - 1',
+          TestsAndComp: ['30 Tests', '88 Components'],
+          price: 1799.00
+        },
+        {
+          title: 'Weekend Special - Wellness Check',
+          TestsAndComp: ['22 Tests', '56 Components'],
+          price: 1199.00
+        },
+        {
+          title: 'Buy 1 Get 1 Free - Basic Panel',
+          TestsAndComp: ['15 Tests', '40 Components'],
+          price: 999.00
+        },
+        {
+          title: 'Festive Health Pack',
+          TestsAndComp: ['28 Tests', '75 Components'],
+          price: 1499.00
+        }
+      ]
+    };
+
+    return data[category] || [];
   };
 
   const cards = getCardsForCategory(activeTab);

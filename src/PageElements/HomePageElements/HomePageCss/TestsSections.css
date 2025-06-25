@@ -1,62 +1,64 @@
-.linksDieases a{
+.linksDieases a {
   color: #003588;
 }
 
-.TestsContainer{
-    padding: 2rem 4ren;
+.TestsContainer {
+  padding: 2rem 4ren;
 }
 
-.abc{
+.abc {
   margin-top: 0 !important;
 }
-.temp-title{
-    max-width: 48rem !important;
-    text-align: center !important;
+.temp-title {
+  max-width: 48rem !important;
+  text-align: center !important;
 }
 
-.diseaseSectionExplore{
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    gap: 1rem;
-    justify-items: center;
-    padding: 2rem 4rem;
+.diseaseSectionExplore {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  padding: 2rem 4rem;
 }
 
-.cardDiseaseSection{
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    /* width: 10rem; */
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.cardDiseaseSection {
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* width: 10rem; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.cardDiseaseSection img{
-    width: 10rem;
-    height: 10rem;
-    /* height: auto; */
-    object-fit: cover;
-    border-radius: 50%;
+.cardDiseaseSection img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
-.cardDiseaseSection h2{
-    font-size: 1.8rem;
-
+.cardDiseaseSection img:hover {
+  transform: scale(1.03);
 }
 
-.cardDiseaseSection p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+.cardDiseaseSection h2 {
+  font-size: 1.8rem;
 }
 
-.cardDiseaseSection a{
-    text-decoration: none;
-    font-size: 0.8rem;
+.cardDiseaseSection p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
+.cardDiseaseSection a {
+  text-decoration: none;
+  font-size: 0.8rem;
+}
 
 @media (max-width: 1024px) {
   .diseaseSectionExplore {
@@ -70,7 +72,7 @@
     padding: 2rem 1rem;
   }
 
-  .pk-tag{
+  .pk-tag {
     width: 2rem;
   }
 

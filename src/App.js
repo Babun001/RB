@@ -3,6 +3,8 @@ import './App.css';
 import Layout from './Layout';
 import ScrollToTop from './ScrollToTop';
 
+import StickyContactButtons from './Components/StickyContactBtn';
+
 // all pages
 import Home from './Pages/Home.Page';
 import HomeCollection from './Pages/HomeCollection.page';
@@ -39,6 +41,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <StickyContactButtons />
       <Routes>
         <Route path="/doctors-grid/:id" element={<DoctorDetailsPage />} />
         <Route path="/" element={<Layout />}>
@@ -75,7 +78,7 @@ function App() {
 
           <Route path='/appointment/:id' element={<BookAppointmentPage />} />
 
-          
+
         </Route>
       </Routes>
     </Router>
