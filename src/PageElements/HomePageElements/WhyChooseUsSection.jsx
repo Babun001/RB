@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./HomePageCss/WhyChooseUsSection.css";
 
 import AnimatedText from "../../AnimatedText";

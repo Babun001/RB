@@ -1,6 +1,4 @@
 import Slider from 'react-slick';
-import { FaPhone } from "react-icons/fa6";
-import { IoMdMail } from "react-icons/io";
 import './HomePageCss/FirstSection.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
