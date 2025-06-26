@@ -20,7 +20,7 @@ export default function TestimonialSection() {
             <div className="testimonialLowerSection">
                 <div className="videoSection">
                     <video controls className="responsiveVideo">
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                        <source src="https://www.google.com/search?sca_esv=031453346484e3fe&rlz=1C1YTUH_enIN1157IN1157&udm=7&sxsrf=AE3TifM5P1y8RXX6CKtdRvmc_oxvcWJJnw:1750946671160&q=short+video+link&sa=X&ved=2ahUKEwjLvOvSoI-OAxV54TgGHfyKMpUQ8ccDKAJ6BAgQEAQ&biw=1536&bih=703&dpr=1.25#fpstate=ive&vld=cid:e1202e2d,vid:IyOv7Yhxaaw,st:0" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>

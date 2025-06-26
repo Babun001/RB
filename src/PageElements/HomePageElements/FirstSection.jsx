@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import img1 from '../../Assets/bg1.jpg';
 import img2 from '../../Assets/bg2.jpg';
-import img3 from '../../Assets/WhyChooseUs.png';
+import img3 from '../../Assets/bg3.jpg';
 
 const images = [img1,img2,img3];
 
@@ -36,7 +36,7 @@ const FirstSection = () => {
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
-                                height: '700px',
+                                height: '750px',
                             }}
                         />
                     </div>

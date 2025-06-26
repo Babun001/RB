@@ -1,38 +1,42 @@
 import './HomePageCss/FAQSection.css';
 
-export default function FAQSectionSection(){
+import AnimatedText from '../../AnimatedText';
+
+export default function FAQSectionSection() {
     const Qs = [
         {
-            name:"Career"
+            name: "Career"
         },
         {
-            name:"General Queries"
+            name: "General Queries"
         },
         {
-            name:"Home Collection"
+            name: "Home Collection"
         },
         {
-            name:"Reports and Payments"
+            name: "Reports and Payments"
         },
         {
-            name:"Test Related Queries"
+            name: "Test Related Queries"
         },
         {
-            name:"Ultrasound"
+            name: "Ultrasound"
         },
         {
-            name:"Vaccination"
+            name: "Vaccination"
         }
     ]
-    return(
+    return (
         <>
             <div className="faqContainer">
                 <div className="faqUpperSection">
-                    <h1>Frequently Asked Questions (FAQs)</h1>
+                    <AnimatedText tag="h1" type="chars" y={30}>
+                        Frequently Asked Questions (FAQs)
+                    </AnimatedText>
                 </div>
                 <div className="questionsSection">
                     {
-                        Qs.map((q,indx) =>(
+                        Qs.map((q, indx) => (
                             <div className="qus" key={indx}>
                                 <p><span>+</span> {q.name}</p>
                             </div>

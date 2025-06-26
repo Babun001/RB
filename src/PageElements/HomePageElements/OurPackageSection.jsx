@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './HomePageCss/OurPackageSection.css';
 import { FaShoppingCart } from "react-icons/fa";
 import cornerIcon from '../../Assets/cornerIcon.png';
+import AnimatedText from '../../AnimatedText';
 
 export default function OurPackage() {
   const [activeTab, setActiveTab] = useState('General Wellness');
@@ -110,14 +111,20 @@ export default function OurPackage() {
   return (
     <div className="ourPackageContainer">
       <div className="ourPackageUpperSection">
-        <h2 className="rb-title ourpackageTitle">Our Packages</h2>
+        <AnimatedText tag="h2" type="chars" y={30} className="rb-title ourpackageTitle">
+          Our Packages
+        </AnimatedText>
+
         <div className="textParaSection">
-          <p className="paraText">
+
+          <AnimatedText tag="p" type="words" y={-20} className="paraText">
             RB Diagnostic offers a comprehensive range of health check-up packages tailored for every stage of life.
-          </p>
-          <p className="paraText">
+          </AnimatedText>
+
+          <AnimatedText tag="p" type="words" y={-20} className="paraText">
             Each package is designed by experts to provide accurate insights and support preventive healthcare, ensuring timely diagnosis and better health outcomes.
-          </p>
+          </AnimatedText>
+
         </div>
 
       </div>

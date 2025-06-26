@@ -1,3 +1,10 @@
+.trustPara{
+  color: white !important;
+}
+.trust-title{
+  color: white !important;
+}
+
 .trustUpperSection {
   display: flex;
   justify-content: space-around;

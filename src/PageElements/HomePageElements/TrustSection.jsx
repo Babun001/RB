@@ -4,6 +4,8 @@ import logo1 from '../../Assets/affiliatLogo.png';
 import logo2 from '../../Assets/affiliateLogo2.png';
 import logo3 from '../../Assets/affiliateLogo3.png';
 
+import AnimatedText from '../../AnimatedText';
+
 export default function TrustSection() {
   const [testsCount, setTestsCount] = useState(0);
   const [customerCount, setCustomerCount] = useState(0);
@@ -72,15 +74,36 @@ export default function TrustSection() {
   return (
     <div className="trustContainer" ref={sectionRef}>
       <div className="trustUpperSection">
-        <h2 className="rb-title trust-title" style={{ color: "white", lineHeight: "1", marginTop: "3rem", textAlign: "center" }}>
+        <AnimatedText
+          tag="h2"
+          type="chars"
+          y={30}
+          className="rb-title trust-title"
+          style={{ color: "white", lineHeight: "1", marginTop: "3rem", textAlign: "center" }}
+        >
           Your Trusted Diagnostic Partner Since 2010
-        </h2>
-        <p className="paraText" style={{ color: "white", lineHeight: "0" }}>
+        </AnimatedText>
+
+        <AnimatedText
+          tag="p"
+          type="words"
+          y={-20}
+          className="paraText trustPara"
+          style={{ color: "white", lineHeight: "0" }}
+        >
           Delivering accurate, affordable, and timely diagnostic services with NABL-accredited labs,
-        </p>
-        <p className="paraText" style={{ color: "white" }}>
+        </AnimatedText>
+
+        <AnimatedText
+          tag="p"
+          type="words"
+          y={-20}
+          className="paraText trustPara"
+          style={{ color: "white" }}
+        >
           cutting-edge technology, and a commitment to excellence across Eastern India.
-        </p>
+        </AnimatedText>
+
 
         <div className="innerLowerSection">
           <div className="innerLowerTextSection">

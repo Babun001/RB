@@ -5,6 +5,7 @@ import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { MdCalendarToday } from 'react-icons/md';
 import './ComponentsStyles/Navbar01.css';
 import logo from '../Assets/logo.png';
+import CountrySelector from './CountrySelector';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(true);
@@ -17,13 +18,13 @@ const Navbar = () => {
             const currentScrollY = window.scrollY;
 
             if (currentScrollY <= 0) {
-                setScrolled(true); // at top, show navbar
+                setScrolled(true); 
                 setAtTop(true);
             } else if (currentScrollY > lastScrollY) {
-                setScrolled(false); // scrolling down, hide navbar
+                setScrolled(false); 
                 setAtTop(false);
             } else {
-                setScrolled(true); // scrolling up, show navbar
+                setScrolled(true);
                 setAtTop(false);
             }
 
@@ -62,12 +63,10 @@ const Navbar = () => {
 
             <div className="rightNavSection">
                 <div className="rightLeftSection">
-                    <BsSearch style={{ fontSize: '1.5rem', color: 'black' }} />
-                    <div className='barDiv'></div>
-                    <FaMapMarkerAlt style={{ fontSize: '1.5rem', color: 'black' }} />
+                   <CountrySelector/>
                 </div>
                 <div className="rightButtonSection">
-                    <button><MdCalendarToday /> Make an Appointment</button>
+                    <button><span className="btn-text"><MdCalendarToday /> Make an Appointment</span></button>
                 </div>
             </div>
         </div>

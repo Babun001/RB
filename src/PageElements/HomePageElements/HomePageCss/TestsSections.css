@@ -37,11 +37,11 @@
   height: 10rem;
   object-fit: cover;
   border-radius: 50%;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .cardDiseaseSection img:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .cardDiseaseSection h2 {

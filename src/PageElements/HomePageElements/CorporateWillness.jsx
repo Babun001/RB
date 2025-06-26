@@ -1,10 +1,10 @@
-import { useRef } from 'react';
 import './HomePageCss/CorporateWillSection.css';
-import Slider from "react-slick";
+import AnimatedText from '../../AnimatedText';
+// import Slider from "react-slick";
 
-import tcs from '../../Assets/tcs.png';
-import wipro from '../../Assets/wipro.png';
-import itc from '../../Assets/itc.png';
+// import tcs from '../../Assets/tcs.png';
+// import wipro from '../../Assets/wipro.png';
+// import itc from '../../Assets/itc.png';
 
 export default function CorporateWillSection() {
     // const sliderRef = useRef(null);
@@ -58,9 +58,12 @@ export default function CorporateWillSection() {
             <div className="textSection">
                 <h4 className="rb-headingTag cw-headingTag">Corporate Wellness</h4>
                 <div className="headLineText corporateHeadLineText">
-                    <h2 className="rb-title">Preferred Diagnostic Partner for Corporates Across Industries</h2>
+                    <AnimatedText tag="h2" type="chars" y={30} className="rb-title rb-corporates">
+                        Preferred Diagnostic Partner for Corporates Across Industries
+                    </AnimatedText>
+
                 </div>
-                <button className='KnowMoreBtn'>Click to Know More...</button>
+                <button className=' rbdButton'><span className='btn-text'>Click to Know More...</span></button>
             </div>
 
             {/* <div className="companiesSection">

@@ -34,15 +34,6 @@ export default function GridMainSection() {
     };
 
     const doctorsPerPage = 12;
-    // const doctorsDetails = Array(20).fill({
-    //     name: "Dr. A K Jain",
-    //     specialty: "Diabetologist",
-    //     location: "SaltLake",
-    //     availability: false,
-    //     rating: 5.0,
-    //     fees: 700,
-    //     imageUrl: img,
-    // });
 
     const doctorsDetails = doctors;
 

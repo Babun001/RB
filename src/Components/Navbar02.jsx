@@ -47,7 +47,7 @@ const SecondaryNavbar = () => {
         )}
       </div>
 
-      <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
+      <ul className={`nav-menu ${menuOpen ? "open" : ""} ${isSticky ? "scrolled" : ""}`}>
         <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
         <li><Link to="/collection" className={location.pathname === '/collection' ? 'active' : ''}>Home Collection</Link></li>
         <li><Link to="/view-reports" className={location.pathname === '/view-reports' ? 'active' : ''}>View Report</Link></li>

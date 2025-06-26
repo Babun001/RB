@@ -79,7 +79,6 @@ body {
   font-size: 0.9rem;
   margin-left: 2rem;
   align-items: center;
-  
 }
 
 .contactSection .phoneNumbers p,
@@ -103,15 +102,51 @@ body {
 }
 
 .rightButtonSection button {
-  padding: 0.5rem 1.4rem;
+  position: relative;
+  padding: 14px 16px;
   background-color: #0fb7a4;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
   border: none;
-  border-radius: 6px;
+  border-radius: 50px;
   cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
   transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.rightButtonSection button::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 50%;
+  background: #0b9a8a;
+  border-radius: 50px;
+  z-index: 0; /* Behind the text */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.rightButtonSection button:hover::after {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+
+.rightButtonSection button:hover {
+  transform: translateY(-3px);
 }
 
 .rightLeftSection {
@@ -138,9 +173,6 @@ body {
   font-size: 1.1rem;
 }
 
-.rightButtonSection button:hover {
-  background-color: #10d2bb;
-}
 
 @media (max-width: 768px) {
   .NavbarDiv {

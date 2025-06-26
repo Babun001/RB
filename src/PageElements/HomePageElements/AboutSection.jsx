@@ -1,6 +1,7 @@
 // import { FaCheckCircle } from 'react-icons/fa';
 import img1 from '../../Assets/aboutImage.png';
-import './HomePageCss/AboutSection.css'
+import './HomePageCss/AboutSection.css';
+import AnimatedText from '../../AnimatedText';
 const AboutSection = () => {
     return (
         <>
@@ -30,7 +31,7 @@ const AboutSection = () => {
                                 </text>
 
                                 <text x="100" y="110" textAnchor="middle" fontSize="40" fontWeight="bold" fill="black">
-                                    50+
+                                    15+
                                 </text>
                             </svg>
                         </div>
@@ -39,10 +40,15 @@ const AboutSection = () => {
 
                 <div className="about-right">
                     <span className="rb-headingTag">About US</span>
-                    <h2 className="title">Explore Tests by Organ for Smarter Health Screening</h2>
-                    <p className="description">
+                    <AnimatedText tag="h2" type="chars" y={30} className="title">
+                        Explore Tests by Organ for Smarter Health Screening
+                    </AnimatedText>
+
+                    <AnimatedText tag="p" type="words" y={-20} className="description">
                         At RB Diagnostic, we offer an extensive range of tests covering all major health parameters. From routine screenings to advanced diagnostics, our tests are designed to deliver accurate results with the highest precision—empowering you and your doctor to make informed health decisions at every step.
-                    </p>
+                    </AnimatedText>
+
+
                     <div className="about-right-buttom">
                         <ul className="features">
                             <li>
@@ -62,7 +68,7 @@ const AboutSection = () => {
                             </li>
                         </ul>
 
-                        <button className="read-more-btn">Read More</button>
+                        <button className="read-more-btn rbdButton"><span className='btn-text'>Read More</span></button>
                     </div>
                 </div>
 

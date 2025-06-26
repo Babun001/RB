@@ -56,15 +56,15 @@
 }
 
 .consult-button button {
-  background-color: #0fb7a4;
-  color: white;
-  border: none;
-  padding: 1rem 0.5rem;
-  border-radius: 15px;
-  font-size: 1rem;
-  font-weight: 100;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  /* background-color: #0fb7a4; */
+  /* color: white; */
+  /* border: none; */
+  /* padding: 1rem 0.5rem; */
+  /* border-radius: 15px; */
+  /* font-size: 1rem; */
+  /* font-weight: 100; */
+  /* cursor: pointer; */
+  /* transition: background-color 0.3s ease; */
   width: 12rem;
 }
 
@@ -72,9 +72,9 @@
   line-height: 0px;
 }
 
-.consult-button button:hover {
+/* .consult-button button:hover {
   background-color: #0a8e7f;
-}
+} */
 
 @media (max-width: 768px) {
   .consult-section {

@@ -10,6 +10,12 @@
   margin-bottom: 5rem;
 }
 
+
+
+
+
+
+
 .about-left,
 .about-right {
   flex: 1;
@@ -44,7 +50,7 @@
 }
 
 .about-right .title {
-  font-size: 52px;
+  font-size: 48px;
   font-weight: 100;
   margin: 1rem 0rem;
   color: #000000;
@@ -55,7 +61,7 @@
 .about-right .description {
   font-size: 17px;
   color: #687276;
-  font-family: "Inter",sans-serif !important;
+  font-family: "Inter", sans-serif !important;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -82,7 +88,7 @@
   color: #687276;
   line-height: 0.5;
   margin-top: 2rem;
-  font-family: "Inter",sans-serif !important;
+  font-family: "Inter", sans-serif !important;
 }
 
 .features li strong {
@@ -93,22 +99,22 @@
 
 .read-more-btn {
   position: absolute;
-  background-color: #d9ede6;
-  color: black;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  /* background-color: #d9ede6; */
+  /* color: black; */
+  /* border: none; */
+  /* padding: 0.75rem 1.5rem; */
+  /* border-radius: 5px; */
+  /* font-size: 1rem; */
+  /* cursor: pointer; */
+  /* transition: background-color 0.3s ease; */
   right: 0px;
   width: 10rem;
- margin-top: 1rem;
+  margin-top: 1rem;
 }
 
-.read-more-btn:hover {
+/* .read-more-btn:hover {
   background-color: #c6ded6;
-}
+} */
 
 .experience-badge {
   width: 100px;
@@ -186,7 +192,7 @@
     margin-bottom: 0.2rem;
   }
 
-  .read-more-btn{
+  .read-more-btn {
     transform: translateX(-36px);
     margin-top: 2rem;
   }

@@ -6,28 +6,28 @@ import './HomePageCss/TestimonialCarousal.css';
 
 const users = [
     {
-        img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d",
+        img: "https://media.istockphoto.com/id/958064228/photo/portrait-of-happy-young-man.jpg?s=612x612&w=0&k=20&c=lZoxAGwQd_IL1p50R6FCXwbKtofoSuknmAKJod6OkzQ=",
         name: "Priyanka Das",
         recedential: "Salt Lake",
         comments:
             "RB Diagnostic has consistently delivered prompt and reliable reports. The staff is courteous and professional, and their centres are always well-organised. I feel confident trusting them with my family’s healthcare needs."
     },
     {
-        img: "https://img.freepik.com/free-photo/handsome-adult-male-posing_23-2148729713.jpg",
+        img: "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwZmFjZXN8ZW58MHx8MHx8fDA%3D",
         name: "Rajat Ghosh",
         recedential: "Garia",
         comments:
             "Their home collection service is a lifesaver for working professionals like me. The technician was punctual, polite, and followed all hygiene protocols. The reports arrived on time and were easy to access online."
     },
     {
-        img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde",
+        img: "https://t4.ftcdn.net/jpg/04/59/85/07/360_F_459850779_582p4mR7RTtvBFavIZlcpADdgLzeYlyo.jpg",
         name: "Sutapa Roy",
         recedential: "Behala",
         comments:
             "I’ve visited multiple diagnostic centres before, but RB Diagnostic stands out for its efficiency and transparency. From registration to consultation, everything was smooth and hassle-free."
     },
     {
-        img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde",
+        img: "https://plus.unsplash.com/premium_photo-1682089787056-9ac0c78a2ac2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWFuJTIwcGVvcGxlfGVufDB8fDB8fHww",
         name: "Animesh Dutta",
         recedential: "Dum Dum",
         comments:
@@ -41,21 +41,21 @@ const users = [
             "dfa afaf adfasd 32rqerg refery Diagnostic stands out for its efficiency and transparency. From registration to consultation, everything was smooth and hassle-free.  asdf adsf adsf asdf asdfads fasd fasdfadsfasdf adsf adsf asdf asdfads fasd fasdfadsfasdf adsf adsf asdf asdfads fasd fasdfadsf"
     },
     {
-        img: "https://img.freepik.com/free-photo/handsome-adult-male-posing_23-2148729713.jpg",
+        img: "https://www.shutterstock.com/shutterstock/videos/1040604956/thumb/1.jpg?ip=x480",
         name: "Rajat Ghosh",
         recedential: "Garia",
         comments:
             "Their home collection service is a lifesaver for working professionals like me. The technician was punctual, polite, and followed all hygiene protocols. The reports arrived on time and were easy to access online."
     },
     {
-        img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde",
+        img: "https://plus.unsplash.com/premium_photo-1682089841647-458dd29dc0ee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aW5kaWFuJTIwZmFjZXN8ZW58MHx8MHx8fDA%3D",
         name: "Sutapa Roy",
         recedential: "Behala",
         comments:
             "I’ve visited multiple diagnostic centres before, but RB Diagnostic stands out for its efficiency and transparency. From registration to consultation, everything was smooth and hassle-free."
     },
     {
-        img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde",
+        img: "https://st2.depositphotos.com/23255830/46761/i/450/depositphotos_467615556-stock-photo-teenager-boy-portrait-wearing-coloring.jpg",
         name: "Animesh Dutta",
         recedential: "Dum Dum",
         comments:
@@ -105,4 +105,4 @@ const TestimonialCarousel = ({ onSlideChange }) => {
 };
 
 export default TestimonialCarousel;
-export { users }; // Export users for initial state if needed
+export { users };

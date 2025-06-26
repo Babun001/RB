@@ -18,7 +18,7 @@ code {
 }
 
 .rb-title {
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 100;
   margin: 1rem 0rem;
   color: #001a26;
@@ -26,18 +26,15 @@ code {
   margin-bottom: 2rem;
 }
 
+/* #003588; */
+
 .rb-headingTag {
   font-size: 1rem;
   font-weight: 700;
-  color: #003588;
-  background-image: linear-gradient(
-    to right,
-    #b5ebfe 0%,
-    rgba(255, 255, 255, 0)
-  );
-  padding: 0.4rem 1rem;
+  color: #000000;
+  background-color: #b9ecfe;
+  padding: 0.4rem 1.5rem;
   border-radius: 20px;
-  width: 8rem;
   display: flex;
   align-items: center;
   margin: 0;
@@ -58,11 +55,88 @@ h3 {
 strong,
 li,
 p {
-  font-family: "Inter",sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 @media (max-width: 768px) {
   .rb-title {
     font-size: 2rem;
   }
+}
+
+.rbdButton {
+  position: relative;
+  padding: 14px 16px;
+  background-color: #0fb7a4;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.rbdButton::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 50%;
+  background: #0b9a8a;
+  border-radius: 50px;
+  z-index: 0; /* Behind the text */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.rbdButton:hover::after {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.rbdButton:hover {
+  transform: translateY(-3px);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+/* - - - - - animations - - - - -  */
+.fade-left,
+.fade-right,
+.fade-up,
+.fade-down {
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.fade-left {
+  transform: translateX(-40px);
+}
+.fade-right {
+  transform: translateX(40px);
+}
+.fade-up {
+  transform: translateY(40px);
+}
+.fade-down {
+  transform: translateY(-40px);
+}
+
+.animate {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
 }
