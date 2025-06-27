@@ -1,5 +1,5 @@
-.priceSection h2{
-  font-family: "Inter",sans-serif !important ;
+.priceSection h2 {
+  font-family: "Inter", sans-serif !important ;
 }
 
 .ourPackageContainer {
@@ -20,7 +20,7 @@
 
 .paraText {
   font-size: 17px;
-  line-height:0.6;
+  line-height: 0.6;
   text-align: center;
   margin-top: 0.5rem;
   color: #687276;
@@ -77,7 +77,7 @@
   background-color: white;
   transition: transform 0.5s ease;
 }
-.packageCard:hover{
+.packageCard:hover {
   box-shadow: 0 16px 15px #bbbbbb;
   transform: scale(1.01);
 }
@@ -150,12 +150,79 @@
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
+/* ========================================================================================================= */
 
-  .ourPackageContainer{
+@media (max-width: 1200px) {
+  .cornerImage img {
+    width: 3.5rem !important;
+    transform: translate(40px, 0px);
+  }
+
+  .cardsMiddleSec p {
+    line-height: 1;
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .cardsMiddleSec h4 {
+    font-size: 1.1rem;
+  }
+
+  .cardTitlePack {
+    height: 88px;
+  }
+
+  .cardTitlePack h2 {
+    font-size: 1.3rem;
+  }
+  .priceSection h2 {
+    margin: 1rem 0;
+  }
+
+  .paraText {
+    font-size: 15px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .ourPackageContainer {
+    padding: 1.1rem;
+  }
+
+  .navBtn {
+    font-size: 14px;
+    padding: 0.4rem 0.8rem;
+    width: 11rem;
+  }
+
+  .ourPackageCardSection {
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .packageCard {
+    width: 10rem;
+    padding: 1.3rem;
+  }
+
+  .testAndComp p {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .cardLowerSec button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* ========================================================================================================= */
+
+@media (max-width: 768px) {
+  .ourPackageContainer {
     margin-bottom: 1.5rem;
   }
-  .textParaSection{
+  .textParaSection {
     margin-top: -0.5rem;
   }
   .ourPackageCardSection {

@@ -144,7 +144,6 @@ body {
   z-index: 2;
 }
 
-
 .rightButtonSection button:hover {
   transform: translateY(-3px);
 }
@@ -173,6 +172,77 @@ body {
   font-size: 1.1rem;
 }
 
+@media (max-width: 1024px) {
+  .NavbarDiv {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+  }
+
+  .leftNavSection {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .logoSection img {
+    height: 55px;
+    margin-right: 1rem;
+  }
+
+  .playStoreSection .buttons {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .playStoreSection img {
+    height: 1.8rem;
+  }
+
+  .rightNavSection {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-right: 0;
+  }
+
+  .contactSection {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    gap: 0.4rem;
+  }
+
+  .mailId p,
+  .phoneNumbers p {
+    font-size: 1rem;
+  }
+
+  .rightButtonSection {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .rightButtonSection button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .rightLeftSection {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .barDiv {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
   .NavbarDiv {

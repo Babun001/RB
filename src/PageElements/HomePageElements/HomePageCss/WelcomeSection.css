@@ -190,6 +190,25 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .leftWelcomeSection h2{
+    font-size: 40px;
+  }
+  .rightWelcomeSection h3{
+    font-size: 1.3rem;
+  }
+  .cardsSection{
+    height: 15rem;
+  }
+  .leftBottomWelcomeSection{
+    max-width: 90%;
+  }
+  .cardsSection h4 {
+    font-size: 1.1rem;
+  }
+}
+
+
 @media (max-width: 768px) {
   .WelcomeContainer {
     grid-template-columns: 1fr;

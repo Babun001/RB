@@ -11,7 +11,7 @@ export default function HomecarePage() {
         <>
             <ServiceHeader
                 childClass="homecareBGSection"
-                breadcrumb={<>Services <FaGreaterThan size={36} /> Homecare</>}
+                breadcrumb={<>Services <FaGreaterThan size={15} /> Homecare</>}
                 title="Homecare"
             />
 

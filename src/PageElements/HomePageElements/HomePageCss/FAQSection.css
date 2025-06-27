@@ -1,6 +1,6 @@
 .faqContainer {
   position: relative;
-  background-image: url('../../../Assets/faqBackground.png');
+  background-image: url("../../../Assets/faqBackground.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,4 +74,10 @@
 .qus p {
   margin: 0;
   font-size: 1.1rem;
+}
+
+@media (max-width: 1200px) {
+  .faqUpperSection {
+    font-size: 15px;
+  }
 }

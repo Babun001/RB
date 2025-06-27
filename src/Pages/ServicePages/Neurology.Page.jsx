@@ -11,7 +11,7 @@ export default function NeurologyPage() {
         <>
             <ServiceHeader
                 childClass="neurologyBGSection"
-                breadcrumb={<>Services <FaGreaterThan size={36} /> Neurology</>}
+                breadcrumb={<>Services <FaGreaterThan size={15} /> Neurology</>}
                 title="Neurology"
             />
 

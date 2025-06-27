@@ -36,7 +36,7 @@
 
 .headingText {
   margin-bottom: 10px;
-  font-family: "Inter",sans-serif !important;
+  font-family: "Inter", sans-serif !important;
   font-weight: 500;
   font-size: 20px;
 }
@@ -104,7 +104,6 @@
   transform: scale(1.2);
 }
 
-
 /* ✅ Responsive adjustments for tablets and phones */
 @media (max-width: 992px) {
   .footer-container {
@@ -131,7 +130,7 @@
 }
 
 @media (max-width: 768px) {
-  .social-icons{
+  .social-icons {
     font-size: 2rem;
   }
   .footer {
@@ -188,5 +187,75 @@
 
   .footer-bottom {
     font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .short-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    transform: translateX(28px);
+    margin-top: 1rem;
+  }
+
+  .short-links ul {
+    line-height: 2;
+    
+  }
+
+  .contactDiv {
+    margin-left: 0;
+  }
+
+  .footer-right {
+    margin-top: 2rem;
+    text-align: center;
+    order: 2; /* Ensures it stays below links */
+    width: 100%;
+  }
+
+  .footer-right .contact-info {
+    margin-top: 2rem;
+    align-items: center;
+  }
+
+  .contact-info li {
+    font-size: 1rem;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .headingText {
+    font-size: 1.8rem !important;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .underLine {
+    width: 7rem;
+    margin: auto;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .social-icons {
+    font-size: 1.8rem;
+    gap: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
   }
 }

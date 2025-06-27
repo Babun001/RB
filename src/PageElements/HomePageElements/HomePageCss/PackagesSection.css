@@ -23,11 +23,7 @@
 
 .diseaseCardSection {
   position: relative;
-  /* width: 250px;
-  height: 220px; */
-  /* border-radius: 20px; */
   overflow: hidden;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
   cursor: pointer;
   transition: transform 0.3s ease;
   border-radius: 50px;
@@ -40,27 +36,11 @@
   align-items: center;
 }
 .viewMoreBtn {
-  /* background-color: #d9ede6; */
-  /* color: black; */
-  /* border: none; */
-  /* padding: 0.75rem 1.5rem; */
-  /* border-radius: 5px; */
-  /* font-size: 1rem; */
-  /* cursor: pointer; */
-  /* transition: background-color 0.3s ease; */
   right: 0px;
   width: 10rem;
   margin: 3rem;
-  /* font-weight: 700; */
 }
 
-/* .viewMoreBtn:hover{
-  background-color: #c6ded6;
-} */
-
-/* .diseaseCardSection:hover {
-  transform: translateY(-5px);
-} */
 
 .diseaseCardSection img {
   width: 100%;
@@ -89,6 +69,43 @@
 }
 
 
+
+@media (max-width: 1200px) {
+  .packageContainer {
+    padding: 2rem;
+  }
+
+  .pk-title {
+    font-size: 40px !important;
+  }
+
+  .packageLowerSection {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    /* margin-top: 2rem; */
+    margin-bottom: 2rem;
+  }
+
+  .diseaseCardSection {
+    width: 12rem;
+  }
+
+  .diseaseName p {
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+
+  .viewMoreBtn {
+    width: 10rem;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
 @media (max-width: 768px) {
   .packageContainer {
     padding: 3rem 1.5rem;
@@ -96,7 +113,7 @@
 
 
   .packageLowerSection {
-    grid-template-columns: repeat(2, 1fr); /* ✅ Always 2 cards per row */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 1.5rem;
   }
 
@@ -119,21 +136,3 @@
     padding: 0.6rem 1rem;
   }
 }
-
-
-/* @media (max-width: 480px) {
-  .packageLowerSection {
-    grid-template-columns: 1fr; 
-    gap: 1.5rem;
-  }
-
-  .diseaseCardSection {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .viewMoreBtn {
-    width: 90%;
-    margin: 2rem auto;
-  }
-} */

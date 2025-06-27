@@ -70,6 +70,38 @@
   object-fit: contain;
 }
 
+
+
+@media (max-width: 1200px) {
+  .trustUpperSection {
+    padding: 2rem;
+    height: 13rem;
+  }
+  .innerLowerSection{
+    transform: translateY(50px);
+  }
+
+  .innerLowerTextSection h3 {
+    font-size: 3rem; /* from 4rem */
+  }
+
+  .innerLowerTextSection p {
+    font-size: 14px; /* assume default was 17px */
+  }
+
+  .trustLowerSection h3 {
+    font-size: 1.3rem; /* from 1.5rem */
+  }
+
+  .trustPara,
+  .trust-title {
+    font-size: 15px; /* consistent size for titles */
+  }
+}
+
+
+
+
 @media (max-width: 768px) {
   .trustUpperSection {
     padding: 2rem 1rem;
@@ -115,14 +147,3 @@
     margin-top: 1rem !important;
   }
 }
-
-/* @media (max-width: 480px) {
-  .innerLowerTextSection h3 {
-    font-size: 2rem;
-  }
-
-  .affiliatedWith img {
-    width: 5rem;
-    height: 5rem;
-  }
-} */

@@ -11,7 +11,7 @@ export default function DermatologyPage() {
         <>
             <ServiceHeader
                 childClass="dermatologyBGSection"
-                breadcrumb={<>Services <FaGreaterThan size={36} /> Dermatology</>}
+                breadcrumb={<>Services <FaGreaterThan size={15} /> Dermatology</>}
                 title="Dermatology"
             />
 

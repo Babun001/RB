@@ -1,4 +1,4 @@
-.testimonial-title{
+.testimonial-title {
   z-index: 2;
 }
 
@@ -105,7 +105,6 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-
 .testimonialTextSection {
   padding: 2rem;
   border-radius: 10px;
@@ -134,7 +133,15 @@
   transform: translateY(-50px);
 }
 
-
+@media (max-width: 1200px) {
+  .testimonial-container {
+    width: 100%;
+    max-width: 1010px;
+  }
+  .testimonialTextSection p{
+    font-size: 15px !important;
+  }
+}
 
 @media (max-width: 768px) {
   .testimonialContainer {
@@ -187,6 +194,7 @@
     width: 100px;
     height: 50px;
     transform: translateY(-50px);
+    z-index: 999;
   }
 }
 

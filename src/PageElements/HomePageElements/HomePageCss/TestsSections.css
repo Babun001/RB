@@ -60,6 +60,36 @@
   font-size: 0.8rem;
 }
 
+@media (max-width: 1200px) {
+  .TestsContainer {
+    padding: 2rem 2rem; /* Adjusted right typo (ren → rem) */
+  }
+
+  .temp-title {
+    font-size: 40px !important; /* If it was 48px */
+    max-width: 100% !important;
+  }
+
+  .cardDiseaseSection h2 {
+    font-size: 1.3rem; /* Approx. from 1.8rem */
+  }
+
+  .cardDiseaseSection a {
+    font-size: 0.75rem;
+  }
+
+  .diseaseSectionExplore {
+    grid-template-columns: repeat(4, 1fr); /* Reduce columns for better fit */
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .cardDiseaseSection img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .diseaseSectionExplore {
     grid-template-columns: repeat(6, 1fr);

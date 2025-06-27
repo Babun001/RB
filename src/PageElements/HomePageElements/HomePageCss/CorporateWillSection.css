@@ -16,9 +16,6 @@
   width: 20%;
 }
 
-/* .buttonsection{
-  background-color: red;
-} */
 
 .rb-headingTag {
   width: fit-content !important;
@@ -134,20 +131,20 @@
   margin: auto;
 }
 
-/* .moreBtn {
-  padding: 8px 24px;
-  background-color: #0ca798;
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-} */
 
 .moreBtn:hover {
   background-color: #0bc0ad;
+}
+
+/* ====================================================================================== */
+
+@media (max-width: 1200px) {
+  .corporateContainer{
+    padding: 2rem;
+  }
+  .rb-corporates{
+    font-size: 40px !important;
+  }
 }
 
 @media (max-width: 768px) {

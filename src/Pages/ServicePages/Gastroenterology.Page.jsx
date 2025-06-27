@@ -12,7 +12,7 @@ export default function GastroenterologyPage() {
         <>
             <ServiceHeader
                 childClass="gastroenterologyBgSection"
-                breadcrumb={<>Services <FaGreaterThan size={36} /> Gastroenterology</>}
+                breadcrumb={<>Services <FaGreaterThan size={15} /> Gastroenterology</>}
                 title="Gastroenterology"
             />
 

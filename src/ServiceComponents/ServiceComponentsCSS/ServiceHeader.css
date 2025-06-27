@@ -1,9 +1,9 @@
 .pulmonologybgSection{
-    background-image: url('../../Assets/Rectangle\ 232.png') !important;
+    background-image: url('../../Assets/pulmonologybg.png') !important;
 }
 
 .gastroenterologyBgSection{
-    background-image: url('../../Assets/GEBackground.png') !important;
+    background-image: url('../../Assets/gastrology.jpg.png') !important;
 }
 
 .physiotherapyBGSection{
@@ -15,11 +15,11 @@
 }
 
 .homecareBGSection{
-    background-image: url('../../Assets/hc4.png') !important;
+    background-image: url('../../Assets/Homecare.png') !important;
 }
 
 .dermatologyBGSection{
-    background-image: url('../../Assets/dl5.png') !important;
+    background-image: url('../../Assets/Dermatology.png') !important;
 }
 
 .dialysisBgSection{
@@ -31,7 +31,7 @@
 }
 
 .neurologyBGSection{
-    background-image: url('../../Assets/nlBackground.png') !important;
+    background-image: url('../../Assets/serviceimg2.jpg') !important;
 }
 
 .radiologyBGSection{

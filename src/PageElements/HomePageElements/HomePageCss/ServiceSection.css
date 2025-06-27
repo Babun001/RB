@@ -21,7 +21,6 @@
   z-index: -1;
 }
 
-
 .section-title {
   font-size: 2rem;
   font-weight: bold;
@@ -30,13 +29,25 @@
 }
 
 .section-content {
-  color: #0CA798;
+  color: #0ca798;
   line-height: 1.6;
   margin-top: 10px;
   font-size: 18px;
 }
 
+@media (max-width: 1200px) {
+  .health-section {
+    padding: 1rem 5rem; /* reduced from 3rem 8rem */
+  }
 
+  .section-title {
+    font-size: 1.3rem; /* reduced from 2rem (~32px) */
+  }
+
+  .section-content {
+    font-size: 15px; /* reduced from 18px */
+  }
+}
 
 @media (max-width: 768px) {
   .health-section {
@@ -54,17 +65,3 @@
     line-height: 1.5;
   }
 }
-
-/* @media (max-width: 480px) {
-  .health-section {
-    padding: 1.5rem 1rem;
-  }
-
-  .section-title {
-    font-size: 1.3rem;
-  }
-
-  .section-content {
-    font-size: 15px;
-  }
-} */

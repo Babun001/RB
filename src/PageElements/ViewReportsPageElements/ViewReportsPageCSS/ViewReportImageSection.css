@@ -4,7 +4,7 @@
 }
 
 .viewReportImageUpperSection{
-    padding-top:10rem !important;
+    padding-top:14rem !important;
 }
 
 .viewReportUpperText{
@@ -18,4 +18,6 @@
     align-items: center;
     font-size: 1.5rem;
     gap: 0.5rem;
+    margin: 0;
+    opacity: 65%;
 }

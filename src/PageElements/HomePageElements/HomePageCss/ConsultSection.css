@@ -56,15 +56,6 @@
 }
 
 .consult-button button {
-  /* background-color: #0fb7a4; */
-  /* color: white; */
-  /* border: none; */
-  /* padding: 1rem 0.5rem; */
-  /* border-radius: 15px; */
-  /* font-size: 1rem; */
-  /* font-weight: 100; */
-  /* cursor: pointer; */
-  /* transition: background-color 0.3s ease; */
   width: 12rem;
 }
 
@@ -72,9 +63,53 @@
   line-height: 0px;
 }
 
-/* .consult-button button:hover {
-  background-color: #0a8e7f;
-} */
+/* ======================================================================================== */
+
+
+@media (max-width: 1200px) {
+  .consult-section {
+    margin: 2rem;
+    height: 13em;
+    padding: 1.5rem;
+    border-radius: 40px;
+    gap: 1.5rem;
+    top: 60px;
+  }
+
+  .consult-text {
+    width: 45%;
+    padding: 0.5rem;
+  }
+
+  .consult-text h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+  .consult-text h4 {
+    font-size: 1.1rem;
+  }
+
+  .consult-text p {
+    font-size: 15px;
+  }
+
+  .consult-image img {
+    width: 20rem;
+    transform: translateY(-10px);
+  }
+
+  .consult-button {
+    transform: translate(-120px, 60px);
+  }
+
+  .consult-button button {
+    width: 11rem;
+    font-size: 15px;
+  }
+}
+
+
+/* ======================================================================================== */
 
 @media (max-width: 768px) {
   .consult-section {
