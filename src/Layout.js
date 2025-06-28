@@ -8,7 +8,7 @@ import FooterSection from "./Components/Footer";
 export default function Layout() {
     return (
         <>
-            <Navbar />
+            <Navbar/>
             <SecondaryNavbar />
 
             <main>

@@ -83,6 +83,7 @@
 @media (max-width: 1200px) {
   .hero-slider-container {
     height: 650px;
+    margin-top: -14rem;
   }
 
   .slider-image {

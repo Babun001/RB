@@ -135,8 +135,8 @@
 
 @media (max-width: 1200px) {
   .testimonial-container {
-    width: 100%;
-    max-width: 1010px;
+    width: 100% !important;
+    max-width: 900px !important;
   }
   .testimonialTextSection p{
     font-size: 15px !important;
