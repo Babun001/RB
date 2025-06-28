@@ -1,12 +1,16 @@
 import png1 from '../../Assets/bike.png';
 import png2 from '../../Assets/tubes.png';
 
-import './HomeCollectionCss/HomeCollection.css';
+import { FaGreaterThan } from "react-icons/fa6";
+
+// import './HomeCollectionCss/HomeCollection.css';
+
+import ServiceHeader from '../../ServiceComponents/ServiceHeader';
 
 export default function CollectionFirstSec() {
     return (
         <>
-            <div className="collectionContainer">
+            {/* <div className="collectionContainer ">
                 <div className="collectionUpperSection">
                     <div className="upperTextSection">
                         <h2 className='rb-title collectionTitle'>Home Collection</h2>
@@ -26,7 +30,15 @@ export default function CollectionFirstSec() {
                 </div>
 
 
-            </div>
+            </div> */}
+
+
+            <ServiceHeader
+                childClass="collectionUpperSection"
+                breadcrumb={<> Home Collection</>}
+                title="Home Collection"
+            />
+
         </>
     )
 }

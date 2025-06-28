@@ -21,7 +21,7 @@ export default function TestimonialSection() {
                 <div className="videoSection">
                     <video controls className="responsiveVideo">
                         <source 
-                            src="https://www.w3schools.com/html/mov_bbb.mp4" 
+                            src="" 
                             type="video/mp4" 
                         />
                         Your browser does not support the video tag.

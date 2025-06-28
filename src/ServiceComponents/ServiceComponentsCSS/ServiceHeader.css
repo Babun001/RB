@@ -1,33 +1,33 @@
 .pulmonologybgSection{
-    background-image: url('../../Assets/pulmonologybg.png') !important;
+    background-image: url('../../Assets/pnlBg.jpg') !important;
 }
 
 .gastroenterologyBgSection{
-    background-image: url('../../Assets/gastrology.jpg.png') !important;
+    background-image: url('../../Assets/gasentretology.jpg') !important;
 }
 
 .physiotherapyBGSection{
-    background-image: url('../../Assets/pt4.png') !important;
+    background-image: url('../../Assets/physiotheraphy.jpg') !important;
 }
 
 .OphthalmologyBGSection{
-    background-image: url('../../Assets/om5.png') !important;
+    background-image: url('../../Assets/Ophthalmology.jpg') !important;
 }
 
 .homecareBGSection{
-    background-image: url('../../Assets/Homecare.png') !important;
+    background-image: url('../../Assets/HomecareBackground.png.jpg') !important;
 }
 
 .dermatologyBGSection{
-    background-image: url('../../Assets/Dermatology.png') !important;
+    background-image: url('../../Assets/dermatology.jpg') !important;
 }
 
 .dialysisBgSection{
-    background-image: url('../../Assets/ds5.png') !important;
+    background-image: url('../../Assets/Diyalysis.jpg') !important;
 }
 
 .dentalBGSection{
-    background-image: url('../../Assets/dn5.png') !important;
+    background-image: url('../../Assets/Dental.jpg') !important;
 }
 
 .neurologyBGSection{
@@ -35,5 +35,16 @@
 }
 
 .radiologyBGSection{
-    background-image: url('../../Assets/rl5.png') !important;
+    background-image: url('../../Assets/Rdiology.jpg') !important;
+}
+
+.faqFirstContainer{
+    background-image: url('../../Assets/faq.jpg') !important;
+}
+
+.collectionUpperSection{
+    background-image: url('../../Assets/HomeCollectionbg1.jpg') !important;
+}
+.corporateWellness{
+    background-image: url('../../Assets/HomeCollectionbg007.jpg') !important;
 }

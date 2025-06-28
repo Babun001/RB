@@ -1,27 +1,23 @@
 import { useState } from "react";
 import './FAQsPageElementsCss/FAQsMainSection.css';
+import AnimatedText from "../../AnimatedText";
 
 export default function FAQsMainSection() {
-    const [activeTab, setActiveTab] = useState("Career");
+    const [activeTab, setActiveTab] = useState("General Queries");
     const [openIndex, setOpenIndex] = useState(null);
 
     const categories = [
-        "Career",
         "General Queries",
         "Home Collection",
         "Reports and Payments",
         "Test Related Queries",
         "Ultrasound",
         "Vaccination",
+        "Career",
     ];
 
     const faqData = {
-        Career: [
-            {
-                question: "Where will I upload my resume?",
-                answer: "Send your resume at hr@rbdiagnostics.com",
-            },
-        ],
+
         "General Queries": [
             {
                 question: "What are your working hours?",
@@ -369,9 +365,13 @@ Irritability`,
                 question: "Can I get contracted with COVID-19 even after the vaccination?",
                 answer: "Vaccine is 100% protective. You can contract COVID-19 even after the vaccination. However, the vaccination will help you protect yourself from the severity of the virus.",
             },
-        ]
-
-
+        ],
+        Career: [
+            {
+                question: "Where will I upload my resume?",
+                answer: "Send your resume at hr@rbdiagnostics.com",
+            },
+        ],
 
     };
 
@@ -386,12 +386,14 @@ Irritability`,
     return (
         <div className="faqMainContainer">
             <div className="ourPackageUpperSection">
-                <h2 className="rb-title ourpackageTitle">FAQs</h2>
+                <AnimatedText tag="h2" type="chars" y={30} className="rb-title ourpackageTitle">
+                    FAQs
+                </AnimatedText>
                 <div className="textParaSection">
-                    <p className="paraText">
+                    <p className="paraText faqPara">
                         RB Diagnostic offers a comprehensive range of health check-up packages tailored for every stage of life.
                     </p>
-                    <p className="paraText">
+                    <p className="paraText faqPara">
                         Each package is designed by experts to provide accurate insights and support preventive healthcare, ensuring timely diagnosis and better health outcomes.
                     </p>
                 </div>

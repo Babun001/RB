@@ -11,7 +11,7 @@ export default function DialysisPage() {
         <>
             <ServiceHeader
                 childClass="dialysisBgSection"
-                breadcrumb={<>Services <FaGreaterThan size={36} /> Dialysis</>}
+                breadcrumb={<>Services <FaGreaterThan size={15} /> Dialysis</>}
                 title="Dialysis"
             />
 

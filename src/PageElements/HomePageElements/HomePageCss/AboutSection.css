@@ -21,7 +21,7 @@
 }
 
 .image-bg {
-  width: 100%;
+  width: 100% !important;
   height: auto;
   border-radius: 1rem;
 }
@@ -114,7 +114,38 @@
   height: 100%;
 }
 
+@media (max-width: 1450px) {
+  .features li {
+    font-size: 17px;
+    line-height: 1;
+    margin-top: 0px;
+  }
+  .about-right-buttom {
+    transform: translate(-170px, 80px);
+  }
+  .features li h3 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1400px) {
+  .features li {
+    font-size: 17px;
+    line-height: 1;
+    margin-top: 0px;
+  }
+  .features li h3 {
+    margin-bottom: 0;
+  }
+  .about-right-buttom {
+    transform: translate(-170px, 50px);
+  }
+}
+
 @media (max-width: 1200px) {
+  .image-bg {
+    width: 100% !important;
+  }
   .features br {
     display: none;
   }

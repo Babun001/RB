@@ -10,13 +10,13 @@
 }
 
 .whscMiddleText p {
-  font-size: 14px;
+  font-size: 17px;
   color: #555;
   line-height: 1.6;
 }
 
 .whscLowerText li {
-  font-size: 14px;
+  font-size: 17px;
   color: #555;
   line-height: 1.6;
 }
@@ -32,12 +32,25 @@
 }
 
 .whsc-title {
-  width: 60%;
+  width: 65%;
 }
 
 .whscLowerText {
   margin-top: 4rem;
   transform: translateX(-25px);
+}
+
+@media (max-width: 1200px) {
+  .whsc-title {
+    width: 70%;
+  }
+  .whscLeftSection {
+    position: relative;
+    width: 75%;
+  }
+  .image-bg {
+    width: 110%;
+  }
 }
 
 @media (max-width: 768px) {

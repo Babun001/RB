@@ -4,10 +4,10 @@ import pulmonologyImg2 from '../Assets/Frame 3.png';
 import pulmonologyImg3 from '../Assets/Frame 2-1.png';
 
 // Gastroenterology
-import endoscopyImg from '../Assets/GE1.png';
-import colonoscopyImg from '../Assets/GE4.png';
-import sigmoidoscopyImg from '../Assets/GE2.png';
-import fibroscanImg from '../Assets/GE3.png';
+import endoscopyImg from '../Assets/Endoscopy.png';
+import colonoscopyImg from '../Assets/Colonoscopy.png';
+import sigmoidoscopyImg from '../Assets/sigmoidoscopy.png';
+import fibroscanImg from '../Assets/Fibroscan.png';
 
 // Physiotherapy
 import pt1 from '../Assets/pt1.png'

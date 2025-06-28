@@ -1,23 +1,23 @@
-.viewReportImageSection{
-    background-image: url('../../../Assets/viewReportBg.png') !important;
-    height: 29rem !important;
+.viewReportImageSection {
+  background-image: url("../../../Assets/viewReportBg.png");
+  height: 30rem !important;
 }
 
-.viewReportImageUpperSection{
-    padding-top:14rem !important;
+.viewReportImageUpperSection {
+  padding-top: 14rem !important;
 }
 
-.viewReportUpperText{
-    display: inline;
-
+.viewReportUpperText {
+  display: inline;
 }
 
-.viewReportUpperText p{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    font-size: 1.5rem;
-    gap: 0.5rem;
-    margin: 0;
-    opacity: 65%;
+.viewReportUpperText p {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 1rem;
+  gap: 0.5rem;
+  margin: 0;
+  opacity: 65%;
+  transform: translateY(-10px);
 }

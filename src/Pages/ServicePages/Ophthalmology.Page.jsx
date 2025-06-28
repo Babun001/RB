@@ -12,7 +12,7 @@ export default function OphthalmologyPage() {
         <>
             <ServiceHeader
                 childClass="OphthalmologyBGSection"
-                breadcrumb={<>Services <FaGreaterThan size={36} /> Ophthalmology</>}
+                breadcrumb={<>Services <FaGreaterThan size={15} /> Ophthalmology</>}
                 title="Ophthalmology"
             />
 

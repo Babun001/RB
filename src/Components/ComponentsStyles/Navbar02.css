@@ -238,6 +238,12 @@ body {
   }
 }
 
+@media (max-width: 1350px) {
+  .nav-menu{
+    gap: 0.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;

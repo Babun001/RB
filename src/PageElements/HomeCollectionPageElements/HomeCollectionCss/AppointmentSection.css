@@ -137,6 +137,25 @@ label {
   background-color: #4ec7bb;
 }
 
+@media (max-width: 1350px) {
+  .doctor-img {
+    bottom: -50px;
+    right: -38px;
+  }
+  .appointmentHeading {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+  label {
+    font-size: 1.1rem !important;
+  }
+  .appointment-form input[type="text"],
+  .appointment-form input[type="email"],
+  .appointment-form input[type="date"] {
+    padding: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .appointment-form input[type="text"],
   .appointment-form input[type="email"],

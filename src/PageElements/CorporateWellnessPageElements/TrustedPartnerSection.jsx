@@ -6,6 +6,8 @@ import img1 from '../../Assets/wipro.png';
 import img2 from '../../Assets/tcs.png';
 import img3 from '../../Assets/itc.png';
 
+import AnimatedText from "../../AnimatedText";
+
 
 const partners = [
     { name: "IndianOil", img: img1 },
@@ -16,7 +18,7 @@ const partners = [
     { name: "Deloitte", img: img1 },
     { name: "Accenture", img: img2 },
     { name: "TCS", img: img1 },
-    { name: "Hyundai", img: img2},
+    { name: "Hyundai", img: img2 },
 ];
 
 
@@ -50,7 +52,10 @@ export default function TrustedPartnerSection() {
 
     return (
         <div className="partner-section">
-            <h2 className="WellnessHeading">Our Trusted Partner</h2>
+            <AnimatedText tag="h2" type="chars" y={30} className="WellnessHeading">
+                Our Trusted Partner
+            </AnimatedText>
+
             <Slider {...settings}>
                 {partners.map((partner, index) => (
                     <div key={index} className="partner-logo">

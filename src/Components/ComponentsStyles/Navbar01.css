@@ -173,7 +173,15 @@ body {
 }
 
 @media (max-width: 1200px) {
-  
+   .contactSection {
+    display: none;
+  }
+}
+
+@media (max-width: 1350px) {
+  .contactSection {
+    display: none;
+  }
 }
 
 

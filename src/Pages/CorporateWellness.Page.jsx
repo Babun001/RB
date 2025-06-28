@@ -13,8 +13,8 @@ export default function CorporateWellnessPage() {
         <>
             <CorporateWellnessFirstSection/>
             <CorporateAndEnquirySection/>
-            <TrustedPartnerSection/>
-            <ForFranchiseSection/>
+            {/* <TrustedPartnerSection/> */}
+            {/* <ForFranchiseSection/> */}
 
             <ServiceSection />
             <ConsultSection />

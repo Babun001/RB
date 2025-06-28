@@ -6,10 +6,15 @@ import './ServiceComponentsCSS/ServiceBody.css';
 import ServiceList from '../DB/AllServicesList';
 import ServiceDetails from './ServiceDetails';
 
-export default function ServiceBody({serviceName}) {
+export default function ServiceBody({ serviceName }) {
     return (
         <>
             <div className="serviceBody-wrapper">
+
+                <ServiceDetails
+                    serviceName={serviceName}
+                />
+
                 <div className="left-sidebar">
                     <div className="services-box">
                         <h4>Other Services</h4>
@@ -17,7 +22,7 @@ export default function ServiceBody({serviceName}) {
                             {ServiceList.map((svs, index) => (
                                 <li key={index}>
                                     <Link to={`/service/${svs.path}`}>
-                                        {svs.name} <span className="arrow"><GoArrowRight size={18}/></span>
+                                        {svs.name} <span className="arrow"><GoArrowRight size={18} /></span>
                                     </Link>
                                 </li>
                             ))}
@@ -42,9 +47,9 @@ export default function ServiceBody({serviceName}) {
                     </div>
                 </div>
 
-                <ServiceDetails
+                {/* <ServiceDetails
                     serviceName = {serviceName}
-                />
+                /> */}
 
             </div>
         </>

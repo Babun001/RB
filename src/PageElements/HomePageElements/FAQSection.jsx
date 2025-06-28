@@ -1,11 +1,16 @@
 import './HomePageCss/FAQSection.css';
+// import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 import AnimatedText from '../../AnimatedText';
 
 export default function FAQSectionSection() {
+
+    const navigator = useNavigate();
+
     const Qs = [
         {
-            name: "Career"
+            name: "Career",
         },
         {
             name: "General Queries"
@@ -26,6 +31,11 @@ export default function FAQSectionSection() {
             name: "Vaccination"
         }
     ]
+
+    const handleLinkOn = (e) =>{
+        e.preventDefault;
+        navigator("/faqs")
+    }
     return (
         <>
             <div className="faqContainer">
@@ -37,8 +47,10 @@ export default function FAQSectionSection() {
                 <div className="questionsSection">
                     {
                         Qs.map((q, indx) => (
-                            <div className="qus" key={indx}>
+                            <div className="qus" key={indx} onClick={handleLinkOn}>
+                                
                                 <p><span>+</span> {q.name}</p>
+
                             </div>
                         ))
                     }

@@ -21,8 +21,8 @@ export default function ConsultSection() {
 
                     <div className="subText">
                         <h4>Contact Us</h4>
-                        <p style={{ lineHeight: "5px" }}>+91 XXXXXXXXXX</p>
-                        <p style={{ lineHeight: "5px" }}>+91 XXXXXXXXXX</p>
+                        <p style={{ lineHeight: "5px" }}>033-4085 4085</p>
+                        <p style={{ lineHeight: "5px" }}>033-3382 3382</p>
                     </div>
 
                 </div>

@@ -77,3 +77,24 @@
   border-radius: 6px;
   cursor: pointer;
 }
+
+@media (max-width: 1200px) {
+  .serviceBody-wrapper{
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  .left-sidebar {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .services-box,
+  .consult-box{
+    width: 50%;
+  }
+  .services-box h4, .consult-box h4{
+    font-size: 1.3rem;
+  }
+}

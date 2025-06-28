@@ -55,7 +55,7 @@ const SecondaryNavbar = () => {
 
       <ul className={`nav-menu ${menuOpen ? "open" : ""} ${isSticky ? "scrolled" : ""}`}>
         <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
-        <li><Link to="#" className={location.pathname === '/collection' ? 'active' : ''}>Home Collection</Link></li>
+        <li><Link to="/collection" className={location.pathname === '/collection' ? 'active' : ''}>Home Collection</Link></li>
         <li><Link to="#" className={location.pathname === '/view-reports' ? 'active' : ''}>View Report</Link></li>
         <li><Link to="#" className={location.pathname === '/OurPackagesPage' ? 'active' : ''}>Health Package</Link></li>
 
@@ -82,8 +82,8 @@ const SecondaryNavbar = () => {
         */}
 
         <li><Link to="#" className={location.pathname === '/doctors-grid' ? 'active' : ''}>OPD</Link></li>
-        <li><Link to="#" className={location.pathname === '/faqs' ? 'active' : ''}>FAQs</Link></li>
-        <li><Link to="#" className={location.pathname === '/corporate-wellness' ? 'active' : ''}>Corporate Wellness</Link></li>
+        <li><Link to="/faqs" className={location.pathname === '/faqs' ? 'active' : ''}>FAQs</Link></li>
+        <li><Link to="/corporate-wellness" className={location.pathname === '/corporate-wellness' ? 'active' : ''}>Corporate Wellness</Link></li>
         <li><Link to="#" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
         <li><Link to="#" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
 

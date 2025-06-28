@@ -1,5 +1,5 @@
 .long-heading {
-  width: 22rem !important;
+  width: 24rem !important;
   margin: auto !important;
   justify-content: center !important;
 }
@@ -73,6 +73,7 @@
   align-items: center;
   font-size: 2rem;
   color: white;
+  margin-bottom: 1rem !important;
   font-weight: 400;
 }
 
@@ -91,8 +92,6 @@
 .fourthTextArea {
   transform: translate(0px, -205px);
 }
-
-
 
 .indexing {
   animation: flickerGlow 2s infinite alternate;
@@ -125,8 +124,32 @@
   animation-delay: 1.5s;
 }
 
-
-
+@media (max-width: 1200px) {
+  .hc-title {
+    width: 50%;
+  }
+  .firstTextArea {
+    transform: translate(0px, -158px);
+  }
+  .secondTextArea {
+    transform: translate(0px, -105px);
+  }
+  .thirdTextArea {
+    transform: translate(0px, -113px);
+  }
+  .fourthTextArea {
+    transform: translate(0px, -182px);
+  }
+  .whscContainer {
+    margin-top: 3rem !important;
+  }
+  .whsc-title {
+    width: 70%;
+  }
+  .whscleftsection {
+    width: 74%;
+  }
+}
 
 @media (max-width: 768px) {
   .processTextArea h3 {

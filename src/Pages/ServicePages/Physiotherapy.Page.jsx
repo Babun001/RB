@@ -11,7 +11,7 @@ export default function PhysiotherapyPage() {
         <>
             <ServiceHeader
                 childClass="physiotherapyBGSection"
-                breadcrumb={<>Services <FaGreaterThan size={36} /> Physiotherapy</>}
+                breadcrumb={<>Services <FaGreaterThan size={15} /> Physiotherapy</>}
                 title="Physiotherapy"
             />
 

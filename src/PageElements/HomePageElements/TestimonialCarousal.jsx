@@ -34,11 +34,11 @@ const users = [
             "What impressed me most was the speed and accuracy of their reporting. The lab staff explained everything clearly, and I got my reports the same day without any confusion."
     },
     {
-        img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde",
+        img: "https://plus.unsplash.com/premium_photo-1682089841647-458dd29dc0ee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aW5kaWFuJTIwZmFjZXN8ZW58MHx8MHx8fDA%3D",
         name: "Sutapa Roy",
         recedential: "Behala",
         comments:
-            "dfa afaf adfasd 32rqerg refery Diagnostic stands out for its efficiency and transparency. From registration to consultation, everything was smooth and hassle-free.  asdf adsf adsf asdf asdfads fasd fasdfadsfasdf adsf adsf asdf asdfads fasd fasdfadsfasdf adsf adsf asdf asdfads fasd fasdfadsf"
+            "Diagnostic stands out for its efficiency and transparency. From registration to consultation, everything was smooth and hassle-free."
     },
     {
         img: "https://www.shutterstock.com/shutterstock/videos/1040604956/thumb/1.jpg?ip=x480",

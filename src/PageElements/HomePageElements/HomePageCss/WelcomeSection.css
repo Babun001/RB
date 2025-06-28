@@ -190,6 +190,15 @@
   }
 }
 
+@media (max-width: 1400px) {
+  .cardsSection{
+    height: 16rem;
+  }
+  .leftBottomWelcomeSection{
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 1200px) {
   .leftWelcomeSection h2{
     font-size: 40px;

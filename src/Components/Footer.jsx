@@ -66,7 +66,7 @@ export default function FooterSection() {
                     </div>
                     <p>
                         © Copyright @2021 RB Diagnostic Pvt. Ltd. (India) <br />
-                        Designed & Developed by Infymax Solutions Pvt. Ltd.
+                        Designed & Developed by EsspeSoft.
                     </p>
                 </div>
             </footer>

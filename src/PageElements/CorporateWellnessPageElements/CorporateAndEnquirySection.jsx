@@ -4,6 +4,7 @@ import './CorporateWellnessPageCss/CorporateAndEnquirySection.css';
 import { FaUser, FaPhoneAlt, FaBuilding } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
+import AnimatedText from '../../AnimatedText';
 
 export default function CorporateAndEnquirySection() {
     const [formData, setFormData] = useState({
@@ -40,7 +41,9 @@ export default function CorporateAndEnquirySection() {
     return (
         <div className="corporateAndEnquiryContainer" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', padding: '2rem' }}>
             <div className="ceLeftSection" style={{ flex: 1, minWidth: '300px' }}>
-                <h3 className='WellnessHeading'>For Corporates</h3>
+                <AnimatedText tag="h2" type="chars" y={30} className='WellnessHeading'>
+                    For Corporates
+                </AnimatedText>
                 <p>
                     Why employee wellness is paramount for you? There’s a proven, direct connection between health and workplace productivity.
                     Good health means lesser absenteeism which in turn means greater output. Being healthy increases concentration, energy levels,
@@ -63,7 +66,9 @@ export default function CorporateAndEnquirySection() {
             </div>
 
             <div className="ceRightSectionContent">
-                <h3>Enquiry Form</h3>
+                <AnimatedText tag="h2" type="chars" y={30}>
+                    Enquiry Form
+                </AnimatedText>
                 <div className="ceRightSection">
                     <form onSubmit={handleSubmit} className="enquiryForm">
 

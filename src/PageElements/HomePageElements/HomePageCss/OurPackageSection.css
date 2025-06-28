@@ -152,7 +152,7 @@
 
 /* ========================================================================================================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
   .cornerImage img {
     width: 3.5rem !important;
     transform: translate(40px, 0px);

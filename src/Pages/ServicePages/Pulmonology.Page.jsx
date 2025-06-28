@@ -12,7 +12,7 @@ export default function PulmonologyPage() {
 
             <ServiceHeader
                 childClass="pulmonologybgSection"
-                breadcrumb={<>Services <FaGreaterThan size={36} /> Pulmonology</>}
+                breadcrumb={<>Services <FaGreaterThan size={15} /> Pulmonology</>}
                 title="Pulmonology"
             />
 

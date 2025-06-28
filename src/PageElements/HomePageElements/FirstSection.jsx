@@ -7,7 +7,7 @@ import img1 from '../../Assets/bg1.jpg';
 import img2 from '../../Assets/bg2.jpg';
 import img3 from '../../Assets/bg3.jpg';
 
-const images = [img1,img2,img3];
+const images = [img2,img3];
 
 const sliderSettings = {
     dots: true,

@@ -1,39 +1,50 @@
-.whyRBDContainer{
-    background-image: url('../../../Assets/wcrbd.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 4rem;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+.whyRBDContainer {
+  background-image: url("../../../Assets/wcrbd.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
-.wcrbd-title{
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    color: white;
+.wcrbd-title {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  color: white;
 }
-.rbdLowerSection{
-    width: 80%;
-    margin: auto;
-
-}
-
-.textArea{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    padding: 10px 3rem;
-    margin: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    border-radius: 20px;
+.rbdLowerSection {
+  width: 80%;
+  margin: auto;
 }
 
-.textArea p{
-    width: 80%;
+.textArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 3rem;
+  margin: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.textArea p {
+  width: 80%;
+}
+
+@media (max-width: 1200px) {
+  .wcrbd-title {
+    width: 65%;
+  }
+  .textArea{
+    font-size: 12px;
+  }
+  .whyRBDContainer{
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 768px) {

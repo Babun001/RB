@@ -1,5 +1,6 @@
 import './HomePageCss/CorporateWillSection.css';
 import AnimatedText from '../../AnimatedText';
+import { useNavigate } from 'react-router-dom';
 // import Slider from "react-slick";
 
 // import tcs from '../../Assets/tcs.png';
@@ -7,6 +8,12 @@ import AnimatedText from '../../AnimatedText';
 // import itc from '../../Assets/itc.png';
 
 export default function CorporateWillSection() {
+    const navigator = useNavigate();
+
+    const handleKnowmorebtn = (e) =>{
+        e.preventDefault;
+        navigator("/corporate-wellness");
+    }
     // const sliderRef = useRef(null);
 
     // const companies = [
@@ -63,7 +70,7 @@ export default function CorporateWillSection() {
                     </AnimatedText>
 
                 </div>
-                <button className=' rbdButton'><span className='btn-text'>Click to Know More...</span></button>
+                <button className=' rbdButton'><span className='btn-text' onClick={handleKnowmorebtn}>Click to Know More...</span></button>
             </div>
 
             {/* <div className="companiesSection">

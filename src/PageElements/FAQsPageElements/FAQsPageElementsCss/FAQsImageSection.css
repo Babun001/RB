@@ -1,5 +1,5 @@
 .faqFirstContainer {
-  background-image: url("../../../Assets/faqBackground02.png") !important;
+  background-image: url("../../../Assets/faq.jpg") !important;
   width: 100%;
   margin: auto;
   background-position: center;
@@ -8,5 +8,11 @@
   /* border-radius: 50px; */
   height: 25em;
   position: relative;
-  /* margin-top: 2rem; */
+  margin-top: -9rem;
+}
+
+@media (max-width: 1200px) {
+  .faqFirstContainer {
+    margin-top: -10rem;
+  }
 }

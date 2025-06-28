@@ -1,4 +1,5 @@
-import './HomeCollectionCss/WhyChooseUs.css'
+import './HomeCollectionCss/WhyChooseUs.css';
+import AnimatedText from '../../AnimatedText';
 
 const whyRBD = [
     { point: "Trained Phlebotomists", text: "Our experienced professionals ensure safe and hygienic sample collection right at your doorstep" },
@@ -13,7 +14,10 @@ export default function WhyChooseUsRBD() {
         <>
             <div className="whyRBDContainer">
                 <div className="rbdUpperSection">
-                    <h2 className="rb-title wcrbd-title">Why Choose RB Diagnostics for Home Sample Collection?</h2>
+                    <AnimatedText tag="h2" type="chars" y={30} className="rb-title wcrbd-title">
+                        Why Choose RB Diagnostics for Home Sample Collection?
+                    </AnimatedText>
+                    {/* <h2 className="rb-title wcrbd-title">Why Choose RB Diagnostics for Home Sample Collection?</h2> */}
                 </div>
                 <div className="rbdLowerSection">
                     {

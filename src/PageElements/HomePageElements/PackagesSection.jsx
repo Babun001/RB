@@ -85,13 +85,13 @@ export default function PackagesSection() {
 
 
             {/* Toggle Buttons */}
-            {diseaseData.length > 8 && (
+            {/* {diseaseData.length > 8 && (
                 <div className="viewMoreContainer">
                     <button className="viewMoreBtn rbdButton" onClick={() => setShowAll(!showAll)}>
                         <span className='btn-text'>{showAll ? 'View Less' : 'View All'}</span>
                     </button>
                 </div>
-            )}
+            )} */}
         </div>
     );
 }
