@@ -51,6 +51,7 @@
 .doctor-image:hover{
     transform: scale(1.16);
 }
+
 .doctor-info {
     padding: 12px;
 }

@@ -26,6 +26,12 @@ code {
   margin-bottom: 2rem;
 }
 
+.RB-para-text{
+  font-size: 17px;
+  color: #687276;
+  line-height: 1.6;
+}
+
 /* #003588; */
 
 .rb-headingTag {

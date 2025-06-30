@@ -1,16 +1,20 @@
 import './ContactPageElementsCss/ContactInfoSection.css';
+import AnimatedText from '../../AnimatedText';
 
 export default function ContactInfoSection() {
     return (
         <>
             <div className="contact-container">
                 <div className="contact-left">
-                    <h2>Contact<br />information</h2>
-                    <p>
-                        Learn more about our clinic and doctors and<br />
-                        why they are trusted by so many families in our community.
+                    <AnimatedText tag="h2" type="chars" y={30} className='rb-title'>
+                        Contact Information
+                    </AnimatedText>
+
+                    <p className='RB-para-text'>
+                        Learn more about our clinic and doctors and why they are trusted by so many families in our community.
+                        Learn more about our clinic and doctors and why they are trusted by so many families in our community.
                     </p>
-                    <div className="contact-details">
+                    <div className="contact-details" style={{marginTop:"1rem"}}>
                         <div>
                             <strong>ADDRESS:</strong><br />
                             <span className="bold">LakeTown</span>

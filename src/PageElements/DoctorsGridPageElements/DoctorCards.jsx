@@ -3,6 +3,7 @@ import { FaStar, FaHeart, FaMapMarkerAlt } from 'react-icons/fa';
 import { LuBookText, LuDot } from "react-icons/lu";
 import { useEffect, useState } from 'react';
 import DoctorDetailsPage from './DoctorDetailsPage';
+// import pngLogo from '../../Assets/RBlogoPng.png'
 
 export default function DoctorCard(params) {
     const [liked, setLiked] = useState(false);
@@ -38,6 +39,7 @@ export default function DoctorCard(params) {
 
                 <div className="doctorsImgSec">
                     <img src={params.imageUrl} alt={params.name} className="doctor-image" />
+                    {/* <img src={pngLogo} alt="Logo" className='RBVerifiedLogo'/> */}
                 </div>
 
                 <div className="doctor-info" >

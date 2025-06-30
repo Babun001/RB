@@ -1,50 +1,54 @@
-.pulmonologybgSection{
-    background-image: url('../../Assets/pnlBg.jpg') !important;
+.pulmonologybgSection {
+  background-image: url("../../Assets/pnlBg.jpg") !important;
 }
 
-.gastroenterologyBgSection{
-    background-image: url('../../Assets/gasentretology.jpg') !important;
+.gastroenterologyBgSection {
+  background-image: url("../../Assets/gasentretology.jpg") !important;
 }
 
-.physiotherapyBGSection{
-    background-image: url('../../Assets/physiotheraphy.jpg') !important;
+.physiotherapyBGSection {
+  background-image: url("../../Assets/physiotheraphy.jpg") !important;
 }
 
-.OphthalmologyBGSection{
-    background-image: url('../../Assets/Ophthalmology.jpg') !important;
+.OphthalmologyBGSection {
+  background-image: url("../../Assets/Ophthalmology.jpg") !important;
 }
 
-.homecareBGSection{
-    background-image: url('../../Assets/HomecareBackground.png.jpg') !important;
+.homecareBGSection {
+  background-image: url("../../Assets/HomecareBackground.png.jpg") !important;
 }
 
-.dermatologyBGSection{
-    background-image: url('../../Assets/dermatology.jpg') !important;
+.dermatologyBGSection {
+  background-image: url("../../Assets/dermatology.jpg") !important;
 }
 
-.dialysisBgSection{
-    background-image: url('../../Assets/Diyalysis.jpg') !important;
+.dialysisBgSection {
+  background-image: url("../../Assets/Diyalysis.jpg") !important;
 }
 
-.dentalBGSection{
-    background-image: url('../../Assets/Dental.jpg') !important;
+.dentalBGSection {
+  background-image: url("../../Assets/Dental.jpg") !important;
 }
 
-.neurologyBGSection{
-    background-image: url('../../Assets/serviceimg2.jpg') !important;
+.neurologyBGSection {
+  background-image: url("../../Assets/serviceimg2.jpg") !important;
 }
 
-.radiologyBGSection{
-    background-image: url('../../Assets/Rdiology.jpg') !important;
+.radiologyBGSection {
+  background-image: url("../../Assets/Rdiology.jpg") !important;
 }
 
-.faqFirstContainer{
-    background-image: url('../../Assets/faq.jpg') !important;
+.faqFirstContainer {
+  background-image: url("../../Assets/faq.jpg") !important;
 }
 
-.collectionUpperSection{
-    background-image: url('../../Assets/HomeCollectionbg1.jpg') !important;
+.collectionUpperSection {
+  background-image: url("../../Assets/HomeCollectionbg1.jpg") !important;
 }
-.corporateWellness{
-    background-image: url('../../Assets/HomeCollectionbg007.jpg') !important;
+.corporateWellness {
+  background-image: url("../../Assets/HomeCollectionbg007.jpg") !important;
+}
+
+.contactBgSections {
+  background-image: url("../../Assets/HomeCollectionbg007.jpg") !important;
 }

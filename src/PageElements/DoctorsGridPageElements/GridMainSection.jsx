@@ -1,26 +1,30 @@
 import { useState } from 'react';
 import DoctorCard from './DoctorCards';
-import { FaCheck, FaTimes } from "react-icons/fa";
+import { FaCheck, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import './DoctorsGridPageCss/GridMainSection.css';
 import doctors from '../../DB/DoctorsDetails';
 import DoctorsGridFirstSection from './DoctorGridFirstSection';
 
-import { FaChevronDown } from "react-icons/fa";
-import { FaChevronUp } from "react-icons/fa";
-
-
 export default function GridMainSection() {
-    const [price, setPrice] = useState(200);
+    const [price, setPrice] = useState(10000);
     const [currentPage, setCurrentPage] = useState(1);
     const [showMoreSpecialties, setShowMoreSpecialties] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
+    const [sortBy, setSortBy] = useState("");
     const [searchFilters, setSearchFilters] = useState({ doctorName: '', department: '' });
 
-    const handleSearchFilters = ({ doctorName, department }) => {
-        setSearchFilters({ doctorName, department });
-    };
+    const [selectedSpecialties, setSelectedSpecialties] = useState([]);
+    const [selectedGenders, setSelectedGenders] = useState([]);
+    const [selectedExperience, setSelectedExperience] = useState([]);
+    const [selectedConsultations, setSelectedConsultations] = useState([]);
+    const [selectedRatings, setSelectedRatings] = useState([]);
 
+    const allSpecialties = [
+        "Diabetologist", "Cardiologist", "Orthopedic", "Dermatologist", "ENT",
+        "Neurologist", "Gynaecologist"
+    ];
 
+    const displayedSpecialties = showMoreSpecialties ? allSpecialties : allSpecialties.slice(0, 7);
 
     const [openFilters, setOpenFilters] = useState({
         specialties: true,
@@ -36,39 +40,71 @@ export default function GridMainSection() {
         setOpenFilters(prev => ({ ...prev, [key]: !prev[key] }));
     };
 
-    const doctorsPerPage = 12;
-
-    const doctorsDetails = doctors;
-
-
-
-    const filteredDoctors = doctorsDetails.filter((doc) => {
-        const matchesName = doc.name.toLowerCase().includes(searchFilters.doctorName.toLowerCase());
-        const matchesDept = doc.specialty.toLowerCase().includes(searchFilters.department.toLowerCase());
-        const isAvailable = !isChecked || doc.availability;
-
-        return matchesName && matchesDept && isAvailable;
-    });
-
-
-    const totalPages = Math.ceil(filteredDoctors.length / doctorsPerPage);
-    const indexOfLastDoctor = currentPage * doctorsPerPage;
-    const indexOfFirstDoctor = indexOfLastDoctor - doctorsPerPage;
-    const currentDoctors = filteredDoctors.slice(indexOfFirstDoctor, indexOfLastDoctor);
-
-    const handlePageChange = (page) => {
-        if (page >= 1 && page <= totalPages) {
-            setCurrentPage(page);
+    const toggleSelection = (value, selectedList, setSelectedList) => {
+        if (selectedList.includes(value)) {
+            setSelectedList(selectedList.filter(item => item !== value));
+        } else {
+            setSelectedList([...selectedList, value]);
         }
     };
 
-    const allSpecialties = [
-        "Diabetologist", "Cardiologist", "Orthopedic", "Dermatologist", "ENT",
-        "Neurologist", "Gynaecologist", "Cardiologist", "Orthopedic", "Dermatologist",
-        "ENT", "Neurologist"
-    ];
+    const handleSearchFilters = ({ doctorName, department }) => {
+        setSearchFilters({ doctorName, department });
+    };
 
-    const displayedSpecialties = showMoreSpecialties ? allSpecialties : allSpecialties.slice(0, 7);
+    const handleClearAll = () => {
+        setSelectedSpecialties([]);
+        setSelectedGenders([]);
+        setSelectedExperience([]);
+        setSelectedConsultations([]);
+        setSelectedRatings([]);
+        setSearchFilters({ doctorName: '', department: '' });
+        setPrice(10000);
+        setIsChecked(false);
+        setSortBy("");
+    };
+
+    const doctorsPerPage = 12;
+
+    const filteredDoctors = doctors.filter((doc) => {
+        const matchesName = doc.name.toLowerCase().includes(searchFilters.doctorName.toLowerCase());
+        const matchesDept = doc.specialty.toLowerCase().includes(searchFilters.department.toLowerCase());
+        const matchesSpecialty = selectedSpecialties.length === 0 || selectedSpecialties.includes(doc.specialty);
+        const matchesGender = selectedGenders.length === 0 || selectedGenders.includes(doc.gender);
+        const matchesExperience = selectedExperience.length === 0 || selectedExperience.some(min => doc.experience >= min);
+        const matchesConsultation = selectedConsultations.length === 0 || selectedConsultations.some(type => doc.consultationTypes?.includes(type));
+        const matchesRating = selectedRatings.length === 0 || selectedRatings.includes(Math.floor(doc.rating));
+        const matchesPrice = parseInt(doc.fees) <= parseInt(price);
+        const isAvailable = !isChecked || doc.availability;
+
+        return (
+            matchesName &&
+            matchesDept &&
+            matchesSpecialty &&
+            matchesGender &&
+            matchesExperience &&
+            matchesConsultation &&
+            matchesRating &&
+            matchesPrice &&
+            isAvailable
+        );
+    });
+
+    const sortedDoctors = [...filteredDoctors].sort((a, b) => {
+        if (sortBy === "priceLow") return parseInt(a.fees) - parseInt(b.fees);
+        if (sortBy === "priceHigh") return parseInt(b.fees) - parseInt(a.fees);
+        if (sortBy === "rating") return b.rating - a.rating;
+        return 0;
+    });
+
+    const totalPages = Math.ceil(sortedDoctors.length / doctorsPerPage);
+    const indexOfLastDoctor = currentPage * doctorsPerPage;
+    const indexOfFirstDoctor = indexOfLastDoctor - doctorsPerPage;
+    const currentDoctors = sortedDoctors.slice(indexOfFirstDoctor, indexOfLastDoctor);
+
+    const handlePageChange = (page) => {
+        if (page >= 1 && page <= totalPages) setCurrentPage(page);
+    };
 
     return (
         <>
@@ -80,148 +116,153 @@ export default function GridMainSection() {
                         <div className="filter-box-header">
                             <div className="filterUpperText">
                                 <p>Filter</p>
-                                <p style={{ textDecoration: "underline" }}>Clear All</p>
+                                <p onClick={handleClearAll} style={{ textDecoration: "underline", cursor: "pointer" }}>Clear All</p>
                             </div>
                         </div>
-                        <input type="text" placeholder="Search doctor..." className="filter-search" />
+                        <input
+                            type="text"
+                            placeholder="Search doctor..."
+                            className="filter-search"
+                            value={searchFilters.doctorName}
+                            onChange={(e) => setSearchFilters(prev => ({ ...prev, doctorName: e.target.value }))}
+                        />
                         <hr />
 
-                        {/* Specialties */}
+                        {/* SPECIALTIES */}
                         <div className="filter-section">
                             <div className="filter-header" onClick={() => toggleFilter('specialties')}>
-                                <label style={{ color: "black" }}>Specialties</label>
-                                <span className="arrow">{openFilters.specialties ? <FaChevronUp /> : <FaChevronDown />}</span>
+                                <label>Specialties</label>
+                                <span>{openFilters.specialties ? <FaChevronUp /> : <FaChevronDown />}</span>
                             </div>
                             {openFilters.specialties && (
                                 <div className="checkbox-group">
                                     {displayedSpecialties.map((specialty, index) => (
-                                        <label key={index}><input type="checkbox" /> {specialty}</label>
+                                        <label key={index}>
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedSpecialties.includes(specialty)}
+                                                onChange={() => toggleSelection(specialty, selectedSpecialties, setSelectedSpecialties)}
+                                            /> {specialty}
+                                        </label>
                                     ))}
                                     {!showMoreSpecialties && (
-                                        <p className="view-more-btn" onClick={() => setShowMoreSpecialties(true)}>
-                                            View More...
-                                        </p>
+                                        <p className="view-more-btn" onClick={() => setShowMoreSpecialties(true)}>View More...</p>
                                     )}
                                 </div>
                             )}
                         </div>
                         <hr />
 
-                        {/* Gender */}
+                        {/* GENDER */}
                         <div className="filter-section">
                             <div className="filter-header" onClick={() => toggleFilter('gender')}>
-                                <label style={{ color: "black" }}>Gender</label>
-                                <span className="arrow">{openFilters.gender ? <FaChevronUp /> : <FaChevronDown />}</span>
+                                <label>Gender</label>
+                                <span>{openFilters.gender ? <FaChevronUp /> : <FaChevronDown />}</span>
                             </div>
                             {openFilters.gender && (
                                 <div className="checkbox-group">
-                                    <label><input type="checkbox" /> Male</label>
-                                    <label><input type="checkbox" /> Female</label>
-                                    <label><input type="checkbox" /> Others</label>
+                                    {["Male", "Female", "Others"].map(gender => (
+                                        <label key={gender}>
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedGenders.includes(gender)}
+                                                onChange={() => toggleSelection(gender, selectedGenders, setSelectedGenders)}
+                                            /> {gender}
+                                        </label>
+                                    ))}
                                 </div>
                             )}
                         </div>
                         <hr />
 
-                        {/* Availability */}
+                        {/* EXPERIENCE */}
                         <div className="filter-section">
-                            <div className="filter-header" onClick={() => toggleFilter('availability')}>
-                                <label style={{ color: "black" }}>Availability</label>
-                                <span className="arrow">{openFilters.availability ? <FaChevronUp /> : <FaChevronDown />}</span>
+                            <div className="filter-header" onClick={() => toggleFilter('experience')}>
+                                <label>Experience</label>
+                                <span>{openFilters.experience ? <FaChevronUp /> : <FaChevronDown />}</span>
                             </div>
-                            {openFilters.availability && (
+                            {openFilters.experience && (
                                 <div className="checkbox-group">
-                                    <label><input type="checkbox" /> Today</label>
-                                    <label><input type="checkbox" /> Tomorrow</label>
-                                    <label><input type="checkbox" /> After Tomorrow</label>
-                                    <label><input type="checkbox" /> +3 Days</label>
-                                    <label><input type="checkbox" /> View more...</label>
+                                    {[2, 5, 8, 10, 15, 20].map(years => (
+                                        <label key={years}>
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedExperience.includes(years)}
+                                                onChange={() => toggleSelection(years, selectedExperience, setSelectedExperience)}
+                                            /> {years}+ years
+                                        </label>
+                                    ))}
                                 </div>
                             )}
                         </div>
                         <hr />
 
-                        {/* Pricing */}
+                        {/* CONSULTATION */}
+                        <div className="filter-section">
+                            <div className="filter-header" onClick={() => toggleFilter('consultation')}>
+                                <label>Consultation Types</label>
+                                <span>{openFilters.consultation ? <FaChevronUp /> : <FaChevronDown />}</span>
+                            </div>
+                            {openFilters.consultation && (
+                                <div className="checkbox-group">
+                                    {["Audio Call", "Video Call", "Instant Counselling", "Chat"].map(type => (
+                                        <label key={type}>
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedConsultations.includes(type)}
+                                                onChange={() => toggleSelection(type, selectedConsultations, setSelectedConsultations)}
+                                            /> {type}
+                                        </label>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                        <hr />
+
+                        {/* RATING */}
+                        <div className="filter-section">
+                            <div className="filter-header" onClick={() => toggleFilter('rating')}>
+                                <label>Rating</label>
+                                <span>{openFilters.rating ? <FaChevronUp /> : <FaChevronDown />}</span>
+                            </div>
+                            {openFilters.rating && (
+                                <div className="checkbox-group">
+                                    {[5, 4, 3, 2, 1].map(rating => (
+                                        <label key={rating}>
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedRatings.includes(rating)}
+                                                onChange={() => toggleSelection(rating, selectedRatings, setSelectedRatings)}
+                                            /> {rating} Star
+                                        </label>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                        <hr />
+
+                        {/* PRICING */}
                         <div className="filter-section">
                             <div className="filter-header" onClick={() => toggleFilter('pricing')}>
-                                <label style={{ color: "black" }}>Pricing (${price})</label>
-                                <span className="arrow">{openFilters.pricing ? <FaChevronUp /> : <FaChevronDown />}</span>
+                                <label>Pricing (${price})</label>
+                                <span>{openFilters.pricing ? <FaChevronUp /> : <FaChevronDown />}</span>
                             </div>
                             {openFilters.pricing && (
                                 <input
                                     type="range"
                                     min="200"
-                                    max="5005"
+                                    max="10000"
                                     value={price}
                                     onChange={(e) => setPrice(e.target.value)}
-                                    className="filter-range"
                                 />
-                            )}
-                        </div>
-                        <hr />
-
-                        {/* Experience */}
-                        <div className="filter-section">
-                            <div className="filter-header" onClick={() => toggleFilter('experience')}>
-                                <label style={{ color: "black" }}>Experience</label>
-                                <span className="arrow">{openFilters.experience ? <FaChevronUp /> : <FaChevronDown />}</span>
-                            </div>
-                            {openFilters.experience && (
-                                <div className="checkbox-group">
-                                    <label><input type="checkbox" /> 2+ years</label>
-                                    <label><input type="checkbox" /> 5+ years</label>
-                                    <label><input type="checkbox" /> 8+ years</label>
-                                    <label><input type="checkbox" /> 10+ years</label>
-                                    <label><input type="checkbox" /> 15+ years</label>
-                                    <label><input type="checkbox" /> 20+ years</label>
-                                    <label><input type="checkbox" /> View more...</label>
-                                </div>
-                            )}
-                        </div>
-                        <hr />
-
-                        {/* Consultation Types */}
-                        <div className="filter-section">
-                            <div className="filter-header" onClick={() => toggleFilter('consultation')}>
-                                <label style={{ color: "black" }}>Consultation Types</label>
-                                <span className="arrow">{openFilters.consultation ? <FaChevronUp /> : <FaChevronDown />}</span>
-                            </div>
-                            {openFilters.consultation && (
-                                <div className="checkbox-group">
-                                    <label><input type="checkbox" /> Audio Call</label>
-                                    <label><input type="checkbox" /> Video Call</label>
-                                    <label><input type="checkbox" /> Instant Counselling</label>
-                                    <label><input type="checkbox" /> Chat</label>
-                                </div>
-                            )}
-                        </div>
-                        <hr />
-
-                        {/* Rating */}
-                        <div className="filter-section">
-                            <div className="filter-header" onClick={() => toggleFilter('rating')}>
-                                <label style={{ color: "black" }}>Rating</label>
-                                <span className="arrow">{openFilters.rating ? <FaChevronUp /> : <FaChevronDown />}</span>
-                            </div>
-                            {openFilters.rating && (
-                                <div className="checkbox-group">
-                                    <label><input type="checkbox" /> 5 Star</label>
-                                    <label><input type="checkbox" /> 4 Star</label>
-                                    <label><input type="checkbox" /> 3 Star</label>
-                                    <label><input type="checkbox" /> 2 Star</label>
-                                    <label><input type="checkbox" /> 1 Star</label>
-                                </div>
                             )}
                         </div>
                     </div>
                 </div>
 
                 <div className="gridMainRightSection">
-
                     <div className="doctors-header-bar">
-                        <h3 className="doctor-count">
-                            Showing <span className="highlight">{filteredDoctors.length}</span> Doctors For You
-                        </h3>
+                        <h3>Showing <span>{filteredDoctors.length}</span> Doctors For You</h3>
 
                         <div className="header-controls">
                             <label className="availability-switch">
@@ -232,70 +273,34 @@ export default function GridMainSection() {
                             </label>
 
                             <div className="sort-dropdown">
-                                <label htmlFor="sort-select">Sort By</label>
-                                <select id="sort-select">
-                                    <option>Price (Low to High)</option>
-                                    <option>Price (High to Low)</option>
-                                    <option>Rating</option>
+                                <label htmlFor="sort-select">Sort By:</label>
+                                <select
+                                    id="sort-select"
+                                    value={sortBy}
+                                    onChange={(e) => setSortBy(e.target.value)}
+                                >
+                                    <option value="">Default</option>
+                                    <option value="priceLow">Price (Low to High)</option>
+                                    <option value="priceHigh">Price (High to Low)</option>
+                                    <option value="rating">Rating</option>
                                 </select>
                             </div>
                         </div>
                     </div>
 
-
-                    {currentDoctors
-                        .filter(doc => !isChecked || doc.availability)
-                        .map((doc, idx) => (
-                            <DoctorCard
-                                key={idx}
-                                id={doc.id}
-                                name={doc.name}
-                                specialty={doc.specialty}
-                                location={doc.location}
-                                availability={doc.availability}
-                                rating={doc.rating}
-                                fees={doc.fees}
-                                imageUrl={doc.imageUrl}
-                                experience={doc.experience}
-                                bio={doc.bio}
-                                Awards={doc.Awards}
-                                experienceDetails={doc.experienceDetails}
-                                availableDays={doc.availableDays}
-                                contact={doc.contact}
-                                languages={doc.languages}
-                                reviews={doc.reviews}
-                            />
-                        ))}
-
-
+                    {currentDoctors.map((doc, idx) => (
+                        <DoctorCard key={idx} {...doc} />
+                    ))}
 
                     {filteredDoctors.length > doctorsPerPage && (
                         <div className="pagination">
-                            <button
-                                onClick={() => handlePageChange(currentPage - 1)}
-                                disabled={currentPage === 1}
-                                className="arrowBtn"
-                            >
-                                ‹
-                            </button>
-
-                            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                                <button
-                                    key={page}
-                                    onClick={() => handlePageChange(page)}
-                                    className={page === currentPage ? 'activePage' : ''}
-                                >
-                                    {page}
+                            <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>‹</button>
+                            {Array.from({ length: totalPages }, (_, i) => (
+                                <button key={i + 1} className={currentPage === i + 1 ? 'activePage' : ''} onClick={() => handlePageChange(i + 1)}>
+                                    {i + 1}
                                 </button>
                             ))}
-
-                            <button
-                                onClick={() => handlePageChange(currentPage + 1)}
-                                disabled={currentPage === totalPages}
-                                className="arrowBtn"
-                            >
-                                ›
-                            </button>
+                            <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>›</button>
                         </div>
                     )}
                 </div>

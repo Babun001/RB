@@ -5,30 +5,35 @@
   gap: 2rem;
   padding: 3rem 5%;
   background-color: #ffffff;
+  align-items: center;
 }
 
 .contact-left {
   flex: 1;
 }
 
-.contact-left h2 {
+/* .contact-left h2 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
   line-height: 1.2;
-}
+} */
 
-.contact-left p {
+/* .contact-left p {
   margin-bottom: 1.5rem;
   font-size: 1rem;
   line-height: 1.5;
   color: #444;
+} */
+strong{
+  font-size: 17px;
 }
-
 .contact-details {
   display: flex;
   gap: 3rem;
   font-size: 1rem;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .bold {

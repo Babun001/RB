@@ -1,5 +1,13 @@
-export default function ContactBGSection(){
+import ServiceHeader from "../../ServiceComponents/ServiceHeader";
+
+export default function ContactBGSection() {
     return (
-        <>Thisvis contact bg section section</>
+        <>
+            <ServiceHeader
+                childClass="contactBgSections"
+                breadcrumb={<> Contacts</>}
+                title="Contacts"
+            />
+        </>
     )
 }

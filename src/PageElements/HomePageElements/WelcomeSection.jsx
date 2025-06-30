@@ -6,8 +6,31 @@ import { FaBriefcaseMedical } from "react-icons/fa6";
 import './HomePageCss/WelcomeSection.css';
 import AnimatedText from '../../AnimatedText';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const WelcomeSection = () => {
+
+    const navigation = useNavigate();
+    const handleHomeCollection = (e) =>{
+        e.preventDefault();
+        navigation('/collection')
+    }
+
+    const handleViewReport = (e) =>{
+        e.preventDefault();
+        navigation('/view-reports')
+    }
+
+    // const handleCenterNearby = (e) =>{
+    //     e.preventDefault();
+    //     navigation('#')
+    // }
+
+    // const handleBookAppointment = (e) =>{
+    //     e.preventDefault();
+    //     navigation('#')
+    // }
+
     return (
         <div className="WelcomeContainer">
             <div className="leftWelcomeSection">
@@ -38,7 +61,7 @@ const WelcomeSection = () => {
                             <p>Schedule your diagnostic tests effortlessly with our easy online booking system</p>
                         </div>
 
-                        <div className="cardsSection" style={{ backgroundColor: "#d7ece5" }}>
+                        <div className="cardsSection" style={{ backgroundColor: "#d7ece5" }} onClick={handleHomeCollection}>
                             <div className="cardUpperSection">
                                 <div className="iconBackground" style={{ backgroundColor: "rgb(60, 120, 110)" }}>
                                     <IoHomeSharp size={24} style={{ color: "white" }} />
@@ -56,7 +79,7 @@ const WelcomeSection = () => {
                     </div>
 
                     <div className="cardUpSection">
-                        <div className="cardsSection" style={{ backgroundColor: "#f1ded8" }}>
+                        <div className="cardsSection" style={{ backgroundColor: "#f1ded8" }} onClick={handleViewReport}> 
                             <div className="cardUpperSection">
                                 <div className="iconBackground" style={{ backgroundColor: "rgb(110, 70, 60)" }}>
                                     <FaFileAlt size={24} style={{ color: "white" }} />
