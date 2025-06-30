@@ -47,17 +47,13 @@ const SecondaryNavbar = () => {
         )}
       </div>
 
-      {/* 
-      /collection
-/view-reports
-/OurPackagesPage
-      */}
+
 
       <ul className={`nav-menu ${menuOpen ? "open" : ""} ${isSticky ? "scrolled" : ""}`}>
         <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
         <li><Link to="/collection" className={location.pathname === '/collection' ? 'active' : ''}>Home Collection</Link></li>
-        <li><Link to="#" className={location.pathname === '/view-reports' ? 'active' : ''}>View Report</Link></li>
-        <li><Link to="#" className={location.pathname === '/OurPackagesPage' ? 'active' : ''}>Health Package</Link></li>
+        <li><Link to="/view-reports" className={location.pathname === '/view-reports' ? 'active' : ''}>View Report</Link></li>
+        <li><Link to="/OurPackagesPage" className={location.pathname === '/OurPackagesPage' ? 'active' : ''}>Health Package</Link></li>
 
         <li className="dropdown">
           <span>Services ▾</span>
@@ -75,30 +71,20 @@ const SecondaryNavbar = () => {
           </ul>
         </li>
 
-        {/* 
-        /doctors-grid
-        /faqs
-        /corporate-wellness
-        */}
 
-        <li><Link to="#" className={location.pathname === '/doctors-grid' ? 'active' : ''}>OPD</Link></li>
+        <li><Link to="/doctors-grid" className={location.pathname === '/doctors-grid' ? 'active' : ''}>OPD</Link></li>
         <li><Link to="/faqs" className={location.pathname === '/faqs' ? 'active' : ''}>FAQs</Link></li>
         <li><Link to="/corporate-wellness" className={location.pathname === '/corporate-wellness' ? 'active' : ''}>Corporate Wellness</Link></li>
-        <li><Link to="#" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
-        <li><Link to="#" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
+        <li><Link to="/about-us" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
+        <li><Link to="/contact-us" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
 
-
-        {/* 
-        /login
-/registration
-        */}
 
 
         <li className="dropdown">
           <span>Login ▾</span>
           <ul className="dropdown-menu">
-            <li><Link to="#" className={location.pathname === '/login' ? 'active' : ''}>Login</Link></li>
-            <li><Link to="#" className={location.pathname === '/registration' ? 'active' : ''}>Registration</Link></li>
+            <li><Link to="/login" className={location.pathname === '/login' ? 'active' : ''}>Login</Link></li>
+            <li><Link to="/registration" className={location.pathname === '/registration' ? 'active' : ''}>Registration</Link></li>
           </ul>
         </li>
       </ul>

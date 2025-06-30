@@ -7,7 +7,7 @@ import ConsultSection from "../PageElements/HomePageElements/ConsultSection";
 export default function DoctorsGridPage() {
     return (
         <>
-            <DoctorGridFirstSection/>
+            {/* <DoctorGridFirstSection/> */}
             <GridMainSection/>
             <ServiceSection />
             <ConsultSection />
