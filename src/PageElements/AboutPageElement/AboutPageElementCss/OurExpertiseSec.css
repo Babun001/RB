@@ -1,0 +1,63 @@
+.ourExpSection{
+  margin: 2rem 4rem;
+}
+
+.ourExpSecPara {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0; */
+}
+
+.ourExpSecPara p {
+  margin: 0 !important;
+}
+
+.expertise-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 0 4rem;
+}
+
+.expertise-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  padding: 25px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.expertise-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.expertise-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #111;
+}
+
+.expertise-card p {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

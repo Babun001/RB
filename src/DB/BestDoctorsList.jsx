@@ -157,80 +157,9 @@ const BestDoctorsList = [
                 description: "Private counseling and therapy sessions."
             }
         ]
-    }, {
-        id: "10",
-        name: "Dr. Tania Sinha",
-        specialty: "Oncologist",
-        experience: "9 Yrs Exp",
-        location: "Barasat",
-        fees: 1000,
-        availability: false,
-        imageUrl: img,
-        contact: "033-4012-2299",
-        rating: 4.7,
-        reviews: 95,
-        availableDays: ["Monday", "Wednessday", "Sunday"],
-        languages: ["Bengali", "English", "Hindi"],
-        bio: "Cancer care expert specializing in chemotherapy, radiation and palliative care.",
-        Awards: [
-            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
-        ],
-        experienceDetails: [
-            {
-                hospital: "Tata Memorial Hospital",
-                department: "Oncology",
-                location: "Mumbai",
-                duration: "2014 - 2018",
-                total: "4 Years",
-                description: "Handled complex cancer cases."
-            },
-            {
-                hospital: "AMRI Hospital",
-                department: "",
-                location: "Kolkata",
-                duration: "2018 - Present",
-                total: "6 Years",
-                description: "Radiotherapy and end-of-life care."
-            }
-        ]
-    },
-    {
-        id: "11",
-        name: "Dr. Swapan Bhattacharya",
-        specialty: "Gastroenterologist",
-        experience: "15 Yrs Exp",
-        location: "Kasba",
-        fees: 850,
-        availability: true,
-        imageUrl: img,
-        contact: "033-4066-8877",
-        rating: 4.8,
-        reviews: 130,
-        availableDays: ["Monday", "Wednessday", "Sunday"],
-        languages: ["Bengali", "English", "Hindi"],
-        bio: "Digestive tract expert with expertise in liver diseases and endoscopy.",
-        Awards: [
-            { awdName: 'Awards Name (2025")', awdDetails: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, soluta!" }
-        ],
-        experienceDetails: [
-            {
-                hospital: "KIMS Hospital",
-                department: "Gastro",
-                location: "Hyderabad",
-                duration: "2008 - 2014",
-                total: "6 Years",
-                description: "Performed liver biopsies and upper GI procedures."
-            },
-            {
-                hospital: "Belle Vue Clinic",
-                department: "",
-                location: "Kolkata",
-                duration: "2014 - Present",
-                total: "10 Years",
-                description: "Handles liver cirrhosis and pancreas-related disorders."
-            }
-        ]
-    },
+    }, 
+    
+    
 ]
 
 export default BestDoctorsList;

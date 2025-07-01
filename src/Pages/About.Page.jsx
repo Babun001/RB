@@ -16,12 +16,12 @@ export default function AboutPage() {
             < AboutBGSection />
             < AboutRBDSection />
             < OurExpertiseSection />
-            < ReachOutUsSection />
+            {/* < ReachOutUsSection /> */}
             < ManagementTeamSection />
             < BestDoctSection />
-            <TestimonialSection />
-            <ServiceSection />
-            <ConsultSection />
+            < TestimonialSection />
+            < ServiceSection />
+            < ConsultSection />
         </>
     );
 }

@@ -1,9 +1,14 @@
-export default function AboutBGSection(){
-    return(
+import ServiceHeader from "../../ServiceComponents/ServiceHeader";
+
+
+export default function AboutBGSection() {
+    return (
         <>
-            <div className="aboutBGSection">
-                <h1>This is about Sectioin</h1>
-            </div>
+            <ServiceHeader
+                childClass="aboutBGSection"
+                breadcrumb={<> About Us</>}
+                title="About"
+            />
         </>
     )
 }

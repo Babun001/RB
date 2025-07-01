@@ -39,7 +39,7 @@ import BookAppointmentPage from './Pages/BookingAppointment.Page';
 
 function App() {
   return (
-    <Router basename="/RBD">
+    <Router basename="/RBDTestServer">
       <ScrollToTop />
       <StickyContactButtons />
       <Routes>
