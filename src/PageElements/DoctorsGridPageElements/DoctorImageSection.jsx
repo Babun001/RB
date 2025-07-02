@@ -4,8 +4,8 @@ export default function DoctorImageSection() {
     return (<>
         <ServiceHeader
             childClass="doctorImageSection"
-            breadcrumb={<>Doctor Grid</>}
-            title="Doctor Grid"
+            breadcrumb={<>OPD</>}
+            title="OPD"
         />
     </>)
 }
