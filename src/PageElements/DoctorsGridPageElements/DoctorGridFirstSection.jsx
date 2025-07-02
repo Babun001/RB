@@ -3,6 +3,8 @@ import './DoctorsGridPageCss/DoctorGridFirstSection.css';
 import { FaSearch, FaStethoscope } from 'react-icons/fa';
 import { FaUser } from "react-icons/fa";
 
+import DoctorImageSection from './DoctorImageSection';
+
 
 export default function DoctorsGridFirstSection({ onSearch }) {
     const [doctorName, setDoctorName] = useState('');
@@ -15,12 +17,8 @@ export default function DoctorsGridFirstSection({ onSearch }) {
     return (
         <div className="gridContainer">
             <div className="gridUpperTextSection">
-                <div className="gridSmallText">
-                    <p>{`Home > Doctor > Doctor Grid`}</p>
-                </div>
-                <div className="gridTitleText">
-                    <h2 className='rb-title'>Doctor Grid</h2>
-                </div>
+                
+                <DoctorImageSection/>
 
                 <div className="customSearchBar">
                     <div className="inputWithIcon">

@@ -57,3 +57,13 @@
 .aboutBGSection{
   background-image: url("../../Assets/abtBG.webp") !important;
 }
+
+
+.ourPackageFirstSection{
+  background-image: url("../../Assets/packagesBG.png") !important;
+}
+
+
+.doctorImageSection{
+  background-image: url("../../Assets/viewReportCompressed.png") !important;
+}

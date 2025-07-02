@@ -147,3 +147,7 @@ hr{
 span{
     font-family: sans-serif !important;
 }
+
+@media (max-width: 1200px) {
+  
+}

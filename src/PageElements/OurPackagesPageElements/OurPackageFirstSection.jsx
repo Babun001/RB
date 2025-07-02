@@ -1,15 +1,14 @@
 import './OurPackagesPageCss/OurPackageFirstSection.css';
+import ServiceHeader from '../../ServiceComponents/ServiceHeader';
+
 export default function OurPackageFirstSection() {
     return (
         <>
-            <div className="packageFirstContainer">
-                <div className="packageFirstUpperSection">
-                    <div className="upperTextSection packageFirstUpperSection">
-                        <h2 className='rb-title packageFirstTitle'>Our Packages</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis unde nihil cupiditate, iste totam </p>
-                    </div>
-                </div>
-            </div>
+            <ServiceHeader
+                childClass="ourPackageFirstSection"
+                breadcrumb={<> Our Packages</>}
+                title="Our Packages"
+            />
         </>
     )
 }

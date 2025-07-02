@@ -1,103 +1,101 @@
-.mainPackageCardSection{
-    display: flex;
-    justify-content: right;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 4rem;
+.mainPackageCardSection {
+  display: flex;
+  justify-content: right;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 4rem;
 }
-.testAndCompSpan{
-    padding: 5px 14px !important;
-
+.testAndCompSpan {
+  padding: 5px 14px !important;
 }
 
-.cardsMiddleSec h4{
-    /* color: red; */
-    font-weight: 700 !important;
-    font-size: 1rem !important;
-    margin-bottom: 1.5rem !important;
-    font-family: sans-serif !important;
+.cardsMiddleSec h4 {
+  /* color: red; */
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-bottom: 1.5rem !important;
+  font-family: sans-serif !important;
 }
 .packageBodySection {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    justify-content: space-between;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: space-between;
 }
 
 .filterSection {
-    flex: 1;
-    max-width: 300px;
-    padding: 1rem;
-    border: 1px solid #939393;
-    border-radius: 25px;
-    background: #f9f9f9;
-    height: 18rem;
-    margin-top: 4rem;
-    width: 270px;
+  flex: 1;
+  max-width: 300px;
+  padding: 1rem;
+  border: 1px solid #939393;
+  border-radius: 25px;
+  background: #f9f9f9;
+  height: 18rem;
+  margin-top: 4rem;
+  width: 270px;
 }
 
 .filterSection label {
-    display: block;
-    margin: 1rem 0;
+  display: block;
+  margin: 1rem 0;
 }
 
 .filterSection select {
-    width: 100%;
-    background-color: #EDEFEF;
-    border: none;
-    padding: 11px;
-    font-size: 16px;
-    border-radius: 7px;
+  width: 100%;
+  background-color: #edefef;
+  border: none;
+  padding: 11px;
+  font-size: 16px;
+  border-radius: 7px;
 }
 
 .resetBtn {
-    margin-top: 1rem;
-    padding: 0.4rem 1rem;
-    background-color: #01CAB8;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 17px;
+  margin-top: 1rem;
+  padding: 0.4rem 1rem;
+  background-color: #01cab8;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 17px;
 }
 
 .mainPackageCardSection {
-    flex: 3;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.5rem;
-    max-width: 75%;
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 75%;
 }
 
-.midNavButtons{
-    width: 75% !important;
+.midNavButtons {
+  width: 75% !important;
 }
 
 .pagination {
-    margin-top: 1.5rem;
-    text-align: center;
-    grid-column: 1/-1;
+  margin-top: 1.5rem;
+  text-align: center;
+  grid-column: 1/-1;
 }
 
 .pagination button {
-    margin: 0 5px;
-    padding: 8px 12px;
-    border: 1px solid #797979;
-    cursor: pointer;
-    border-radius: 15px;
-    width: 3rem;;
-    height: 3rem;
-    font-size: 1.5rem;
-    background-color: white;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #797979;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: white;
 }
 
 .pagination .activePage {
-    background-color: #0CA798;
-    color: white;
-    font-weight: bolder;
-    border: none;
+  background-color: #0ca798;
+  color: white;
+  font-weight: bolder;
+  border: none;
 }
-
 
 .filterHeader {
   display: flex;
@@ -109,25 +107,90 @@
   justify-content: space-between;
 }
 
-
-.mainPackageCard{
-    margin-bottom: 3rem;
-    max-height: 18rem;
+.mainPackageCard {
+  margin-bottom: 3rem;
+  max-height: 18rem;
 }
 
-.mainLeftDoctorImage{
-    margin-top: 5rem;
+.mainLeftDoctorImage {
+  margin-top: 5rem;
 }
 
-/* .pagination .arrowBtn {
-  font-size: 1.5rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #333;
+@media (max-width: 1300px) {
+  .mainPackageCard .cornerImage {
+    margin: 1rem 0;
+  }
+  .packageBodySection {
+    margin: 0 3rem;
+  }
+  .mainPackageCard img {
+    transform: translate(45px, -26px);
+  }
+  .mainpackageTitlePack {
+    display: flex;
+    align-items: center;
+  }
+  .mainPackageCard {
+    max-height: none;
+    width: 14rem;
+  }
+  .filterSection {
+    width: 80%;
+    margin-top: 2rem;
+    height: auto;
+  }
 }
 
-.pagination .arrowBtn:disabled {
-  color: #ccc;
-  cursor: not-allowed;
-} */
+@media (max-width: 1200px) {
+  .mainPackageCard .cornerImage {
+    margin: 1rem 0;
+  }
+  .packageBodySection {
+    margin: 0 3rem;
+  }
+  .mainPackageCard img {
+    transform: translate(45px, -26px);
+  }
+  .mainpackageTitlePack {
+    display: flex;
+    align-items: center;
+  }
+
+  .filterSection {
+    width: 80%;
+    margin-top: 2rem;
+    height: auto;
+  }
+
+  .mainPackageCardSection {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .midNavButtons {
+    width: 100% !important;
+  }
+
+  .mainPackageCard {
+    max-height: none;
+    width: 14rem;
+  }
+
+  .pagination {
+    margin-top: 2rem;
+  }
+
+  .pagination button {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .mainLeftDoctorImage {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}

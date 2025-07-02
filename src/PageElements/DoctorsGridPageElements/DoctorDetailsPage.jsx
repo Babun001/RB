@@ -131,7 +131,8 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
 
     const handleBookAppointment = (e) => {
         e.preventDefault();
-        navigator('/appointment')
+        alert(`This feature is under development. The booking system will be available shortly.`);
+        // navigator('/appointment')
     }
 
     return (

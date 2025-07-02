@@ -35,6 +35,11 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const handleBookAppointment = (e) =>{
+        e.preventDefault();
+        alert(`This feature is under development. The booking system will be available shortly.`);
+    }
+
 
     return (
         <div className={`NavbarDiv ${atTop ? 'atthetop' : ''} ${scrolled ? '' : 'navbar-hidden'}`}>
@@ -66,7 +71,7 @@ const Navbar = () => {
                    <CountrySelector/>
                 </div>
                 <div className="rightButtonSection">
-                    <button><span className="btn-text"><MdCalendarToday /> Make an Appointment</span></button>
+                    <button><span className="btn-text" onClick={handleBookAppointment}><MdCalendarToday /> Make an Appointment</span></button>
                 </div>
             </div>
         </div>

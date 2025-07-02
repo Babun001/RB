@@ -1,16 +1,7 @@
-/* .gridMainContainer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-} */
-
 .gridMainContainer {
   display: flex;
   padding: 1rem;
   gap: 1.5rem;
-  /* flex-wrap: wrap; */
-  /* margin-top: 6rem; */
   margin: auto;
   width: 90%;
   justify-content: space-between;
@@ -35,12 +26,11 @@
   position: relative;
 }
 
-.pagination button{
+.pagination button {
   width: 2.5rem !important;
   height: 2.5rem !important;
   align-items: centers;
 }
-
 
 .filter-box {
   display: flex;
@@ -71,10 +61,6 @@
   border-radius: 8px;
   font-size: 0.95rem;
   background-color: white;
-}
-
-.filter-range {
-  /* width: 100%; */
 }
 
 .view-more-btn {
@@ -220,10 +206,9 @@ input + hr {
   gap: 0.4rem;
 }
 
-.sort-dropdown label{
+.sort-dropdown label {
   font-size: 1rem;
 }
-
 
 .sort-dropdown select {
   padding: 0.3rem 0.6rem;
@@ -249,7 +234,7 @@ input + hr {
   background-color: #ccc;
   border-radius: 34px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: flex-start;
   padding: 2px;
   transition: background-color 0.3s, justify-content 0.3s;
@@ -269,10 +254,30 @@ input + hr {
   margin-bottom: 0rem;
 }
 
+.icon .onIcon {
+  margin-bottom: 0 !important;
+}
+/* .slider .icon{
+  margin-top: 0;
+} */
 
+@media (max-width: 1300px) {
+  .filterUpperText {
+    width: 237px;
+  }
+}
 
-
-
+@media (max-width: 1200px) {
+  .availability-switch {
+    display: none;
+  }
+  .gridMainLeftSection {
+    width: 30%;
+  }
+  .filterUpperText {
+    width: 277px;
+  }
+}
 
 @media (max-width: 768px) {
   .gridMainContainer {

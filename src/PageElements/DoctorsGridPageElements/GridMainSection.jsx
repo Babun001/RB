@@ -239,10 +239,9 @@ export default function GridMainSection() {
                                 </div>
                             )}
                         </div>
-                        <hr />
 
                         {/* PRICING */}
-                        <div className="filter-section">
+                        {/* <div className="filter-section">
                             <div className="filter-header" onClick={() => toggleFilter('pricing')}>
                                 <label>Pricing (${price})</label>
                                 <span>{openFilters.pricing ? <FaChevronUp /> : <FaChevronDown />}</span>
@@ -256,7 +255,7 @@ export default function GridMainSection() {
                                     onChange={(e) => setPrice(e.target.value)}
                                 />
                             )}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
@@ -268,7 +267,7 @@ export default function GridMainSection() {
                             <label className="availability-switch">
                                 Availability
                                 <div className={`slider ${isChecked ? 'on' : ''}`} onClick={() => setIsChecked(!isChecked)}>
-                                    {isChecked ? <FaCheck className="icon" /> : <FaTimes className="icon" />}
+                                    {isChecked ? <FaCheck className="icon onIcon" /> : <FaTimes className="icon" />}
                                 </div>
                             </label>
 

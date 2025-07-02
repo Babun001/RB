@@ -21,7 +21,8 @@ export default function DoctorCard(params) {
 
     const handleBookNow = (e) => {
         e.stopPropagation();
-        setShowModal(true);
+        alert(`This feature is under development. The booking system will be available shortly.`)
+        // setShowModal(true);
     };
 
     const handleCloseModal = () => setShowModal(false);

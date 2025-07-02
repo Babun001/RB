@@ -3,6 +3,7 @@ import cornerIcon from '../../Assets/cornerIcon.png';
 import { useState } from 'react';
 import './OurPackagesPageCss/OurPackageMainSection.css';
 import { IoSearchOutline } from "react-icons/io5";
+import AnimatedText from '../../AnimatedText';
 
 import png1 from '../../Assets/Medical doctor_ 1.png'
 
@@ -17,14 +18,58 @@ export default function OurPackageMainSection() {
     const getCardsForCategory = (category) => {
         switch (category) {
             case 'General Wellness':
-                return Array(15).fill({
+                return [{
                     title: 'Serology Profile',
                     TestsAndComp: ['4 Tests', '7 Components'],
                     price: 1600,
                     fasting: 'Yes',
                     gender: 'Any',
                     ageRange: '18-35'
-                });
+                },
+                {
+                    title: 'Master Health Check up',
+                    TestsAndComp: ['15 Tests', '88 Components'],
+                    price: 3500,
+                    fasting: 'Yes',
+                    gender: 'Any',
+                    ageRange: '18-35'
+                },
+                {
+                    title: 'Executive Health Check Up',
+                    TestsAndComp: ['17 Tests', '95 Components'],
+                    price: 5000,
+                    fasting: 'Yes',
+                    gender: 'Any',
+                    ageRange: '18-35'
+                },
+                {
+                    title: 'Master Health Check up, Blood',
+                    TestsAndComp: ['12 Tests', '75 Components'],
+                    price: 1900,
+                    fasting: 'Yes',
+                    gender: 'Any',
+                    ageRange: '18-35'
+                },
+
+                {
+                    title: 'Full Body Platinum Package (Blood)',
+                    TestsAndComp: ['15 Tests', '87 Components'],
+                    price: 4000,
+                    fasting: 'Yes',
+                    gender: 'Any',
+                    ageRange: '18-35'
+                },
+                {
+                    title: 'Full Body Platinum Package (Male)',
+                    TestsAndComp: ['21 Tests', '93 Components'],
+                    price: 6900,
+                    fasting: 'Yes',
+                    gender: 'Any',
+                    ageRange: '18-35'
+                },
+
+
+                ];
             case 'Lifestyle':
                 return Array(10).fill({
                     title: 'Diabetes Check',
@@ -84,9 +129,19 @@ export default function OurPackageMainSection() {
     return (
         <div className="ourPackageContainer">
             <div className="ourPackageUpperSection">
-                <h2 className="rb-title">Our Packages</h2>
-                <p className="paraText">RB Diagnostic offers a comprehensive range of health check-up packages tailored for every stage of life.</p>
-                <p className="paraText">Each package is designed by experts to provide accurate insights and support preventive healthcare, ensuring timely diagnosis and better health outcomes.</p>
+                <AnimatedText tag="h2" type="chars" y={30} className="rb-title">
+                    Our Packages
+                </AnimatedText>
+
+                <AnimatedText tag="p" type="words" y={-20} className="paraText">
+                    RB Diagnostic offers a comprehensive range of health check-up packages tailored for every stage of life.
+                </AnimatedText>
+                <AnimatedText tag="p" type="words" y={-20} className="paraText">
+                    Each package is designed by experts to provide accurate insights and support preventive healthcare, ensuring timely diagnosis and better health outcomes.
+                </AnimatedText>
+
+                {/* <p className="paraText">RB Diagnostic offers a comprehensive range of health check-up packages tailored for every stage of life.</p>
+                <p className="paraText">Each package is designed by experts to provide accurate insights and support preventive healthcare, ensuring timely diagnosis and better health outcomes.</p> */}
             </div>
 
             <div className="midNavButtons">
@@ -174,8 +229,10 @@ export default function OurPackageMainSection() {
                                 <img src={cornerIcon} alt="corner icon" style={{ width: "4.5rem" }} />
                             </div>
 
-                            <div className="cardTitlePack">
-                                <h2 style={{ lineHeight: "25px", margin: "5px 0px" }}>{card.title}</h2>
+                            <div className="cardTitlePack mainpackageTitlePack">
+                                <h2 style={{ margin: "5px 0px" }}>
+                                    {card.title.length > 25 ? `${card.title.slice(0, 25)}...` : card.title}
+                                </h2>
                             </div>
 
                             <span className="testAndComp">
