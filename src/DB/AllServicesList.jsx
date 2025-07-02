@@ -8,7 +8,9 @@ const ServiceList = [
     { name: "Dermatology", path: "dermatology" },
     { name: "Homecare", path: "homecare" },
     { name: "Ophthalmology", path: "ophthalmology" },
-    { name: "Physiotherapy", path: "physiotherapy" }
+    { name: "Physiotherapy", path: "physiotherapy" },
+    { name: "Pathoogy", path: "#" },
+    { name: "Urology", path: "#" },
 ]
 
 export default ServiceList;

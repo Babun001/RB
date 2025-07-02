@@ -261,6 +261,12 @@ input + hr {
   margin-top: 0;
 } */
 
+@media (max-width: 1280px) {
+  .filterUpperText {
+    width: 233px;
+  }
+}
+
 @media (max-width: 1300px) {
   .filterUpperText {
     width: 237px;

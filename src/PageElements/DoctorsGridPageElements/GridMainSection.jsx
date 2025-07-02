@@ -20,7 +20,7 @@ export default function GridMainSection() {
     const [selectedRatings, setSelectedRatings] = useState([]);
 
     const allSpecialties = [
-        "Diabetologist", "Cardiologist", "Orthopedic", "Dermatologist", "ENT",
+        "Diabetologist", "Cardiologist", "Orthopaedic", "Dermatologist", "ENT",
         "Neurologist", "Gynaecologist"
     ];
 

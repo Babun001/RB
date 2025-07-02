@@ -13,7 +13,7 @@ export default function OurPackageMainSection() {
     const [currentPage, setCurrentPage] = useState(1);
     const cardsPerPage = 12;
 
-    const categories = ['General Wellness', 'Lifestyle', 'Male Care', 'Women Care', 'Cardiology', 'dialysis', 'Gynaecology', 'Diabetes'];
+    const categories = ['General Wellness', 'Lifestyle', 'Male Care', 'Female Care', 'Cardiology', 'Dialysis', 'Gynaecology', 'Diabetes'];
 
     const getCardsForCategory = (category) => {
         switch (category) {
@@ -71,23 +71,273 @@ export default function OurPackageMainSection() {
 
                 ];
             case 'Lifestyle':
-                return Array(10).fill({
-                    title: 'Diabetes Check',
-                    TestsAndComp: ['5 Tests', '6 Components'],
-                    price: 2000,
-                    fasting: 'No',
+                return [
+                    {
+                        title: 'KFT',
+                        TestsAndComp: ['7 Tests', '7 Components'],
+                        price: 1300,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Iron Profile',
+                        TestsAndComp: ['2 Tests', '5 Components'],
+                        price: 1400,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Coagulation Profile',
+                        TestsAndComp: ['4 Tests', '39 Components'],
+                        price: 1400,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'RPI',
+                        TestsAndComp: ['4 Tests', '11 Components'],
+                        price: 700,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Elec/Renal',
+                        TestsAndComp: ['6 Tests', '9 Components'],
+                        price: 1700,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'RPII',
+                        TestsAndComp: ['5 Tests', '38 Components'],
+                        price: 1100,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                ];
+            case 'Male Care':
+                return [
+                    {
+                        title: 'RBD Healthy Life, Blood (Male)',
+                        TestsAndComp: ['15 Tests', '98 Components'],
+                        price: 4000,
+                        fasting: 'Yes',
+                        gender: 'Male',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'RBD Healthy Life (Male)',
+                        TestsAndComp: ['21 Tests', '104 Components'],
+                        price: 6900,
+                        fasting: 'Yes',
+                        gender: 'Male',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Health Check Up (Male)',
+                        TestsAndComp: ['19 Tests', '90 Components'],
+                        price: 6000,
+                        fasting: 'Yes',
+                        gender: 'Male',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Prostate Screening Test',
+                        TestsAndComp: ['3 Tests', '3 Components'],
+                        price: 2200,
+                        fasting: 'Yes',
+                        gender: 'Male',
+                        ageRange: '18-35'
+                    },
+                ];
+            case 'Female Care':
+                return [
+                    {
+                        title: 'RBD Healthy Life, Blood (Female)',
+                        TestsAndComp: ['15 Tests', '98 Components'],
+                        price: 4000,
+                        fasting: 'Yes',
+                        gender: 'Female',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'RBD Healthy Life (Female)',
+                        TestsAndComp: ['21 Tests', '104 Components'],
+                        price: 6900,
+                        fasting: 'Yes',
+                        gender: 'Female',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Health Check Up (Female)',
+                        TestsAndComp: ['19 Tests', '90 Components'],
+                        price: 6000,
+                        fasting: 'Yes',
+                        gender: 'Female',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'PCOS/PCOD Profile',
+                        TestsAndComp: ['6 Tests', '6 Components'],
+                        price: 2200,
+                        fasting: 'Yes',
+                        gender: 'Female',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Pregnancy Profile',
+                        TestsAndComp: ['11 Tests', '64 Components'],
+                        price: 3700,
+                        fasting: 'Yes',
+                        gender: 'Female',
+                        ageRange: '18-35'
+                    },
+                ];
+            case 'Cardiology':
+                return [
+                    {
+                        title: 'Cardiac Enzyme Profile',
+                        TestsAndComp: ['0 Tests', '4 Components'],
+                        price: 1250,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Pre Cath Profile 1',
+                        TestsAndComp: ['8 Tests', '38 Components'],
+                        price: 2500,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Cardiac Health Check Up >45 Yrs',
+                        TestsAndComp: ['18 Tests', '79 Components'],
+                        price: 5500,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Pre Cardiac-angio Checkup',
+                        TestsAndComp: ['17 Tests', '97 Components'],
+                        price: 5000,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Cardiac Injury Profile',
+                        TestsAndComp: ['7 Tests', '40 Components'],
+                        price: 2200,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Cardiac Health Check Up (Blood)',
+                        TestsAndComp: ['15 Tests', '86 Components'],
+                        price: 4000,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Cardiac Health Check Up <45 Yrs',
+                        TestsAndComp: ['17 Tests', '77 Components'],
+                        price: 5200,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                ];
+            case 'Dialysis':
+                return [
+                    {
+                        title: 'Dialysis Special Offer (Multiuse)',
+                        TestsAndComp: ['0 Tests', '2 Components'],
+                        price: 1800,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Dialysis Special Offer (Singleuse)',
+                        TestsAndComp: ['0 Tests', '2 Components'],
+                        price: 2200,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                ];
+            case 'Gynaecology':
+                return [
+                    {
+                        title: 'FSH, LH, PRL',
+                        TestsAndComp: ['3 Tests', '3 Components'],
+                        price: 1600,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'LH & FSH',
+                        TestsAndComp: ['2 Tests', '2 Components'],
+                        price: 1000,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Antenatal Profile',
+                        TestsAndComp: ['8 Tests', '61 Components'],
+                        price: 1900,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Pre-Marriage Profile',
+                        TestsAndComp: ['5 Tests', '15 Components'],
+                        price: 1500,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'BOH (Bad Obstetric History) Panel',
+                        TestsAndComp: ['8 Tests', '32 Components'],
+                        price: 9000,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                    {
+                        title: 'Infertility Profile',
+                        TestsAndComp: ['13 Tests', '31 Components'],
+                        price: 5800,
+                        fasting: 'Yes',
+                        gender: 'Any',
+                        ageRange: '18-35'
+                    },
+                ];
+            case 'Diabetes': return [
+                {
+                    title: 'Diabetic Profile',
+                    TestsAndComp: ['8 Tests', '70 Components'],
+                    price: 2100,
+                    fasting: 'Yes',
                     gender: 'Any',
-                    ageRange: '36-50'
-                });
-            case 'Gynecology Packages':
-                return Array(14).fill({
-                    title: 'PCOD Package',
-                    TestsAndComp: ['9 Tests', '22 Components'],
-                    price: 4500,
-                    fasting: 'No',
-                    gender: 'Female',
                     ageRange: '18-35'
-                });
+                },
+            ];
             case 'Offers':
                 return Array(16).fill({
                     title: 'Summer Special Package',

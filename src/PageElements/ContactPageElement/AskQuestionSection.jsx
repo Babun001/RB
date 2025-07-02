@@ -1,6 +1,6 @@
 
 import './ContactPageElementsCss/AskAQuestion.css';
-import doctorImg from '../../Assets/Medical doctor_ 1.png';
+import doctorImg from '../../Assets/doctorPng (1).webp';
 import AnimatedText from '../../AnimatedText';
 
 export default function AskQuestionSection() {

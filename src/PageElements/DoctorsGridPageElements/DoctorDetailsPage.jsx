@@ -12,6 +12,8 @@ import { IoMdClose } from "react-icons/io";
 import { RiSpeakFill } from "react-icons/ri";
 import { FaLocationDot } from "react-icons/fa6";
 
+import defaultImg from '../../Assets/defaultImg.png'
+
 import AwardsCarousel from "./AwardCarousal";
 import AvailabilityCarousel from "./AvailabilityCarousel";
 import './DoctorsGridPageCss/DoctorDetailsPage.css';
@@ -61,7 +63,7 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
                         )}
                         <br />
                         <strong>Training</strong>
-                        <p className="doctorBio">{doctor.bio}</p>
+                        <p className="doctorBio">{doctor.training || ""}</p>
                     </div>
                 );
 
@@ -142,7 +144,7 @@ export default function DoctorDetailsPage({ doctor, onClose }) {
 
                 {/* Upper Section */}
                 <div className="doctorDetailsPageUpperSection">
-                    <img src={doctor.imageUrl} alt={doctor.name} className="doctorImage" />
+                    <img src={doctor.imageUrl || defaultImg} alt={doctor.name} className="doctorImage" />
 
                     <div className="doctorDetailsUpperMiddleSection">
                         <h1 className="doctorName">

@@ -239,16 +239,8 @@
   font-size: 13px;
 }
 
-.awardsCarouselWrapper {
-  /* margin: 2rem; */
-}
-
-/* this is rating section css */
-
 .ratingSection {
   display: flex;
-  /* flex-direction: column; */
-  /* margin-top: 2rem; */
 }
 
 .ratingCountSection{
@@ -321,4 +313,12 @@
   font-weight: 500;
   color: #333;
   text-align: left;
+}
+
+
+@media (max-width: 1200px){
+  .doctorDetailsPageContainer{
+    width: 80%;
+    height: 32rem;
+  }
 }

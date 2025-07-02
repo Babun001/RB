@@ -3,7 +3,8 @@ import { FaStar, FaHeart, FaMapMarkerAlt } from 'react-icons/fa';
 import { LuBookText, LuDot } from "react-icons/lu";
 import { useEffect, useState } from 'react';
 import DoctorDetailsPage from './DoctorDetailsPage';
-// import pngLogo from '../../Assets/RBlogoPng.png'
+import defaultImg from '../../Assets/defaultImg.png'
+import { BsHospitalFill } from "react-icons/bs";
 
 export default function DoctorCard(params) {
     const [liked, setLiked] = useState(false);
@@ -21,8 +22,7 @@ export default function DoctorCard(params) {
 
     const handleBookNow = (e) => {
         e.stopPropagation();
-        alert(`This feature is under development. The booking system will be available shortly.`)
-        // setShowModal(true);
+        setShowModal(true);
     };
 
     const handleCloseModal = () => setShowModal(false);
@@ -34,13 +34,13 @@ export default function DoctorCard(params) {
                     <FaStar /> {parseFloat(params.rating).toFixed(1)}
                 </div>
 
-                <div className="favorite-icon" onClick={handleLikedBtn}>
-                    <FaHeart size={22} style={{ color: liked ? "red" : "white" }} />
+                <div className="experience-badge-opd">
+                    {params.experience}+ yrs
                 </div>
 
+
                 <div className="doctorsImgSec">
-                    <img src={params.imageUrl} alt={params.name} className="doctor-image" />
-                    {/* <img src={pngLogo} alt="Logo" className='RBVerifiedLogo'/> */}
+                    <img src={params.imageUrl || defaultImg} alt={params.name} className="doctor-image" />
                 </div>
 
                 <div className="doctor-info" >
@@ -62,9 +62,15 @@ export default function DoctorCard(params) {
                         <span className="doctor-name">{params.name}</span>
                     </div>
 
-                    <div className="location">
+
+                    <div className="location" style={{fontSize:"13px"}}>
+                        <BsHospitalFill /> {params.degree}
+                    </div>
+
+                    <div className="location" style={{marginTop:"0.3rem"}}>
                         <FaMapMarkerAlt /> {params.location}
                     </div>
+                    
 
                     <hr />
 

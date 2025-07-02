@@ -29,11 +29,24 @@
 }
 
 .section-content {
-  color: #0ca798;
+  color: #0FB7A4;
   line-height: 1.6;
   margin-top: 10px;
   font-size: 18px;
 }
+
+.text-link {
+    color: #46b6aa;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.text-link:hover {
+    /* text-decoration: underline; */
+    color: #3a9c92;
+}
+
 
 @media (max-width: 1200px) {
   .health-section {
