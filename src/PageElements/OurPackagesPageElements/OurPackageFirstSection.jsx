@@ -6,8 +6,8 @@ export default function OurPackageFirstSection() {
         <>
             <ServiceHeader
                 childClass="ourPackageFirstSection"
-                breadcrumb={<> Our Packages</>}
-                title="Our Packages"
+                breadcrumb={<>Health Packages</>}
+                title="Health Packages"
             />
         </>
     )
